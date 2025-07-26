@@ -2,12 +2,12 @@
 
 - [index][1]
 - [categories](mu.md)
-   - [LX](mu.md)
-      - [corpusLX](mu.md)
-	  - [psych](mu.md)
+   - [LX](mu copy.md)
+      - [corpusLX](mu copy 2.md)
+	  - [psych](mu copy 3.md)
 	    - [poster][5]
 		- [appendix][7]
-   - [AVL](mu.md)
+   - [AVL](mu copy 4.md)
       - [xthings][6]
 - [snc][8]
 
