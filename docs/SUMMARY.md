@@ -12,25 +12,8 @@
 - [snc][8]
 
 [1]:	index.md
-[2]:	pre.md
-[3]:	pre003.md
-[4]:	index.md
+[4]:	mu.md
 [5]:	psych-pub/poster-007.md
 [6]:	xthings/15492.necrography.response.md
 [7]:	psych-pub/poster-ext.md
 [8]:	trigger.md
-[9]:	pre007.md
-[10]:	tei010.md
-[11]:	pre008.md
-[12]:	trans_p.md
-[13]:	ocr001.md
-[14]:	wiki008.md
-[15]:	tei_p001.md
-[16]:	tei001.md
-[17]:	oxygen009.md
-[18]:	text000.md
-[19]:	stylo001.md
-[20]:	net001.md
-[21]:	annis01.md
-[22]:	empty.md
-[23]:	gaga.md
