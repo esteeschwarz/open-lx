@@ -1,10 +1,10 @@
 [book]
-authors = ["estee"]
+authors = ["esteeschwarz"]
 language = "en"
 multilingual = false
-src = "./mdbook/workflow/src"
-title = "Dramenanalyse Workflow"
+src = "./docs"
+title = "SPUND-LX pub folder"
 
 
 [output.html]
-git-repository-url = "https://github.com/esteeschwarz/ETCRA5_dd23"
+git-repository-url = "https://github.com/esteeschwarz/SPUND-LX"
