@@ -1,0 +1,14 @@
+base_url = "https://esteeschwarz.github.io/open-lx"
+compile_sass = true
+build_search_index = false
+generate_feeds = false
+minify_html = true
+theme = "academic-paper"
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+smart_punctuation = true
+
+[extra]
+server_side_katex = false
