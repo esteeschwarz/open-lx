@@ -1,0 +1,10 @@
+[book]
+authors = ["estee"]
+language = "en"
+multilingual = false
+src = "./mdbook/workflow/src"
+title = "Dramenanalyse Workflow"
+
+
+[output.html]
+git-repository-url = "https://github.com/esteeschwarz/ETCRA5_dd23"
