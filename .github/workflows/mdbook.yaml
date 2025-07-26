@@ -71,12 +71,12 @@ jobs:
       #       path: mdbook
       #       key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
       - name: build book
-        run: mdbook build -d ./docs
+        run: mdbook build -d docs
          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/book
+          path: docs/book
       # - name: docache
       #   uses: actions/cache/save@v3
       #   with:

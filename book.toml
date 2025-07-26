@@ -2,7 +2,7 @@
 authors = ["esteeschwarz"]
 language = "en"
 multilingual = false
-src = "./docs"
+src = "docs"
 title = "SPUND-LX pub folder"
 
 
