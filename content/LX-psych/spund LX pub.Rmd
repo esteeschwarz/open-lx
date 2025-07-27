@@ -1,3 +1,27 @@
+--- 
+title: "xtitle: coherence & presuppositions observations in :schizophrenia: threads"
+author: "st. schwarz"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+keep_md: true
+documentclass: book
+description: |
+  This website is built using a minimal example of using the bookdown package to write a book. The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+bibliography: /Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/poster/psych.bib
+nocite: '@*'
+link-citations: yes
+github-repo: esteeschwarz/SPUND-LX/tree/main/psych
+---
+
+# Über diesen Kurs {-}
+
+Willkommen in meinem Seminar "Textanalyse mit R für die Geisteswissenschaften"! Hier findet ihr die Inhalte zu allen Sitzungen.
+
+Dieses Seminar vermittelt grundlegende praktische Kenntnisse der Textanalyse mit der Programmiersprache R. Der Fokus liegt auf der Verarbeitung und Analyse geisteswissenschaftlicher Daten. Das Seminar richtet sich insbesondere an Studierende ohne Programmiererfahrung und vermittelt neben Verfahren der Textanalyse und des Text Mining auch Grundlagen der Programmierung mit R. R kommt als besonders einstiegsfreundliche Programmiersprache vermehrt auch in geisteswissenschaftlichen Forschungsprojekten zur Anwendung, beispielsweise bei der quantitativen Textanalyse, in der digitalen Stilometrie, bei der Autorschaftserkennung oder zur Analyse und Visualisierung historischer Korrespondenznetzwerke. Das Seminar setzt keine Programmiererfahrung voraus. 
+
+<!--chapter:end:index.Rmd-->
+
 
 ```{r setup_dep, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE)
@@ -191,4 +215,46 @@ gplot.dist(dfa,ref_target)
 ::: {#refs-top}
 :::literature used and alii...   
 
+
+
+<!--chapter:end:poster-ext.Rmd-->
+
+
+```{r setup_dep2, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
+# R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+```{r kable}
+kable(cars)
+```
+# Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## quellen da?
+-----
+
+<!--# REF
+literature used and alii...   
+-->
+
+
+<!--chapter:end:testpages.Rmd-->
 

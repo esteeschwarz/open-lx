@@ -1,6 +1,57 @@
+--- 
+title: "Textanalyse mit R für die Geisteswissenschaften"
+author: |
+  | **Lisa Poggel**
+  | **SoSe 2024**
+  | **Freie Universität Berlin**
+site: bookdown::bookdown_site
+documentclass: book
+description: |
+  This website is built using a minimal example of using the bookdown package to write a book. The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+bibliography: /Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/poster/psych.bib
+nocite: '@*'
+
+link-citations: yes
+github-repo: lipogg/textanalyse-mit-r
+---
+
+# Über diesen Kurs {-}
+
+Willkommen in meinem Seminar "Textanalyse mit R für die Geisteswissenschaften"! Hier findet ihr die Inhalte zu allen Sitzungen.
+
+Dieses Seminar vermittelt grundlegende praktische Kenntnisse der Textanalyse mit der Programmiersprache R. Der Fokus liegt auf der Verarbeitung und Analyse geisteswissenschaftlicher Daten. Das Seminar richtet sich insbesondere an Studierende ohne Programmiererfahrung und vermittelt neben Verfahren der Textanalyse und des Text Mining auch Grundlagen der Programmierung mit R. R kommt als besonders einstiegsfreundliche Programmiersprache vermehrt auch in geisteswissenschaftlichen Forschungsprojekten zur Anwendung, beispielsweise bei der quantitativen Textanalyse, in der digitalen Stilometrie, bei der Autorschaftserkennung oder zur Analyse und Visualisierung historischer Korrespondenznetzwerke. Das Seminar setzt keine Programmiererfahrung voraus. 
+
+<!--chapter:end:index.Rmd-->
+
+---
+# title: "xtitle: coherence & presuppositions observations in :schizophrenia: threads"
+# author: "st. schwarz"
+# date: "`r Sys.Date()`"
+# output: 
+#     # bookdown::html_document2:
+#     #   base_format: tufte::tufte_html
+#     #   keep_md: true
+#     #   self_contained: true
+#     bookdown::tufte_html_book:
+#       keep_md: true
+#       toc: true
+#       css: ../../bookdown/assets/style.css
+#      # self_contained: true
+# 
+#     # #fig_path: "plots/"
+#   # md_document:
+#   #   variant: markdown_github
+#   #   pandoc_args: ["--wrap=none"]
+# 
+#   #keep_md: yes
+# bibliography: /Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/poster/psych.bib
+# nocite: '@*'
+#keep_md: true
+---
 
 ```{r setup_dep, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE)
+knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE,results = "hide")
 library(knitr)
 #library(kableExtra)
 ```
@@ -29,7 +80,7 @@ background-color: rgba(0, 0, 0, 0.04);
 #run<-15303
 dataset<-11
 
-reload<-F
+reload<-T
 target<-c("obs","ref")
 ref_target<-"obs"
 rel<-T
@@ -186,9 +237,43 @@ gplot.dist(dfa,ref_target)
 ```
 -----
 
-# References {-}
+# REF
+literature used and alii...   
 
-::: {#refs-top}
-:::literature used and alii...   
 
+
+<!--chapter:end:poster-ext.Rmd-->
+
+---
+title: "testpage"
+author: "esteeschwarz"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup_dep, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+<!--chapter:end:testpages.Rmd-->
 

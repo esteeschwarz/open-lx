@@ -1,0 +1,8 @@
+book_filename: "spund LX pub"
+delete_merged_file: true
+repo: https://github.com/lipogg/textanalyse-mit-r
+rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]
+#rmd_files: ["index.Rmd","testpages.Rmd"]
+new_session: no
+output_dir: "output"
+keep_md: yes
