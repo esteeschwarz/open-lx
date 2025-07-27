@@ -6,8 +6,7 @@ fig:barplot-mean
 fig:lmeplot
 fig:gplot
 index
-appendix
-testcite
+xtitle-coherence-propositions
 method-m11
 legende
 anova-analysis

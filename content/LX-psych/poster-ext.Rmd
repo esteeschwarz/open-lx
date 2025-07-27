@@ -1,4 +1,3 @@
-
 ```{css, echo=FALSE,eval=T}
 /*table {
   width: 100% !important;
@@ -47,12 +46,14 @@ dfe<-eval.1$plot.md
 
 ```
 
-# appendix
+# xtitle: coherence & propositions
+observations in :schizophrenia: threads   
+date: `r Sys.time()`   
 eval output M`r dataset``r caption.ext`.
 
-# testcite
 ## method (M`r dataset`)
-To compute distances we queried a corpus for matching conditions where certain (assumed) determiners appear before similar nouns. In M`r dataset` (removed...)  This distance should give us information structural evidence of how strong these noun occurences are connected, i.e. if a noun appears out of the blue mostly or if it somewhere before has been introduced to the audience. In information structure definitions this would be termed with **given and new information** [@prince_toward_1981].
+To compute distances we queried a corpus for matching conditions where certain (assumed) determiners appear before similar nouns. In M`r dataset` (removed...)  
+This distance should give us information structural evidence of how strong these noun occurences are connected, i.e. if a noun appears out of the blue mostly or if it somewhere before has been introduced to the audience. In information structure definitions this would be termed with **given and new information** [@prince_toward_1981].
 
 
 ## legende

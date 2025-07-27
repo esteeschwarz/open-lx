@@ -1,5 +1,5 @@
 --- 
-title: "xtitle: coherence & presuppositions observations in :schizophrenia: threads"
+title: "SPUND-LX / AVL :: Appendix"
 author: "st. schwarz"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -15,4 +15,4 @@ link-citations: yes
 github-repo: esteeschwarz/SPUND-LX/tree/main/psych
 ---
 # index
-linguistics, AVL, alii pub essais.
+linguistics, AVL, alii pub essais extension.
