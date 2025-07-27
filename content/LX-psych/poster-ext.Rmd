@@ -3,14 +3,14 @@ title: "xtitle: coherence & presuppositions observations in :schizophrenia: thre
 author: "st. schwarz"
 date: "`r Sys.Date()`"
 output: 
-    # bookdown::html_document2:
-    #   base_format: tufte::tufte_html
-    #   keep_md: true
-    #   self_contained: true
+    bookdown::html_document2:
+      base_format: tufte::tufte_html
+      keep_md: true
+      self_contained: true
     # #fig_path: "plots/"
-  md_document:
-    variant: markdown_github
-    pandoc_args: ["--wrap=none"]
+  # md_document:
+  #   variant: markdown_github
+  #   pandoc_args: ["--wrap=none"]
 
   #keep_md: yes
 bibliography: /Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/poster/psych.bib
@@ -24,9 +24,16 @@ library(knitr)
 library(kableExtra)
 ```
 
-```{css, echo=FALSE,eval=F}
-table {
+```{css, echo=FALSE,eval=T}
+/*table {
   width: 100% !important;
+  
+}*/
+pre {
+border: 1px solid black;
+border-radius: 0.25rem;
+background-color: rgba(0, 0, 0, 0.04);
+
 }
 ```
 
