@@ -1,6 +1,7 @@
 book_filename: spund-pub
 repo: https://github.com/esteeschwarz/SPUND-LX/
-output_dir: _book
+# output_dir: _book
+output_dir: ../../docs
 #clean: [packages.bib]
 # rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]
 rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]

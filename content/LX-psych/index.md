@@ -1,7 +1,7 @@
 --- 
 title: "xtitle: coherence & presuppositions observations in :schizophrenia: threads"
 author: "st. schwarz"
-date: "`r Sys.Date()`"
+date: "2025-07-27"
 site: bookdown::bookdown_site
 documentclass: book
 # url: your book url like https://bookdown.org/yihui/bookdown
@@ -14,5 +14,4 @@ bibliography: '/Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/poster/psych.bib'
 link-citations: yes
 github-repo: esteeschwarz/SPUND-LX/tree/main/psych
 ---
-# index
-linguistics, AVL, alii pub essais.
+
