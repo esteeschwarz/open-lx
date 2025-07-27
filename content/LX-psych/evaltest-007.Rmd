@@ -1,0 +1,74 @@
+
+```{r,src,echo=F,warning=F,message=F,results='hide',fig.keep='none'}
+#eval.n<-7
+run<-15302
+dataset<-11
+reload<-F
+limit<-1000
+conditions<-letters[1:6]
+target<-c("obs","ref")
+ref_target<-"obs"
+rel<-T
+det<-c(T,F)
+conditions<-letters[1:6]
+limit<-T
+author<-T
+source(paste0(Sys.getenv("GIT_TOP"),"/SPUND-LX/psych/HA/eval-003.R"),echo = F)
+if(reload)
+  eval.1<-get.anovas(dfa,target,conditions,det,rel,ref_target,author)
+```
+
+# poster
+eval output M`r dataset`
+
+```{r,dfs,echo=FALSE}
+legend<-data.frame(variable=c("target","q","det",paste0("q:",letters[1:6])),
+                   explanation=c("corpus","condition","antecedent POS==DET",rep("query condition",6)),
+                   values=c("obs,ref","a,b,c,d,e,f","TRUE,FALSE",
+                            ".*","this,that,those,these","the","a,an,any,some","my","his,her,their,your")
+                   )
+kable(legend,caption = "model vars")
+s1<-eval.1$anova.plain
+p.select<-c("target|target:q")
+p.an<-s1[grep(p.select,rownames(s1)),]
+#p.an
+print("anova plain")
+s1
+s2<-eval.1$anova.lme
+p.an.lm<-s2[grep(p.select,rownames(s2)),]
+#p.an.lm
+print("anova of linear regression model")
+s2
+dfe<-eval.1$plot.md
+s3<-eval.1$lme
+print("lmer coefficients")
+s3$coefficients
+```
+
+```{r boxplot1,echo=F,warning=F,message=F,fig.cap="compare distances by corpus"}
+# df1_no_outliers <- dfa %>%
+#   group_by(target) %>%
+#   filter(
+#     dist >= quantile(dist, 0.25) - 1.5 * IQR(dist),
+#     dist <= quantile(dist, 0.75) + 1.5 * IQR(dist)
+#   ) %>%
+#   ungroup()
+boxplot(dist~target,dfa,outline=F,notch=T,varwidth=T)
+
+```
+
+```{r,barplot,echo=F,warning=F,message=F,fig.cap="median distances over query/corpus"}
+plot.dist(dfe,"median")
+```
+
+
+```{r lmeplot,echo=F,warning=F,message=F,fig.cap="distances relation"}
+rmd.plot.lme(s3)
+```
+
+-----
+
+# REF
+literature used and alii...   
+
+

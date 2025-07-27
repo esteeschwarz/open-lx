@@ -1,10 +1,4 @@
 
-```{r setup_dep, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE)
-library(knitr)
-#library(kableExtra)
-```
-
 ```{css, echo=FALSE,eval=T}
 /*table {
   width: 100% !important;
@@ -16,6 +10,7 @@ border-radius: 0.25rem;
 background-color: rgba(0, 0, 0, 0.04);
 
 }
+
 ```
 
 ```{r}
@@ -24,6 +19,7 @@ background-color: rgba(0, 0, 0, 0.04);
 
 ```{r,src,echo=F,warning=F,message=F,results='hide',fig.keep='none'}
 #eval.n<-7
+library(knitr)
  run<-15302
 # dataset<-11
 #run<-15303
@@ -51,11 +47,16 @@ dfe<-eval.1$plot.md
 
 ```
 
-# top
+# appendix
 eval output M`r dataset``r caption.ext`.
 
+# testcite
+## method (M`r dataset`)
+To compute distances we queried a corpus for matching conditions where certain (assumed) determiners appear before similar nouns. In M`r dataset` (removed...)  This distance should give us information structural evidence of how strong these noun occurences are connected, i.e. if a noun appears out of the blue mostly or if it somewhere before has been introduced to the audience. In information structure definitions this would be termed with **given and new information** [@prince_toward_1981].
+
+
 ## legende
-```{r,legend,echo=TRUE,warning=F,message=F}
+```{r,legend,echo=FALSE,warning=F,message=F}
 legend<-data.frame(variable=c("target","q","det",paste0("q:",letters[1:6])),
                    explanation=c("corpus","condition","antecedent POS==DET",rep("query condition",6)),
                    values=c("obs,ref","a,b,c,d,e,f","TRUE,FALSE",
@@ -66,7 +67,9 @@ legend<-data.frame(variable=c("target","q","det",paste0("q:",letters[1:6])),
 # k<-kable(legend,caption = "model vars")
 # k<-kable_styling(k,full_width = TRUE)
 # k
-kable(legend, caption = "model vars",format="markdown")
+ kable(legend, caption = "model vars",format="markdown")
+#kable(legend, caption = "model vars")
+
 ```
 
 ## anova analysis
@@ -168,7 +171,7 @@ plot.dist(dfe,"mean")
 
 
 ```{r,dfe-table,echo=F,warning=F,message=F}
-kable(dfe)
+kable(dfe,caption = paste0("mean/median table for M",dataset),format="markdown")
 ```
 
 
@@ -186,9 +189,9 @@ gplot.dist(dfa,ref_target)
 ```
 -----
 
-# References {-}
+## REF {#REF-1}
 
+<!--## refs-top {-}
 ::: {#refs-top}
-:::literature used and alii...   
-
+:::-->
 

@@ -1,0 +1,12 @@
+---
+title: "My Book"
+author: "Your Name"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+#bibliography: references.bib
+---
+
+# Introduction
+
+Welcome to the book. See each chapter for references.

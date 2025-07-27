@@ -3,19 +3,15 @@ title: "xtitle: coherence & presuppositions observations in :schizophrenia: thre
 author: "st. schwarz"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-keep_md: true
 documentclass: book
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This website is built using a minimal example of using the bookdown package to write a book. The HTML output format for this example is bookdown::gitbook,
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::gitbook,
   set in the _output.yml file.
-bibliography: /Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/poster/psych.bib
-nocite: '@*'
+bibliography: '/Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/poster/psych.bib'
 link-citations: yes
 github-repo: esteeschwarz/SPUND-LX/tree/main/psych
 ---
 
-# Über diesen Kurs {-}
-
-Willkommen in meinem Seminar "Textanalyse mit R für die Geisteswissenschaften"! Hier findet ihr die Inhalte zu allen Sitzungen.
-
-Dieses Seminar vermittelt grundlegende praktische Kenntnisse der Textanalyse mit der Programmiersprache R. Der Fokus liegt auf der Verarbeitung und Analyse geisteswissenschaftlicher Daten. Das Seminar richtet sich insbesondere an Studierende ohne Programmiererfahrung und vermittelt neben Verfahren der Textanalyse und des Text Mining auch Grundlagen der Programmierung mit R. R kommt als besonders einstiegsfreundliche Programmiersprache vermehrt auch in geisteswissenschaftlichen Forschungsprojekten zur Anwendung, beispielsweise bei der quantitativen Textanalyse, in der digitalen Stilometrie, bei der Autorschaftserkennung oder zur Analyse und Visualisierung historischer Korrespondenznetzwerke. Das Seminar setzt keine Programmiererfahrung voraus. 

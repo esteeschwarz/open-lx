@@ -1,0 +1,12 @@
+---
+title: "Chapter One"
+bookdown::bs4_book:
+  split_bib: true
+bibliography: references.bib
+reference-section-title: References
+---
+
+# Chapter One
+
+We reference the R book here [@rbook].   
+snc.1

@@ -1,10 +1,8 @@
+---
+nocite: '@*'
+---
 
-```{r setup_dep2, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(knitr)
-```
-
-# R Markdown
+# R Markdown template page
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -15,7 +13,7 @@ summary(cars)
 ```
 
 ```{r kable}
-kable(cars)
+knitr::kable(head(cars))
 ```
 # Including Plots
 
@@ -28,8 +26,9 @@ plot(pressure)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 ## quellen da?
------
 
+-----
+# REF global
 <!--# REF
 literature used and alii...   
 -->

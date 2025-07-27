@@ -1,0 +1,10 @@
+book_filename: "my-book"
+language:
+  ui:
+    chapter_name: "Chapter "
+rmd_files:
+  - index.Rmd
+  - chapter1.Rmd
+  - chapter2.Rmd
+  - chapter3.Rmd
+delete_merged_file: true

@@ -1,7 +1,0 @@
-book_filename: "textanalyse-mit-r"
-delete_merged_file: true
-repo: https://github.com/lipogg/textanalyse-mit-r
-rmd_files: ["index.Rmd",
-"docs/testpages.Rmd","content/poster-ext.Rmd"]
-new_session: yes
-output_dir: "output"

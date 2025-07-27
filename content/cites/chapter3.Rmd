@@ -1,0 +1,9 @@
+---
+title: "Chapter Three"
+bibliography: references.bib
+reference-section-title: References
+---
+
+# Chapter Three
+
+Here we mention dplyr [@dplyr].

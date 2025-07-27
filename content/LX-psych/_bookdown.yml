@@ -1,8 +1,19 @@
-book_filename: "spund LX pub"
-delete_merged_file: true
-repo: https://github.com/lipogg/textanalyse-mit-r
+book_filename: spund-pub
+repo: https://github.com/esteeschwarz/SPUND-LX/
+output_dir: _book
+#clean: [packages.bib]
+# rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]
 rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]
-#rmd_files: ["index.Rmd","testpages.Rmd"]
+# language:
+#   label:
+#     fig: "FIGURE "
+#     tab: "TABLE "
+#   ui:
+#     chapter_name: "Chapter "
+#delete_merged_file: true
 new_session: no
-output_dir: "output"
-keep_md: yes
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+
