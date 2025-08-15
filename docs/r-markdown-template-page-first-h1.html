@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Including Plots | rmarkdown samplepage</title>
+  <title>3 R Markdown template page, first h1 | rmarkdown samplepage</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The HTML output format for this example is bookdown::gitbook, set in the _output.yml file." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Including Plots | rmarkdown samplepage" />
+  <meta property="og:title" content="3 R Markdown template page, first h1 | rmarkdown samplepage" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The HTML output format for this example is bookdown::gitbook, set in the _output.yml file." />
   <meta name="github-repo" content="esteeschwarz/SPUND-LX/tree/main/psych" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Including Plots | rmarkdown samplepage" />
+  <meta name="twitter:title" content="3 R Markdown template page, first h1 | rmarkdown samplepage" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The HTML output format for this example is bookdown::gitbook, set in the _output.yml file." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="r-markdown-template-page-first-h1.html"/>
-<link rel="next" href="ref-global.html"/>
+<link rel="prev" href="top.html"/>
+<link rel="next" href="including-plots.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -203,23 +203,64 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="including-plots" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">4</span> Including Plots<a href="including-plots.html#including-plots" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>You can also embed plots, for example:</p>
-<p><img src="spund-pub_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
-<div id="quellen-da" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> quellen da?<a href="including-plots.html#quellen-da" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<hr />
-</div>
+<div id="r-markdown-template-page-first-h1" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> R Markdown template page, first h1<a href="r-markdown-template-page-first-h1.html#r-markdown-template-page-first-h1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ul>
+<li>test for yaml title</li>
+</ul>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="r-markdown-template-page-first-h1.html#cb6-1" tabindex="-1"></a><span class="fu">summary</span>(cars)</span></code></pre></div>
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="r-markdown-template-page-first-h1.html#cb8-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(cars))</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">speed</th>
+<th align="right">dist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">4</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="right">22</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="right">10</td>
+</tr>
+</tbody>
+</table>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="r-markdown-template-page-first-h1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ref-global.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="top.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="including-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
