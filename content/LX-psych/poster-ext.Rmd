@@ -78,7 +78,7 @@ lme.form<-eval.1$lme.form
 caption.ext<-ifelse(rel,paste0(", normalised to ",ref_target,", distance ceiling =  ",ceiling),paste0("not normalised, distance ceiling =",ceiling))
 ```
 
-# top
+# coherence & proposition observations in :schizophrenia: threads
 eval output M`r dataset``r caption.ext`.
 
 ## citetest, method (M`r dataset`)

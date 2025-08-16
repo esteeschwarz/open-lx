@@ -99,7 +99,7 @@ lme.form<-eval.1$lme.form
 caption.ext<-ifelse(rel,paste0(", normalised to ",ref_target,", distance ceiling =  ",ceiling),paste0("not normalised, distance ceiling =",ceiling))
 ```
 
-# top
+# coherence & proposition observations in :schizophrenia: threads
 eval output M`r dataset``r caption.ext`.
 
 ## citetest, method (M`r dataset`)
@@ -247,10 +247,26 @@ literature used and alii...
 <!--chapter:end:poster-ext.Rmd-->
 
 ---
+title: "SPUND-LX / AVL :: Appendix"
+author: "st. schwarz"
+date: "`r Sys.Date()`"
+output: 
+    bookdown::html_document2:
+      base_format: tufte::tufte_html
+      keep_md: true
+      self_contained: true
+    #fig_path: "plots/"
+  # md_document:
+  #   variant: markdown_github
+  #   pandoc_args: ["--wrap=none"]
+  #keep_md: yes
+bibliography: psych.bib
 nocite: '@*'
+#keep_md: true
 ---
 
-# R Markdown template page
+# R Markdown template page, first h1
+- test for yaml title
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 

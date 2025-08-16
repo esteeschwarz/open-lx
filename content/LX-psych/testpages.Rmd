@@ -1,6 +1,6 @@
 ---
-title: "rmarkdown samplepage"
-author: "posit"
+title: "SPUND-LX / AVL :: Appendix"
+author: "st. schwarz"
 date: "`r Sys.Date()`"
 output: 
     bookdown::html_document2:
