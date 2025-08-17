@@ -1,7 +1,7 @@
 --- 
 title: "SPUND-LX / AVL :: Appendix"
 author: "st. schwarz"
-date: "`r Sys.Date()`"
+date: "2025-08-17"
 site: bookdown::bookdown_site
 #documentclass: book
 # url: your book url like https://bookdown.org/yihui/bookdown

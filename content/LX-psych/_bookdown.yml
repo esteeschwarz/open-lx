@@ -4,7 +4,7 @@ repo: https://github.com/esteeschwarz/SPUND-LX/
 output_dir: ../../docs
 #clean: [packages.bib]
 # rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]
-rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]
+rmd_files: ["index.Rmd","poster-ext.Rmd","draft-paper.Rmd","testpages.Rmd"]
 # language:
 #   label:
 #     fig: "FIGURE "
@@ -12,7 +12,7 @@ rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]
 #   ui:
 #     chapter_name: "Chapter "
 #delete_merged_file: true
-new_session: no
+new_session: yes
 delete_merged_file: true
 language:
   ui:
