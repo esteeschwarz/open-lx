@@ -2,17 +2,17 @@
 title: "draft: coherence & proposition observations in :schizophrenia: threads"
 author: "st. schwarz"
 date: "2025-08-17"
-output: 
-    bookdown::html_document2:
-      base_format: tufte::tufte_html
-      keep_md: true
-      self_contained: true
+# output: 
+#     bookdown::html_document2:
+#       base_format: tufte::tufte_html
+#       keep_md: true
+#       self_contained: true
     #fig_path: "plots/"
   # md_document:
   #   variant: markdown_github
   #   pandoc_args: ["--wrap=none"]
   #keep_md: yes
-bibliography: psych.bib
+#bibliography: psych.bib
 nocite: '@*'
 #keep_md: true
 ---

@@ -53,7 +53,7 @@ To compute distances we queried a corpus for matching conditions where certain (
 
 
 
-Table: (\#tab:legend)model vars
+Table: model vars
 
 |variable    |explanation                                |values                  |
 |:-----------|:------------------------------------------|:-----------------------|
@@ -154,19 +154,13 @@ Table: (\#tab:legend)model vars
 ```
 
 ## plots
-<div class="figure">
-<img src="poster-ext_files/figure-epub3/boxplot1-1.png" alt="compare distances by corpus, normalised to obs, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:boxplot1)compare distances by corpus, normalised to obs, distance ceiling =  outliers removed</p>
-</div>
+![compare distances by corpus, normalised to obs, distance ceiling =  outliers removed](poster-ext_files/figure-markdown_github/boxplot1-1.png)
 
-<div class="figure">
-<img src="poster-ext_files/figure-epub3/barplot-median-1.png" alt="mean distances over query/corpus, normalised to obs, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:barplot-median)mean distances over query/corpus, normalised to obs, distance ceiling =  outliers removed</p>
-</div>
+![mean distances over query/corpus, normalised to obs, distance ceiling =  outliers removed](poster-ext_files/figure-markdown_github/barplot-median-1.png)
 
 
 
-Table: (\#tab:dfe-table)mean/median table for M12
+Table: mean/median table for M12
 
 |target |q  |       n| mean| median|
 |:------|:--|-------:|----:|------:|
@@ -184,20 +178,11 @@ Table: (\#tab:dfe-table)mean/median table for M12
 |ref    |f  |     853|   67|     55|
 
 
-<div class="figure">
-<img src="poster-ext_files/figure-epub3/barplot-mean-1.png" alt="median distances over query/corpus, normalised to obs, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:barplot-mean)median distances over query/corpus, normalised to obs, distance ceiling =  outliers removed</p>
-</div>
+![median distances over query/corpus, normalised to obs, distance ceiling =  outliers removed](poster-ext_files/figure-markdown_github/barplot-mean-1.png)
 
-<div class="figure">
-<img src="poster-ext_files/figure-epub3/lmeplot-1.png" alt="distances relation, normalised to obs, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:lmeplot)distances relation, normalised to obs, distance ceiling =  outliers removed</p>
-</div>
+![distances relation, normalised to obs, distance ceiling =  outliers removed](poster-ext_files/figure-markdown_github/lmeplot-1.png)
 
-<div class="figure">
-<img src="poster-ext_files/figure-epub3/gplot-1.png" alt="distances normalised vs. raw"  />
-<p class="caption">(\#fig:gplot)distances normalised vs. raw</p>
-</div>
+![distances normalised vs. raw](poster-ext_files/figure-markdown_github/gplot-1.png)
 -----
 
 ## REF

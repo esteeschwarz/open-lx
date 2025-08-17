@@ -2,18 +2,8 @@
 title: "SPUND-LX / AVL :: Appendix"
 author: "st. schwarz"
 date: "`r Sys.Date()`"
-output: 
-    bookdown::html_document2:
-      base_format: tufte::tufte_html
-      keep_md: true
-      self_contained: true
-    #fig_path: "plots/"
-  # md_document:
-  #   variant: markdown_github
-  #   pandoc_args: ["--wrap=none"]
-  #keep_md: yes
-bibliography: psych.bib
-nocite: '@*'
+#bibliography: psych.bib
+#nocite: '@*'
 #keep_md: true
 ---
 

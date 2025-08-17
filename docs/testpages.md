@@ -2,18 +2,8 @@
 title: "SPUND-LX / AVL :: Appendix"
 author: "st. schwarz"
 date: "2025-08-17"
-output: 
-    bookdown::html_document2:
-      base_format: tufte::tufte_html
-      keep_md: true
-      self_contained: true
-    #fig_path: "plots/"
-  # md_document:
-  #   variant: markdown_github
-  #   pandoc_args: ["--wrap=none"]
-  #keep_md: yes
-bibliography: psych.bib
-nocite: '@*'
+#bibliography: psych.bib
+#nocite: '@*'
 #keep_md: true
 ---
 
@@ -58,7 +48,7 @@ knitr::kable(head(cars))
 
 You can also embed plots, for example:
 
-![](testpages_files/figure-epub3/pressure-1.png)<!-- -->
+![](testpages_files/figure-markdown_github/pressure-1.png)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 

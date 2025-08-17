@@ -12,7 +12,7 @@ rmd_files: ["index.Rmd","poster-ext.Rmd","draft-paper.Rmd","testpages.Rmd"]
 #   ui:
 #     chapter_name: "Chapter "
 #delete_merged_file: true
-new_session: yes
+new_session: no
 delete_merged_file: true
 language:
   ui:

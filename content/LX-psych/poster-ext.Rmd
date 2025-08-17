@@ -2,23 +2,25 @@
 title: "xtitle: coherence & presuppositions observations in :schizophrenia: threads"
 author: "st. schwarz"
 date: "`r Sys.Date()`"
-output: 
-    bookdown::html_document2:
-      base_format: tufte::tufte_html
-      keep_md: true
-      self_contained: true
+#output: bookdown::html_notebook2
+    # bookdown::html_document2:
+    #   base_format: tufte::tufte_html
+    #   keep_md: true
+    #   self_contained: true
     #fig_path: "plots/"
   # md_document:
   #   variant: markdown_github
   #   pandoc_args: ["--wrap=none"]
   #keep_md: yes
-bibliography: psych.bib
+#bibliography: psych.bib
 nocite: '@*'
 #keep_md: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.pos = "H", out.extra = "")
+
 library(knitr)
 library(kableExtra)
 ```
@@ -44,8 +46,10 @@ background-color: rgba(0, 0, 0, 0.04);
 #eval.n<-7
 # run<-15302
 # dataset<-11
+###> render notes:
 #> render_site(paste0(Sys.getenv("GIT_TOP"),"/open-lx/content/LX-psych/poster-ext.Rmd"))
-
+#> if new==no, then vars are saved
+#>################
 run<-15303
 dataset<-12
 

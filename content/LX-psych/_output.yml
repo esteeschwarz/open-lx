@@ -1,6 +1,8 @@
+#html_notebook
 bookdown::gitbook:
   css: style.css
   pandoc_args: ["--wrap=none"]
+  #extra_dependencies: ["float"]
   config:
     toc:
       before: |
@@ -8,7 +10,7 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     # edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
-    download: ["pdf", "epub"]
+    download: ["pdf"]
     github-repo: esteeschwarz/SPUND-LX
     repo-url: esteeschwarz/SPUND-LX
     sharing:
@@ -20,8 +22,13 @@ bookdown::gitbook:
       instapaper: false
       vk: false
       whatsapp: false
-bookdown::pdf_book:
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-bookdown::epub_book: default
+# for downloads, gets into /docs
+bookdown::pdf_document2:
+  extra_dependencies: ["float"]
+#   #latex_engine: xelatex
+#   #citation_package: natbib
+#   keep_tex: yes
+#bookdown::epub_book: default
+# md_document:
+#    variant: markdown_github
+#    pandoc_args: ["--wrap=none"]
