@@ -1,0 +1,44 @@
+---
+title: "R Notebook"
+output: html_notebook
+output_dir: ../../docs
+
+---
+
+# notebook
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+## codesample
+```{r, eval=FALSE}
+target<-c("obs","ref")
+ref_target<-"obs"
+rel<-T
+det<-c(T,F)
+conditions<-letters[1:6]
+limit<-T
+author<-T
+embed<-c(T,F)
+range<-c(T,F)
+lemma<-F
+ifelse(limit,ceiling<-"outliers removed","outliers not removed")
+if(reload)
+  rm(eval.1)
+source(paste0(Sys.getenv("GIT_TOP"),"/SPUND-LX/psych/HA/eval-003.R"),echo = F)
+if(!exists("eval.1"))
+
+```
+
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+

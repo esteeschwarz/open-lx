@@ -1,0 +1,20 @@
+book_filename: spund-pub
+repo: https://github.com/esteeschwarz/SPUND-LX/
+# output_dir: _book
+output_dir: ../../docs
+#clean: [packages.bib]
+# rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]
+rmd_files: ["index.Rmd","~/Documents/GitHub/SPUND-LX/psych/HA/paper/poster-ext.Rmd","~/Documents/GitHub/SPUND-LX/psych/HA/paper/draftpaper-ul.md","testpages.Rmd"]
+# language:
+#   label:
+#     fig: "FIGURE "
+#     tab: "TABLE "
+#   ui:
+#     chapter_name: "Chapter "
+#delete_merged_file: true
+new_session: no
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: ""
+

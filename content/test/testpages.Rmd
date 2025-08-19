@@ -1,0 +1,61 @@
+---
+title: "SPUND-LX / AVL :: Appendix"
+author: "st. schwarz"
+date: "`r Sys.Date()`"
+#output: bookdown::html_document2
+#bibliography: psych.bib
+#nocite: '@*'
+#keep_md: true
+---
+
+# testpage
+- test for yaml title
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+```{r kable}
+knitr::kable(head(cars))
+```
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+```{}
+target<-c("obs","ref")
+ref_target<-"obs"
+rel<-T
+det<-c(T,F)
+conditions<-letters[1:6]
+limit<-T
+author<-T
+embed<-c(T,F)
+range<-c(T,F)
+lemma<-F
+ifelse(limit,ceiling<-"outliers removed","outliers not removed")
+if(reload)
+  rm(eval.1)
+source(paste0(Sys.getenv("GIT_TOP"),"/SPUND-LX/psych/HA/eval-003.R"),echo = F)
+if(!exists("eval.1"))
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## quellen da?
+
+-----
+## REF global
+<!--# REF
+literature used and alii...   
+-->
+
