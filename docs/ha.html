@@ -23,7 +23,7 @@
 <meta name="author" content="st. schwarz" />
 
 
-<meta name="date" content="2025-08-23" />
+<meta name="date" content="2025-08-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -231,7 +231,7 @@ div.csl-indent {
 </div>
 <div id="background" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> background<a href="ha.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Inspired by Zimmerer et al. (2017) we are interested in observations concerning coherence and propositional statement conditions in schizophrenia language, as these linguistic markers appear underinvestigated in that fields research whilst they seem to play a crucial role target group language features. (As such seen as asset of thinking or world building capacity which might suffer from linguistic deficits within the range of positive symptoms.)</p>
+<p>Inspired by <span class="citation">Zimmerer et al. (<a href="#ref-zimmerer_deictic_2017">2017</a>)</span> we are interested in observations concerning coherence and propositional statement conditions in schizophrenia language, as these linguistic markers appear underinvestigated in that fields research whilst they seem to play a crucial role target group language features. (As such seen as asset of thinking or world building capacity which might suffer from linguistic deficits within the range of positive symptoms.)</p>
 </div>
 <div id="definitions" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> definitions<a href="ha.html#definitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -242,11 +242,11 @@ div.csl-indent {
 </div>
 <div id="questions" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> questions<a href="ha.html#questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Measuring the referent-reference distance which we assume as indicator of coherence we hope to find empirical evidence for disturbed or not world building capacities within schizophrenia language. Premising that a large noun distance indicates a low reference-referent association we hypothesise that in a language/ToM setting where the speakers estimation of the audiences context understanding capacities is disturbed we will find higer medium scores for the distance under matching conditions. An environment which has potential to test our hypothesis is the reddit thread r/schizophrenia. As reference corpus we chose reddit r/unpopularopinion. The distance measured should give us information structural evidence of how strong the noun occurences<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> are connected, i.e. if a noun appears out of the blue mostly or if it somewhere before has been introduced to the audience thus it will be more or less legitimated to be determined by an antecedent. In information structure definitions we here rely on the terms <em>given and new information</em> coined by (Prince 1981).</p>
+<p>Measuring the referent-reference distance which we assume as indicator of coherence we hope to find empirical evidence for disturbed or not world building capacities within schizophrenia language. Premising that a large noun distance indicates a low reference-referent association we hypothesise that in a language/ToM setting where the speakers estimation of the audiences context understanding capacities is disturbed we will find higer medium scores for the distance under matching conditions. An environment which has potential to test our hypothesis is the reddit thread r/schizophrenia. As reference corpus we chose reddit r/unpopularopinion. The distance measured should give us information structural evidence of how strong the noun occurences<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> are connected, i.e. if a noun appears out of the blue mostly or if it somewhere before has been introduced to the audience thus it will be more or less legitimated to be determined by an antecedent. Our basic assumptions rely on the <em>taxonomy of given end new information</em> coined by <span class="citation">Prince (<a href="#ref-prince_toward_1981">1981</a>)</span>. She develops a hierarchy of references(fn:informations in a text) with specific relations to each other, where each item is attributed in terms of <em>familiarity</em><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>, that defines ranges of 1. givennes in the sense of predictability/recoverability, 2. givenness in the sense of saliency, 3. givenness in the sense of “shared knowledge”. (cf. <span class="citation">Prince (<a href="#ref-prince_toward_1981">1981</a>)</span>, pp. 226) We base our hypothesis of <em>reference distance as indicator for coherence</em> on this model assuming that the reference/association strength<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> determines the level of text coherence.</p>
 </div>
 <div id="daten" class="section level2 hasAnchor" number="3.5">
 <h2><span class="header-section-number">3.5</span> daten<a href="ha.html#daten" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We built a corpus of the reddit r/schizophrenia thread (<code>n=755074</code> tokens) and a reference corpus of r/unpopularopinion (<code>n=271563</code>). Both were pos-tagged using the R udpipe package (Wijffels 2023) which tags according to the universal dependencies tagset maintained by De Marneffe et al. (2021). Still the 755074 tokens can only, within the workflow of growing the corpus and devising the noun distances developed be just a starting point from where with more datapoints statistical evaluation becomes relevant first.<br />
+<p>We built a corpus of the reddit r/schizophrenia thread (<code>n=755074</code> tokens) and a reference corpus of r/unpopularopinion (<code>n=271563</code>). Both were pos-tagged using the R udpipe package (<span class="citation">Wijffels (<a href="#ref-wijffels_udpipe_2023">2023</a>)</span>) which tags according to the universal dependencies tagset maintained by <span class="citation">De Marneffe et al. (<a href="#ref-de_marneffe_universal_2021">2021</a>)</span>. Still the 755074 tokens can only, within the workflow of growing the corpus and devising the noun distances developed be just a starting point from where with more datapoints statistical evaluation becomes relevant first.<br />
 The dataframe used for our model (actual: MX) consists of <code>939879</code> distance datapoints (sample Tab.X) derived from the postagged corpus.</p>
 </div>
 <div id="methods" class="section level2 hasAnchor" number="3.6">
@@ -266,7 +266,7 @@ The dataframe used for our model (actual: MX) consists of <code>939879</code> di
 <h2><span class="header-section-number">3.7</span> reflections<a href="ha.html#reflections" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="range" class="section level3 hasAnchor" number="3.7.1">
 <h3><span class="header-section-number">3.7.1</span> range<a href="ha.html#range" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Evaluating with a growing corpus and (reaching up to M<a href="">odel</a>12 with our methods of computing distances) we interestingly find our basic hypothesis tested again, showing an overall larger distance of analogue nouns within the range of 1 thread url for the target corpus. While until M7 we devised distances from a manually assigned url identifier we saw the necessity to define our “range of interest” according to the original http url of the thread, since with a growing corpus the old url ids, derived from the get_thread_url() method of the redditExtractoR: package, there a no new url ids created since one url fetch gets each time always only around 1000 urls. To ensure unique url ranges within the corpus we as said in M11 assigned the range (within which the noun distance is calculated) to the real thread url. The corpus itself is after each fetch sorted after url and timestamp so it represents the real flow of conversation within one thread which is important since our distance model is based on the token distances within that thread, so they should follow their natural occurence in time.</p>
+<p>Evaluating with a growing corpus and (reaching up to M<a href="">odel</a>12 with our methods of computing distances) we interestingly find our basic hypothesis tested again, showing an overall larger distance of analogue nouns within the range of 1 thread url for the target corpus. While until M7 we devised distances from a manually assigned url identifier we saw the necessity to define our “range of interest” according to the original http url of the thread, since with a growing corpus the old url ids, derived from the get_thread_url() method of the redditExtractoR package (<span class="citation">Rivera (<a href="#ref-rivera_redditextractor_2023">2023</a>)</span>) used for fetching the reddit content, there a no new url ids created since one url fetch gets each time always only around 1000 urls. To ensure unique url ranges within the corpus we as said in M11 assigned the range (within which the noun distance is calculated) to the real thread url. The corpus itself is after each fetch sorted after url and timestamp so it represents the real flow of conversation within one thread which is important since our distance model is based on the token distances within that thread, so they should follow their natural occurence in time.</p>
 </div>
 <div id="author-trace-id" class="section level3 hasAnchor" number="3.7.2">
 <h3><span class="header-section-number">3.7.2</span> author trace id<a href="ha.html#author-trace-id" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -283,13 +283,34 @@ The dataframe used for our model (actual: MX) consists of <code>939879</code> di
 </div>
 <div id="semantics-word-field-embedding" class="section level3 hasAnchor" number="3.7.4">
 <h3><span class="header-section-number">3.7.4</span> semantics, word field, embedding<a href="ha.html#semantics-word-field-embedding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Further we created another covariable possible to integrate in the evaluation model: The probability of one specific noun appearing on its specific position in the thread range, computed with help of an open LL word embedding model<a href="">#ref</a>. This is a common AI way of devising semantic relations in a corpus which exceeds a just frequency based keyword analysis. Using an LLM here allows for a distinctive identification of world field embeddings of the noun in question. In that way we get another variable linguistic feature extracted which may give general insights into the level of standardisation that applies to the corpora. So if a noun is found to be embedded with a high score into its context (the url thread) then it can be very much expected to be found there and does not appear out-of-context.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<p>Further we created another covariable possible to integrate in the evaluation model: The probability of one specific noun appearing on its specific position in the thread range, computed with help of an open LL word embedding model (<span class="citation">HuggingFace (<a href="#ref-huggingface_all-minilm-l6-v2_2025">2025</a>)</span>.) This is a common AI way of devising semantic relations in a corpus which exceeds a just frequency based keyword analysis. Using an LLM here allows for a distinctive identification of world field embeddings of the noun in question. In that way we get another variable linguistic feature extracted which may give general insights into the level of standardisation that applies to the corpora. So if a noun is found to be embedded with a high score into its context (the url thread) then it can be very much expected to be found there and does not appear out-of-context.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
 </div>
 <div id="caveats" class="section level3 hasAnchor" number="3.7.5">
 <h3><span class="header-section-number">3.7.5</span> caveats<a href="ha.html#caveats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Since devising the word embed score does take much computing ressources we had a script run on a server that solves the computing. But the first essai to integrate the new var into the evaluation model failed due to levels &lt; 2. Why? Because since we ran the script over the complete url ranges in the corpus and that is sorted after target,<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> we did not compute any values for the reference corpus. So we learned this way again on linear regression models which require that a variable has more than one level (which would not be the case if the lmer() function excludes all NA rows: there will be no observations left with target=ref since all its embed.score values are NA and so all target.ref rows will be removed during regression.</p>
+<p>Since devising the word embed score does take much computing ressources we had a script run on a server that solves the computing. But the first essai to integrate the new var into the evaluation model failed due to levels &lt; 2. Why? Because since we ran the script over the complete url ranges in the corpus and that is sorted after target,<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> we did not compute any values for the reference corpus. So we learned this way again on linear regression models which require that a variable has more than one level (which would not be the case if the lmer() function excludes all NA rows: there will be no observations left with target=ref since all its embed.score values are NA and so all target.ref rows will be removed during regression.</p>
 
 </div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-de_marneffe_universal_2021" class="csl-entry">
+De Marneffe, Marie-Catherine, Christopher D. Manning, Joakim Nivre, and Daniel Zeman. 2021. <span>“Universal <span>Dependencies</span>.”</span> <em>Computational Linguistics</em>, May, 1–54. <a href="https://doi.org/10.1162/coli_a_00402">https://doi.org/10.1162/coli_a_00402</a>.
+</div>
+<div id="ref-huggingface_all-minilm-l6-v2_2025" class="csl-entry">
+HuggingFace. 2025. <span>“All-<span>MiniLM</span>-<span>L6</span>-V2 · <span>Hugging</span> <span>Face</span>.”</span> <em>Sentence Transformers</em>. <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2">https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2</a>.
+</div>
+<div id="ref-prince_toward_1981" class="csl-entry">
+Prince, Ellen F. 1981. <span>“Toward a Taxonomy of Given-New Information.”</span> In <em>Syntax and Semantics: <span>Vol</span>. 14. <span>Radical</span> <span>Pragmatics</span></em>, edited by P. Cole, 223–55. New York: Academic Press.
+</div>
+<div id="ref-rivera_redditextractor_2023" class="csl-entry">
+Rivera, Ivan. 2023. <span>“<span>RedditExtractoR</span>: <span>Reddit</span> <span>Data</span> <span>Extraction</span> <span>Toolkit</span>.”</span> <a href="https://CRAN.R-project.org/package=RedditExtractoR">https://CRAN.R-project.org/package=RedditExtractoR</a>.
+</div>
+<div id="ref-wijffels_udpipe_2023" class="csl-entry">
+Wijffels, Jan. 2023. <em>Udpipe: <span>Tokenization</span>, <span>Parts</span> of <span>Speech</span> <span>Tagging</span>, <span>Lemmatization</span> and <span>Dependency</span> <span>Parsing</span> with the ’<span>UDPipe</span>’ ’<span>NLP</span>’ <span>Toolkit</span></em>. <a href="https://CRAN.R-project.org/package=udpipe">https://CRAN.R-project.org/package=udpipe</a>.
+</div>
+<div id="ref-zimmerer_deictic_2017" class="csl-entry">
+Zimmerer, Vitor C., Stuart Watson, Douglas Turkington, I. Nicol Ferrier, and Wolfram Hinzen. 2017. <span>“Deictic and <span>Propositional</span> <span>Meaning</span>—<span>New</span> <span>Perspectives</span> on <span>Language</span> in <span>Schizophrenia</span>.”</span> <em>Frontiers in Psychiatry</em> 8 (February). <a href="https://doi.org/10.3389/fpsyt.2017.00017">https://doi.org/10.3389/fpsyt.2017.00017</a>.
 </div>
 </div>
 <div class="footnotes">
@@ -299,8 +320,10 @@ The dataframe used for our model (actual: MX) consists of <code>939879</code> di
 <li id="fn2"><p>due to lack of empathy or a general self-alignment<a href="ha.html#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>where the participants may show a more realistic estimation of beforementioned ability<a href="ha.html#fnref3" class="footnote-back">↩︎</a></p></li>
 <li id="fn4"><p>preceded by conditioned determiners<a href="ha.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>only according to the LLM training data, which is still a blackbox<a href="ha.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>where “obs” comes first<a href="ha.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>cf. Prince: speaker assumptions about hearer familiarity = assumed familiarity<a href="ha.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>which should be weaker with growing distance between reference-referent<a href="ha.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>only according to the LLM training data, which is still a blackbox<a href="ha.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>where “obs” comes first<a href="ha.html#fnref8" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
