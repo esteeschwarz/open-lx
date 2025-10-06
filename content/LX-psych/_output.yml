@@ -25,6 +25,10 @@ bookdown::gitbook:
 # for downloads, gets into /docs
 bookdown::pdf_document2:
   extra_dependencies: ["float"]
+  pandoc_args:
+    - "--variable=classoption=oneside"
+    - "--variable=geometry:margin=2.5cm"
+    - "--variable=fontsize=12pt"
 #   #latex_engine: xelatex
 #   #citation_package: natbib
 #   keep_tex: yes
