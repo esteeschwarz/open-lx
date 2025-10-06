@@ -198,9 +198,9 @@ div.csl-indent {
 <li class="chapter" data-level="3.2" data-path="appendix.html"><a href="appendix.html#legende"><i class="fa fa-check"></i><b>3.2</b> legende</a></li>
 <li class="chapter" data-level="3.3" data-path="appendix.html"><a href="appendix.html#anova-analysis"><i class="fa fa-check"></i><b>3.3</b> anova analysis</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="appendix.html"><a href="appendix.html#anova-plain-formula-dist_rel_obs-targetqdet"><i class="fa fa-check"></i><b>3.3.1</b> anova plain, formula: [<code>dist_rel_obs ~ target*q*det</code>]</a></li>
-<li class="chapter" data-level="3.3.2" data-path="appendix.html"><a href="appendix.html#anova-of-linear-regression-model-anovasummarylmer"><i class="fa fa-check"></i><b>3.3.2</b> anova of linear regression model: [<code>anova(summary(lmer))</code>]</a></li>
-<li class="chapter" data-level="3.3.3" data-path="appendix.html"><a href="appendix.html#linear-regression-coefficients-formula-dist_rel_obs-targetqdet1aut_idrangeembed.score"><i class="fa fa-check"></i><b>3.3.3</b> linear regression coefficients, formula: [<code>dist_rel_obs ~ target*q*det+(1|aut_id)+range+embed.score</code>]</a></li>
+<li class="chapter" data-level="3.3.1" data-path="appendix.html"><a href="appendix.html#anova-plain"><i class="fa fa-check"></i><b>3.3.1</b> anova plain</a></li>
+<li class="chapter" data-level="3.3.2" data-path="appendix.html"><a href="appendix.html#anova-of-linear-regression-model"><i class="fa fa-check"></i><b>3.3.2</b> anova of linear regression model</a></li>
+<li class="chapter" data-level="3.3.3" data-path="appendix.html"><a href="appendix.html#linear-regression-coefficients"><i class="fa fa-check"></i><b>3.3.3</b> linear regression coefficients</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="appendix.html"><a href="appendix.html#plots"><i class="fa fa-check"></i><b>3.4</b> plots</a></li>
 <li class="chapter" data-level="3.5" data-path="appendix.html"><a href="appendix.html#ref-1"><i class="fa fa-check"></i><b>3.5</b> REF</a></li>
@@ -320,8 +320,9 @@ div.csl-indent {
 </div>
 <div id="anova-analysis" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> anova analysis<a href="appendix.html#anova-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="anova-plain-formula-dist_rel_obs-targetqdet" class="section level3 hasAnchor" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> anova plain, formula: [<code>dist_rel_obs ~ target*q*det</code>]<a href="appendix.html#anova-plain-formula-dist_rel_obs-targetqdet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="anova-plain" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> anova plain<a href="appendix.html#anova-plain" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>formula: [<code>dist_rel_obs ~ target*q*det</code>]</p>
 <pre><code>##                  Df     Sum Sq   Mean Sq   F value    Pr(&gt;F)    
 ## target            1  452303747 452303747 7336.4625 &lt; 2.2e-16 ***
 ## q                 5   12320667   2464133   39.9688 &lt; 2.2e-16 ***
@@ -334,8 +335,9 @@ div.csl-indent {
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 </div>
-<div id="anova-of-linear-regression-model-anovasummarylmer" class="section level3 hasAnchor" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> anova of linear regression model: [<code>anova(summary(lmer))</code>]<a href="appendix.html#anova-of-linear-regression-model-anovasummarylmer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="anova-of-linear-regression-model" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> anova of linear regression model<a href="appendix.html#anova-of-linear-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>[<code>anova(summary(lmer))</code>]</p>
 <pre><code>## Type III Analysis of Variance Table with Satterthwaite&#39;s method
 ##                 Sum Sq   Mean Sq NumDF  DenDF   F value    Pr(&gt;F)    
 ## target         2618718   2618718     1  79483   51.0005 9.313e-13 ***
@@ -350,8 +352,9 @@ div.csl-indent {
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 </div>
-<div id="linear-regression-coefficients-formula-dist_rel_obs-targetqdet1aut_idrangeembed.score" class="section level3 hasAnchor" number="3.3.3">
-<h3><span class="header-section-number">3.3.3</span> linear regression coefficients, formula: [<code>dist_rel_obs ~ target*q*det+(1|aut_id)+range+embed.score</code>]<a href="appendix.html#linear-regression-coefficients-formula-dist_rel_obs-targetqdet1aut_idrangeembed.score" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="linear-regression-coefficients" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> linear regression coefficients<a href="appendix.html#linear-regression-coefficients" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>formula: [<code>dist_rel_obs ~ target*q*det+(1|aut_id)+range+embed.score</code>]</p>
 <pre><code>## Linear mixed model fit by REML. t-tests use Satterthwaite&#39;s method [
 ## lmerModLmerTest]
 ## Formula: eval(expr(lmeform))
