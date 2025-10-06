@@ -23,7 +23,7 @@
 <meta name="author" content="st. schwarz" />
 
 
-<meta name="date" content="2025-08-25" />
+<meta name="date" content="2025-10-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,8 +55,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +67,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -166,7 +167,7 @@ div.csl-indent {
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> index</a></li>
 <li class="chapter" data-level="2" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>2</b> appendix</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="appendix.html"><a href="appendix.html#citetest-method-m12"><i class="fa fa-check"></i><b>2.1</b> citetest, method (M12)</a></li>
+<li class="chapter" data-level="2.1" data-path="appendix.html"><a href="appendix.html#citetest-method-m13"><i class="fa fa-check"></i><b>2.1</b> citetest, method (M13)</a></li>
 <li class="chapter" data-level="2.2" data-path="appendix.html"><a href="appendix.html#legende"><i class="fa fa-check"></i><b>2.2</b> legende</a></li>
 <li class="chapter" data-level="2.3" data-path="appendix.html"><a href="appendix.html#anova-analysis"><i class="fa fa-check"></i><b>2.3</b> anova analysis</a>
 <ul>
@@ -181,9 +182,10 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="3.1" data-path="ha.html"><a href="ha.html#subject"><i class="fa fa-check"></i><b>3.1</b> subject</a></li>
 <li class="chapter" data-level="3.2" data-path="ha.html"><a href="ha.html#background"><i class="fa fa-check"></i><b>3.2</b> background</a></li>
-<li class="chapter" data-level="3.3" data-path="ha.html"><a href="ha.html#definitions"><i class="fa fa-check"></i><b>3.3</b> definitions</a>
+<li class="chapter" data-level="3.3" data-path="ha.html"><a href="ha.html#definitions-terminology"><i class="fa fa-check"></i><b>3.3</b> definitions, terminology</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="ha.html"><a href="ha.html#coherence"><i class="fa fa-check"></i><b>3.3.1</b> coherence</a></li>
+<li class="chapter" data-level="3.3.2" data-path="ha.html"><a href="ha.html#deictic-anchoring-and-propositional-complexity"><i class="fa fa-check"></i><b>3.3.2</b> deictic anchoring and propositional complexity</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="ha.html"><a href="ha.html#questions"><i class="fa fa-check"></i><b>3.4</b> questions</a></li>
 <li class="chapter" data-level="3.5" data-path="ha.html"><a href="ha.html#daten"><i class="fa fa-check"></i><b>3.5</b> daten</a></li>
@@ -194,7 +196,8 @@ div.csl-indent {
 <li class="chapter" data-level="3.7.2" data-path="ha.html"><a href="ha.html#author-trace-id"><i class="fa fa-check"></i><b>3.7.2</b> author trace id</a></li>
 <li class="chapter" data-level="3.7.3" data-path="ha.html"><a href="ha.html#lexical-diversity"><i class="fa fa-check"></i><b>3.7.3</b> lexical diversity</a></li>
 <li class="chapter" data-level="3.7.4" data-path="ha.html"><a href="ha.html#semantics-word-field-embedding"><i class="fa fa-check"></i><b>3.7.4</b> semantics, word field, embedding</a></li>
-<li class="chapter" data-level="3.7.5" data-path="ha.html"><a href="ha.html#caveats"><i class="fa fa-check"></i><b>3.7.5</b> caveats</a></li>
+<li class="chapter" data-level="3.7.5" data-path="ha.html"><a href="ha.html#statistics"><i class="fa fa-check"></i><b>3.7.5</b> statistics</a></li>
+<li class="chapter" data-level="3.7.6" data-path="ha.html"><a href="ha.html#caveats"><i class="fa fa-check"></i><b>3.7.6</b> caveats</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="r-markdown-template-page-first-h1.html"><a href="r-markdown-template-page-first-h1.html"><i class="fa fa-check"></i><b>4</b> R Markdown template page, first h1</a></li>
@@ -233,11 +236,18 @@ div.csl-indent {
 <h2><span class="header-section-number">3.2</span> background<a href="ha.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Inspired by <span class="citation">Zimmerer et al. (<a href="#ref-zimmerer_deictic_2017">2017</a>)</span> we are interested in observations concerning coherence and propositional statement conditions in schizophrenia language, as these linguistic markers appear underinvestigated in that fields research whilst they seem to play a crucial role target group language features. (As such seen as asset of thinking or world building capacity which might suffer from linguistic deficits within the range of positive symptoms.)</p>
 </div>
-<div id="definitions" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> definitions<a href="ha.html#definitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definitions-terminology" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> definitions, terminology<a href="ha.html#definitions-terminology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="coherence" class="section level3 hasAnchor" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> coherence<a href="ha.html#coherence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>There are several preliminary affordances to a successful communication. One is the <em>coherence</em> of a <a href="">text = way of communication</a>, which accounts for the partner being able to follow the topic and relate subjects and objects referenced. There can be more or less <em>common</em> references and such, that need to be embedded in context to be understood. The underlying network of informations to create that context is what we call <em>information structure</em> of a text. The level of complexity of that network defines how simple it would be to gather the reference from the given information. We could have to go back many sentences or even infer reference from metaphors or such to be able to understand what is said or in the other case simply recall the subject of the last sentence to get the meaning (reference) of the pronoun in <code>also {she} said thisandthat...</code>. The capacity to imagine or have in mind, what concrete information is accessible to the adressee (what he actually knows or can infer) is key to a successful communication, since factors like common knowledge, weltwissen and shared knowledge between adressant and adressee and information accessible from the text itself varies depending on topic, setting, intimacy of the partners and such. So one cannot always be sure that all information provided is sufficient, but the grade to which one can give the right estimate to this sufficiency should here be a measure for our hypothesis, that the very coherence in disturbed language is deficient such that an utterance is more difficult to understand within the frame of given information. Now one indicator of that coherence we assume is <em>reference distance</em> where according to our hypothesis a larger distance would be observed in places where the adressant overestimates<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> the ability of the partner to follow a reference. That would mean that we find a medium shorter distance between referent and reference in the reference corpus<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> and larger distances in the target corpus. The references we are interested in are nouns that appear as anaphors i.e. here as noun analogies. The assumption is that if a noun is repeated <em>and</em> is combinded with certain preceding determiners, the speaker assumes that the adressee has some knowledge of what is talked about, depending on the strength of the determination. So <a href="">this, that, those, these</a> would be rather strong determiners requiring that the noun most definitely was introduced before; these four determiners depict on of our 5 conditions listed below.</p>
+</div>
+<div id="deictic-anchoring-and-propositional-complexity" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> deictic anchoring and propositional complexity<a href="ha.html#deictic-anchoring-and-propositional-complexity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="raw" class="section level4 hasAnchor" number="3.3.2.1">
+<h4><span class="header-section-number">3.3.2.1</span> raw<a href="ha.html#raw" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span class="citation">(<a href="#ref-zimmerer_deictic_2017">Zimmerer et al. 2017</a>, introduction)</span> - linguistic deviation Deictic anchoring is an inherent part of the process by which we make references to aspects in the world including entities, events, locations, and time. (2) Propositions are statements about the world which can be true or false. Kuperberg (7) notes that in people with schizophrenia, cortical activity to semantic abnormalities in sentences is particularly small compared to controls if interpretation requires integration of several sentences. (3) Delusions and thought disorder can be considered disruptions of propositional meaning described the onset of a delusion as the loss of ability to transcend an experience and see it with the eyes of others. In thought disorder, the ability to express coherent propositions can be severely impaired. Sentences are structurally incomplete, abandoned by the speaker, or contain grammatical errors which severely hinder their interpretation</p>
+</div>
 </div>
 </div>
 <div id="questions" class="section level2 hasAnchor" number="3.4">
@@ -266,7 +276,7 @@ The dataframe used for our model (actual: MX) consists of <code>939879</code> di
 <h2><span class="header-section-number">3.7</span> reflections<a href="ha.html#reflections" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="range" class="section level3 hasAnchor" number="3.7.1">
 <h3><span class="header-section-number">3.7.1</span> range<a href="ha.html#range" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Evaluating with a growing corpus and (reaching up to M<a href="">odel</a>12 with our methods of computing distances) we interestingly find our basic hypothesis tested again, showing an overall larger distance of analogue nouns within the range of 1 thread url for the target corpus. While until M7 we devised distances from a manually assigned url identifier we saw the necessity to define our “range of interest” according to the original http url of the thread, since with a growing corpus the old url ids, derived from the get_thread_url() method of the redditExtractoR package (<span class="citation">Rivera (<a href="#ref-rivera_redditextractor_2023">2023</a>)</span>) used for fetching the reddit content, there a no new url ids created since one url fetch gets each time always only around 1000 urls. To ensure unique url ranges within the corpus we as said in M11 assigned the range (within which the noun distance is calculated) to the real thread url. The corpus itself is after each fetch sorted after url and timestamp so it represents the real flow of conversation within one thread which is important since our distance model is based on the token distances within that thread, so they should follow their natural occurence in time.</p>
+<p>Evaluating with a growing corpus and (reaching up to M<a href="">odel</a>12 with our methods of computing distances) we interestingly find our basic hypothesis tested again, showing an overall larger distance of analogue nouns within the range of 1 thread url for the target corpus. While until M7 we devised distances from a manually assigned url identifier we saw the necessity to define our “range of interest” according to the original http url of the thread, since with a growing corpus the old url ids - derived from the get_thread_url() method of the redditExtractoR package (<span class="citation">Rivera (<a href="#ref-rivera_redditextractor_2023">2023</a>)</span>) used for fetching the reddit content - there a no new url ids created since one url fetch gets each time always only around 1000 urls. To ensure unique url ranges within the corpus we as said in M11 assigned the range (within which the noun distance is calculated) to the real thread url. The corpus itself is after each fetch sorted after url and timestamp so it represents the real flow of conversation within one thread which is important since our distance model is based on the token distances within that thread, so they should follow their natural occurence in time.</p>
 </div>
 <div id="author-trace-id" class="section level3 hasAnchor" number="3.7.2">
 <h3><span class="header-section-number">3.7.2</span> author trace id<a href="ha.html#author-trace-id" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -283,11 +293,15 @@ The dataframe used for our model (actual: MX) consists of <code>939879</code> di
 </div>
 <div id="semantics-word-field-embedding" class="section level3 hasAnchor" number="3.7.4">
 <h3><span class="header-section-number">3.7.4</span> semantics, word field, embedding<a href="ha.html#semantics-word-field-embedding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Further we created another covariable possible to integrate in the evaluation model: The probability of one specific noun appearing on its specific position in the thread range, computed with help of an open LL word embedding model (<span class="citation">HuggingFace (<a href="#ref-huggingface_all-minilm-l6-v2_2025">2025</a>)</span>.) This is a common AI way of devising semantic relations in a corpus which exceeds a just frequency based keyword analysis. Using an LLM here allows for a distinctive identification of world field embeddings of the noun in question. In that way we get another variable linguistic feature extracted which may give general insights into the level of standardisation that applies to the corpora. So if a noun is found to be embedded with a high score into its context (the url thread) then it can be very much expected to be found there and does not appear out-of-context.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<p>Further we created another covariable possible to integrate in the evaluation model: The probability of one specific noun appearing on its specific position in the thread range, computed with help of an open LL word embedding model (<span class="citation">HuggingFace (<a href="#ref-huggingface_all-minilm-l6-v2_2025">2025</a>)</span>.) This is a common AI way of devising semantic relations in a corpus which exceeds a just frequency based keyword analysis. Using an LLM here allows for a distinctive identification of world field embeddings of the noun in question. In that way we get another variable linguistic feature extracted which may give general insights into the level of standardisation that applies to the corpora. So if a noun is found to be embedded with a high score into its context (the url thread) then it can be very much expected to be found there and appears less out-of-context.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
 </div>
-<div id="caveats" class="section level3 hasAnchor" number="3.7.5">
-<h3><span class="header-section-number">3.7.5</span> caveats<a href="ha.html#caveats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Since devising the word embed score does take much computing ressources we had a script run on a server that solves the computing. But the first essai to integrate the new var into the evaluation model failed due to levels &lt; 2. Why? Because since we ran the script over the complete url ranges in the corpus and that is sorted after target,<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> we did not compute any values for the reference corpus. So we learned this way again on linear regression models which require that a variable has more than one level (which would not be the case if the lmer() function excludes all NA rows: there will be no observations left with target=ref since all its embed.score values are NA and so all target.ref rows will be removed during regression.</p>
+<div id="statistics" class="section level3 hasAnchor" number="3.7.5">
+<h3><span class="header-section-number">3.7.5</span> statistics<a href="ha.html#statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this context we thought about what it means statistically, if a high-score embedded word also ranks high in (distance) significance i.e. generally what the relations of the covariates in the context of the linear regression evaluation express. Let us picture this: 1. a word receives a high embed score if it is probable for appearing within the thread according to the LLM. 2. therefore the necessity to introduce/elaborate on it sinks, since it can be considered a “known” entity within the context given. 3. now if a person is using this word, the determined use appears less incoherent by itself. 4. the reference distance thus may increase without losing in coherence. 5. <strong>conclusion:</strong> if we for our linear regression use a (base) formula like <code>distance ~ corpus </code> , a numerical <code>embed_score</code> predictor should correlate positive with the estimates for <code>dist</code> if applied correctly, nestcepas?</p>
+</div>
+<div id="caveats" class="section level3 hasAnchor" number="3.7.6">
+<h3><span class="header-section-number">3.7.6</span> caveats<a href="ha.html#caveats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Since devising the word embed score does take much computing ressources we had a script run on a server that solves the computing. But the first essai to integrate the new var into the evaluation model failed due to levels &lt; 2. Why? Because since we ran the script over the complete url ranges in the corpus and that is sorted after target,<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> we did not compute any values for the reference corpus. So we learned this way again on linear regression models which require that a variable has more than one level (which would not be the case if the lmer() function excludes all NA rows: there would be no observations left with target=ref since all its embed.score values are NA and so all target.ref rows will be removed during regression.)</p>
 
 </div>
 </div>
