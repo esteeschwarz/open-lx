@@ -16,3 +16,9 @@ p code {
 pre code {
   white-space: inherit;
 }
+
+.book .book-body .page-wrapper table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
