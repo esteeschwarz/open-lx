@@ -4,6 +4,11 @@ author: "st. schwarz"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
+# documentclass: article
+# classoption: 
+#   - 12pt
+#   - a4paper
+  # - twocolumn  # if needed
 url: https://esteeschwarz.github.io/open-lx
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |

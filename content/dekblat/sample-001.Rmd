@@ -1,0 +1,23 @@
+---
+title: "Authenticity and Representation"
+author: "esteeschwarz"
+journal: "anarkkiv lankalevikki"
+issue: "16421."
+date: "07 June 2021"
+output:
+  pdf_document:
+    template: dekblat.tex
+    latex_engine: xelatex
+---
+
+# Introduction
+
+In this paper, we explore the question of authenticity in literary representation and the role of politically incorrect terminology in preserving historical voice.
+
+# Discussion
+
+When analyzing figures in literature, we must distinguish between authorial narration and character speech. Authenticity arises when characters express themselves as they would have within their social and temporal context.
+
+# Conclusion
+
+Censorship of language may risk erasing traces of real social discourse, transforming literature into a sanitized reflection of ideology rather than experience.

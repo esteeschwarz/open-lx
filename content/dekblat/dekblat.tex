@@ -1,0 +1,105 @@
+%%!TEX TS-program = xelatex
+%\documentclass[12pt,a4paper]{article}
+
+% Packages
+%\usepackage{geometry}
+%\usepackage{fontspec}
+\usepackage{tikz}
+%\usepackage{fancyhdr}
+%\usepackage{setspace}
+%\usepackage{titlesec}
+\usepackage{eso-pic}
+
+
+% Page geometry
+% \geometry{
+%   top=2cm,
+%   bottom=2cm,
+%   left=3cm,
+%   right=3cm
+% }
+
+
+% Fonts
+%\setmainfont{Georgia}
+%\newfontfamily\futurafont{Futura}
+
+% Line spacing
+% \onehalfspacing
+
+% Header and footer setup
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyheadoffset[L]{+1.5cm}
+% \fancyheadoffset[R]{+1.5cm}
+% \fancyfootoffset[L]{+1.5cm}
+% \fancyfootoffset[R]{+1.5cm}
+% Header content (dynamic from YAML)
+%\fancyhead[L]{\futurafont\small $$}
+% \fancyhead[C]{$title$}
+% \fancyhead[R]{$author$}
+%\fancyhead[R]{\futurafont\small $issue$}
+
+% Footer content (dynamic)
+%\fancyfoot[R]{$issue$ \hspace{1em} | \hspace{1em} $date$}
+
+% Remove default header/footer lines
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Draw decorative boxes/lines from Quark layout
+\AddToShipoutPictureBG*{%
+  \begin{tikzpicture}[remember picture, overlay]
+    % --- Header lines ---
+   % \draw[line width=0.4pt]
+    %  ([xshift=1cm,yshift=-1.5cm]current page.north west)
+     % -- ([xshift=-1cm,yshift=-1.5cm]current page.north east);
+    %\draw[line width=0.4pt]
+     % ([xshift=1cm,yshift=-1.9cm]current page.north west)
+      %-- ([xshift=-1cm,yshift=-1.9cm]current page.north east);
+
+    % --- Footer lines ---
+    %\draw[line width=0.4pt]
+     % ([xshift=1cm,yshift=2cm]current page.south west)
+      %-- ([xshift=-1cm,yshift=2cm]current page.south east);
+   % \draw[line width=0.4pt]
+    %  ([xshift=0.8cm,yshift=2.4cm]current page.south west)
+     % -- ([xshift=-0.8cm,yshift=2.4cm]current page.south east);
+
+    % --- Metadata box (upper left) ---
+  %  \draw[line width=0.3pt]
+   %   ([xshift=1cm,yshift=-3.5cm]current page.north west);
+%      rectangle ([xshift=5cm,yshift=-6.5cm]current page.north west);
+
+    % --- Corner decorations ---
+    \draw[line width=1.3pt]
+      ([xshift=0.7cm,yshift=-0.6cm]current page.north west)
+      -- ++(0,-0.8cm) -- ++(20cm,0);
+    \draw[line width=1.3pt]
+      ([xshift=-0.7cm,yshift=-0.6cm]current page.north east)
+      -- ++(0,-0.8cm) -- ++(-0.8cm,0);
+    \draw[line width=1.3pt]
+      ([xshift=0.7cm,yshift=0.8cm]current page.south west)
+      -- ++(0,0.8cm) -- ++(0.8cm,0);
+    \draw[line width=1.3pt]
+      ([xshift=-0.7cm,yshift=0.8cm]current page.south east)
+      -- ++(0,0.8cm) -- ++(-20cm,0);
+  \end{tikzpicture}
+}
+
+% Title formatting
+%\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{1em}{}
+
+% Document start
+%\begin{document}
+
+% Optional dynamic header box content
+%  {\futurafont\small $journal$ | $issue$ | $date$}
+%\end{flushleft}
+
+%\vspace{1cm}
+
+% Main content area
+% $body$
+
+%\end{document}

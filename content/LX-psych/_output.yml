@@ -24,14 +24,17 @@ bookdown::gitbook:
       whatsapp: false
 # for downloads, gets into /docs
 bookdown::pdf_document2:
+  # template: ../dekblat/dekblat.tex
+  # includes:
+  #     in_header: ../dekblat/dekblat.tex
   extra_dependencies: ["float"]
   pandoc_args:
     - "--variable=classoption=oneside"
     - "--variable=geometry:margin=2.5cm"
     - "--variable=fontsize=12pt"
-#   #latex_engine: xelatex
+  # latex_engine: xelatex
 #   #citation_package: natbib
-#   keep_tex: yes
+  keep_tex: yes
 #bookdown::epub_book: default
 # md_document:
 #    variant: markdown_github

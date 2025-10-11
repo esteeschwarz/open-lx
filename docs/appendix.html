@@ -23,7 +23,7 @@
 <meta name="author" content="st. schwarz" />
 
 
-<meta name="date" content="2025-10-08" />
+<meta name="date" content="2025-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -228,14 +228,13 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="appendix" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">3</span> appendix<a href="appendix.html#appendix" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>eval output M13, normalised to obs, distance ceiling = outliers removed.</p>
+<p>eval output M13, normalised to all, distance ceiling = outliers removed.</p>
 <div id="citetest-method-m13" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> citetest, method (M13)<a href="appendix.html#citetest-method-m13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To compute distances we queried a corpus for matching conditions where certain (assumed) determiners appear before similar nouns. In M13 (removed)… This distance should give us information structural evidence of how strong these noun occurences are connected, i.e. if a noun appears out of the blue mostly or if it somewhere before has been introduced to the audience. In information structure definitions this would be termed with <strong>given and new information</strong> <span class="citation">(<a href="#ref-prince_toward_1981">Prince 1981</a>)</span>.</p>
 </div>
 <div id="legende" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> legende<a href="appendix.html#legende" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<pre><code>## [1] &quot;, normalised to obs, distance ceiling =  outliers removed&quot;</code></pre>
 <table>
 <caption><span id="tab:legend">Table 3.1: </span>model vars</caption>
 <colgroup>
@@ -323,16 +322,16 @@ div.csl-indent {
 <h2><span class="header-section-number">3.3</span> anova analysis<a href="appendix.html#anova-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="anova-plain" class="section level3 hasAnchor" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> anova plain<a href="appendix.html#anova-plain" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>formula: [<code>dist_rel_obs ~ target*q*det</code>]</p>
-<pre><code>##                  Df     Sum Sq   Mean Sq   F value    Pr(&gt;F)    
-## target            1  452303747 452303747 7336.4625 &lt; 2.2e-16 ***
-## q                 5   12320667   2464133   39.9688 &lt; 2.2e-16 ***
-## det               1    1636109   1636109   26.5380 2.588e-07 ***
-## target:q          5    2747371    549474    8.9126 1.786e-08 ***
-## target:det        1     251297    251297    4.0761  0.043496 *  
-## q:det             2     905292    452646    7.3420  0.000648 ***
-## target:q:det      1     717222    717222   11.6335  0.000648 ***
-## Residuals    126209 7780971239     61651                        
+<p>formula: [<code>dist_rel_all ~ target*q*det</code>]</p>
+<pre><code>##                  Df     Sum Sq    Mean Sq   F value    Pr(&gt;F)    
+## target            1 1.2830e+09 1283010757 7336.4625 &lt; 2.2e-16 ***
+## q                 5 3.4949e+07    6989793   39.9688 &lt; 2.2e-16 ***
+## det               1 4.6410e+06    4641007   26.5380 2.588e-07 ***
+## target:q          5 7.7932e+06    1558646    8.9126 1.786e-08 ***
+## target:det        1 7.1283e+05     712833    4.0761  0.043496 *  
+## q:det             2 2.5680e+06    1283981    7.3420  0.000648 ***
+## target:q:det      1 2.0345e+06    2034482   11.6335  0.000648 ***
+## Residuals    126209 2.2072e+10     174881                        
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 </div>
@@ -341,59 +340,60 @@ div.csl-indent {
 <p>[<code>anova(summary(lmer))</code>]</p>
 <pre><code>## Type III Analysis of Variance Table with Satterthwaite&#39;s method
 ##                 Sum Sq   Mean Sq NumDF  DenDF   F value    Pr(&gt;F)    
-## target         2618718   2618718     1  79483   51.0005 9.313e-13 ***
-## q               732070    146414     5 123324    2.8515  0.014059 *  
-## det              14450     14450     1 119400    0.2814  0.595768    
-## range        318496210 318496210     1  27290 6202.8299 &lt; 2.2e-16 ***
-## embed.score   12389668  12389668     1 125991  241.2933 &lt; 2.2e-16 ***
-## target:q        933689    186738     5 124373    3.6368  0.002726 ** 
-## target:det      540220    540220     1 123982   10.5210  0.001181 ** 
-## q:det           390120    195060     2 121665    3.7989  0.022399 *  
-## target:q:det    189268    189268     1 124039    3.6861  0.054872 .  
+## target         3245706   3245706     1   3519   23.4567 1.333e-06 ***
+## q              2091953    418391     5 122421    3.0237 0.0098706 ** 
+## det              34508     34508     1 118425    0.2494 0.6175055    
+## range        142964301 142964301     1   1025 1033.2042 &lt; 2.2e-16 ***
+## embed.score   71204325  71204325     1 122690  514.5942 &lt; 2.2e-16 ***
+## target:q       2202162    440432     5 123486    3.1830 0.0070933 ** 
+## target:det     1534830   1534830     1 123325   11.0922 0.0008672 ***
+## q:det          1019818    509909     2 120804    3.6851 0.0250971 *  
+## target:q:det    623611    623611     1 123315    4.5068 0.0337615 *  
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 </div>
 <div id="linear-regression-coefficients" class="section level3 hasAnchor" number="3.3.3">
 <h3><span class="header-section-number">3.3.3</span> linear regression coefficients<a href="appendix.html#linear-regression-coefficients" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>formula: [<code>dist_rel_obs ~ target*q*det+(1|aut_id)+range+embed.score</code>]</p>
+<p>formula: [<code>dist_rel_all ~ target*q*det+(1|aut_id)+range+(embed.score)+(1|url_id)</code>]</p>
 <pre><code>## Linear mixed model fit by REML. t-tests use Satterthwaite&#39;s method [
 ## lmerModLmerTest]
 ## Formula: eval(expr(lmeform))
 ##    Data: dfa
 ## 
-## REML criterion at convergence: 1733592
+## REML criterion at convergence: 1859224
 ## 
 ## Scaled residuals: 
 ##     Min      1Q  Median      3Q     Max 
-## -3.3198 -0.5695 -0.2131  0.2725  7.0321 
+## -2.8643 -0.5282 -0.1721  0.2469  6.9244 
 ## 
 ## Random effects:
 ##  Groups   Name        Variance Std.Dev.
-##  aut_id   (Intercept)  7540     86.83  
-##  Residual             51347    226.60  
-## Number of obs: 126226, groups:  aut_id, 8238
+##  aut_id   (Intercept)   8101    90.01  
+##  url_id   (Intercept)  23223   152.39  
+##  Residual             138370   371.98  
+## Number of obs: 126226, groups:  aut_id, 8238; url_id, 2145
 ## 
 ## Fixed effects:
 ##                    Estimate Std. Error         df t value Pr(&gt;|t|)    
-## (Intercept)       3.504e+02  4.228e+00  3.672e+04  82.886  &lt; 2e-16 ***
-## targetref        -4.627e+01  2.941e+00  8.918e+03 -15.729  &lt; 2e-16 ***
-## qb               -2.402e+01  1.560e+01  1.217e+05  -1.540 0.123597    
-## qc               -2.131e+01  5.605e+00  1.222e+05  -3.802 0.000144 ***
-## qd               -3.603e+01  2.283e+02  1.194e+05  -0.158 0.874604    
-## qe                2.771e+01  3.890e+00  1.236e+05   7.123 1.06e-12 ***
-## qf               -1.474e+01  4.958e+00  1.232e+05  -2.973 0.002946 ** 
-## det               1.480e+01  4.867e+00  1.225e+05   3.042 0.002354 ** 
-## range            -2.763e-02  3.508e-04  2.729e+04 -78.758  &lt; 2e-16 ***
-## embed.score      -1.211e+02  7.796e+00  1.260e+05 -15.534  &lt; 2e-16 ***
-## targetref:qb      2.177e+01  1.760e+01  1.226e+05   1.238 0.215900    
-## targetref:qc      2.444e+01  1.317e+01  1.251e+05   1.856 0.063477 .  
-## targetref:qd     -8.566e-01  1.291e+01  1.251e+05  -0.066 0.947118    
-## targetref:qe     -2.672e+01  9.785e+00  1.250e+05  -2.730 0.006326 ** 
-## targetref:qf      1.525e+01  1.245e+01  1.248e+05   1.225 0.220738    
-## targetref:det    -1.664e+01  1.117e+01  1.253e+05  -1.490 0.136307    
-## qb:det            5.871e+01  1.714e+01  1.218e+05   3.425 0.000614 ***
-## qd:det            4.094e+01  2.283e+02  1.194e+05   0.179 0.857667    
-## targetref:qb:det -4.828e+01  2.514e+01  1.240e+05  -1.920 0.054872 .  
+## (Intercept)       7.789e+02  8.688e+00  8.969e+03  89.651  &lt; 2e-16 ***
+## targetref        -7.312e+01  1.061e+01  1.300e+03  -6.893 8.50e-12 ***
+## qb               -3.390e+01  2.572e+01  1.218e+05  -1.318 0.187483    
+## qc               -3.717e+01  9.261e+00  1.226e+05  -4.014 5.98e-05 ***
+## qd               -5.353e+01  3.748e+02  1.184e+05  -0.143 0.886426    
+## qe                4.198e+01  6.460e+00  1.247e+05   6.498 8.14e-11 ***
+## qf               -3.185e+01  8.240e+00  1.244e+05  -3.866 0.000111 ***
+## det               2.144e+01  8.041e+00  1.229e+05   2.667 0.007662 ** 
+## range            -9.786e-02  3.044e-03  1.025e+03 -32.143  &lt; 2e-16 ***
+## embed.score      -3.080e+02  1.358e+01  1.227e+05 -22.685  &lt; 2e-16 ***
+## targetref:qb      3.136e+01  2.894e+01  1.225e+05   1.083 0.278599    
+## targetref:qc      3.842e+01  2.154e+01  1.237e+05   1.784 0.074435 .  
+## targetref:qd      7.432e-01  2.113e+01  1.238e+05   0.035 0.971935    
+## targetref:qe     -3.910e+01  1.602e+01  1.239e+05  -2.441 0.014662 *  
+## targetref:qf      3.033e+01  2.039e+01  1.238e+05   1.488 0.136766    
+## targetref:det    -2.490e+01  1.826e+01  1.239e+05  -1.363 0.172784    
+## qb:det            9.962e+01  2.826e+01  1.219e+05   3.526 0.000423 ***
+## qd:det            6.144e+01  3.747e+02  1.184e+05   0.164 0.869736    
+## targetref:qb:det -8.754e+01  4.124e+01  1.233e+05  -2.123 0.033761 *  
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## fit warnings:
@@ -404,15 +404,15 @@ div.csl-indent {
 <div id="plots" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> plots<a href="appendix.html#plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="figure"><span style="display:block;" id="fig:boxplot1"></span>
-<img src="spund-pub_files/figure-html/boxplot1-1.png" alt="compare distances by corpus, normalised to obs, distance ceiling =  outliers removed" width="672"  />
+<img src="spund-pub_files/figure-html/boxplot1-1.png" alt="compare distances by corpus, normalised to all, distance ceiling =  outliers removed" width="672"  />
 <p class="caption">
-Figure 3.1: compare distances by corpus, normalised to obs, distance ceiling = outliers removed
+Figure 3.1: compare distances by corpus, normalised to all, distance ceiling = outliers removed
 </p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:barplot-median"></span>
-<img src="spund-pub_files/figure-html/barplot-median-1.png" alt="mean distances over query/corpus, normalised to obs, distance ceiling =  outliers removed" width="672"  />
+<img src="spund-pub_files/figure-html/barplot-median-1.png" alt="mean distances over query/corpus, normalised to all, distance ceiling =  outliers removed" width="672"  />
 <p class="caption">
-Figure 3.2: mean distances over query/corpus, normalised to obs, distance ceiling = outliers removed
+Figure 3.2: mean distances over query/corpus, normalised to all, distance ceiling = outliers removed
 </p>
 </div>
 <table>
@@ -431,98 +431,98 @@ Figure 3.2: mean distances over query/corpus, normalised to obs, distance ceilin
 <td align="left">obs</td>
 <td align="left">a</td>
 <td align="right">42836</td>
-<td align="right">234</td>
-<td align="right">117</td>
+<td align="right">395</td>
+<td align="right">196</td>
 </tr>
 <tr class="even">
 <td align="left">ref</td>
 <td align="left">a</td>
 <td align="right">58615</td>
-<td align="right">121</td>
-<td align="right">47</td>
+<td align="right">203</td>
+<td align="right">79</td>
 </tr>
 <tr class="odd">
 <td align="left">obs</td>
 <td align="left">b</td>
 <td align="right">2116</td>
-<td align="right">286</td>
-<td align="right">165</td>
+<td align="right">481</td>
+<td align="right">279</td>
 </tr>
 <tr class="even">
 <td align="left">ref</td>
 <td align="left">b</td>
 <td align="right">1130</td>
-<td align="right">121</td>
-<td align="right">44</td>
+<td align="right">204</td>
+<td align="right">75</td>
 </tr>
 <tr class="odd">
 <td align="left">obs</td>
 <td align="left">c</td>
 <td align="right">5770</td>
-<td align="right">231</td>
-<td align="right">114</td>
+<td align="right">388</td>
+<td align="right">191</td>
 </tr>
 <tr class="even">
 <td align="left">ref</td>
 <td align="left">c</td>
 <td align="right">1274</td>
-<td align="right">120</td>
-<td align="right">48</td>
+<td align="right">203</td>
+<td align="right">80</td>
 </tr>
 <tr class="odd">
 <td align="left">obs</td>
 <td align="left">d</td>
 <td align="right">5654</td>
-<td align="right">260</td>
-<td align="right">144</td>
+<td align="right">437</td>
+<td align="right">243</td>
 </tr>
 <tr class="even">
 <td align="left">ref</td>
 <td align="left">d</td>
 <td align="right">1525</td>
-<td align="right">122</td>
-<td align="right">49</td>
+<td align="right">205</td>
+<td align="right">83</td>
 </tr>
 <tr class="odd">
 <td align="left">obs</td>
 <td align="left">e</td>
 <td align="right">3911</td>
-<td align="right">281</td>
-<td align="right">147</td>
+<td align="right">473</td>
+<td align="right">248</td>
 </tr>
 <tr class="even">
 <td align="left">ref</td>
 <td align="left">e</td>
 <td align="right">671</td>
-<td align="right">125</td>
-<td align="right">45</td>
+<td align="right">211</td>
+<td align="right">75</td>
 </tr>
 <tr class="odd">
 <td align="left">obs</td>
 <td align="left">f</td>
 <td align="right">2311</td>
-<td align="right">222</td>
-<td align="right">133</td>
+<td align="right">374</td>
+<td align="right">224</td>
 </tr>
 <tr class="even">
 <td align="left">ref</td>
 <td align="left">f</td>
 <td align="right">413</td>
-<td align="right">116</td>
-<td align="right">47</td>
+<td align="right">195</td>
+<td align="right">79</td>
 </tr>
 </tbody>
 </table>
 <div class="figure"><span style="display:block;" id="fig:barplot-mean"></span>
-<img src="spund-pub_files/figure-html/barplot-mean-1.png" alt="median distances over query/corpus, normalised to obs, distance ceiling =  outliers removed" width="672"  />
+<img src="spund-pub_files/figure-html/barplot-mean-1.png" alt="median distances over query/corpus, normalised to all, distance ceiling =  outliers removed" width="672"  />
 <p class="caption">
-Figure 3.3: median distances over query/corpus, normalised to obs, distance ceiling = outliers removed
+Figure 3.3: median distances over query/corpus, normalised to all, distance ceiling = outliers removed
 </p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:lmeplot"></span>
-<img src="spund-pub_files/figure-html/lmeplot-1.png" alt="distances relation, normalised to obs, distance ceiling =  outliers removed" width="672"  />
+<img src="spund-pub_files/figure-html/lmeplot-1.png" alt="distances relation, normalised to all, distance ceiling =  outliers removed" width="672"  />
 <p class="caption">
-Figure 3.4: distances relation, normalised to obs, distance ceiling = outliers removed
+Figure 3.4: distances relation, normalised to all, distance ceiling = outliers removed
 </p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:gplot"></span>
@@ -592,6 +592,7 @@ Zimmerer, Vitor C., Stuart Watson, Douglas Turkington, I. Nicol Ferrier, and Wol
 </div>
 </div>
 </div>
+
 
 
 
