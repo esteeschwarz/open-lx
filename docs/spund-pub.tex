@@ -216,7 +216,7 @@ Our basic assumptions rely on the \emph{taxonomy of given end new information} c
 \section{data}\label{data}
 
 We built a corpus of the reddit r/schizophrenia thread (\texttt{n\ =1500371\ tokens}) and a reference corpus of r/unpopularopinion (\texttt{n\ =980731\ tokens}). Both were pos-tagged using the R udpipe package (Wijffels (\citeproc{ref-wijffels_udpipe_2023}{2023})) which tags according to the universal dependencies tagset maintained by De Marneffe et al. (\citeproc{ref-de_marneffe_universal_2021}{2021}). Still the available data can only, within the pipeline of steadily growing the corpus and devising the noun distances developed be just a starting point from where with more datapoints statistical evaluation becomes relevant.\\
-The dataframe used for our model (actual: M13) consists of \texttt{142321} distance datapoints (sample cf.~Tab. \ref{tab:data1} below) derived from the postagged corpus. Because the ranges of the url threads vary heavily between target and reference corpus, the distances are (in M13) normalised to the target corpus (cf.~Fig. \ref{fig:gplot} for the raw vs.~normalised distances comparison.) Outliers are excluded from the analysis since they very probably do not fulfill to can be counted as anaphoric references.
+The dataframe used for our model (actual: dataset 13) consists of \texttt{142321} distance datapoints (sample cf.~Tab. \ref{tab:data1} below) derived from the postagged corpus. Because the ranges of the url threads vary heavily between target and reference corpus, the distances are (in evaluation M1) normalised to the target corpus (cf.~Fig. \ref{fig:gplot1} for the raw vs.~normalised distances comparison.) Outliers are excluded from the analysis since they very probably do not fulfill to can be counted as anaphoric references.
 
 \begin{table}
 
@@ -226,17 +226,17 @@ The dataframe used for our model (actual: M13) consists of \texttt{142321} dista
 \toprule
 token & upos & target & pos & prepos & url\_id & range & q & det & aut\_id & total\_mentions & dist & embed.score & dist\_rel\_within & dist\_rel\_all & dist\_rel\_obs & dist\_rel\_ref\\
 \midrule
-organs & NOUN & ref & 279563 & ADJ & 1974 & 9245 & a & 0 & 5915 & 57 & 295 & 0.492 & 143 & 102 & 61 & 143\\
-word & NOUN & ref & 48013 & ADV & 1876 & 1798 & a & 0 & 3856 & 16 & 11 & 0.478 & 27 & 20 & 12 & 27\\
-community & NOUN & ref & 158702 & ADP & 1924 & 3600 & a & 0 & 4962 & 2 & 625 & 0.289 & 779 & 556 & 330 & 779\\
-flight & NOUN & ref & 144891 & PUNCT & 1915 & 1333 & a & 0 & 4796 & 6 & 48 & 0.393 & 162 & 115 & 69 & 162\\
-animals & NOUN & obs & 253509 & ADJ & 454 & 5112 & a & 0 & 23 & 2 & 100 & 0.351 & 37 & 63 & 37 & 88\\
+day & NOUN & ref & 473298 & ADJ & 2038 & 12559 & a & 0 & 7455 & 23 & 203 & 0.404 & 73 & 52 & 31 & 73\\
+money & NOUN & obs & 333813 & DET & 559 & 6036 & c & 1 & 715 & 13 & 411 & 0.351 & 130 & 218 & 130 & 305\\
+roles & NOUN & ref & 5458 & ADV & 1860 & 3762 & a & 0 & 3311 & 17 & 311 & 0.366 & 371 & 265 & 157 & 371\\
+burger & NOUN & ref & 105455 & NOUN & 1900 & 6207 & a & 0 & 4514 & 178 & 29 & 0.551 & 21 & 15 & 9 & 21\\
+subject & NOUN & ref & 702035 & ADP & 2169 & 5673 & a & 0 & 9171 & 10 & 714 & 0.414 & 565 & 403 & 239 & 565\\
 \addlinespace
-material & NOUN & ref & 176167 & PRON & 1929 & 6064 & a & 0 & 5079 & 12 & 537 & 0.321 & 397 & 284 & 169 & 397\\
-references & NOUN & ref & 161823 & ADV & 1925 & 6358 & a & 0 & 4633 & 5 & 9 & 0.457 & 6 & 5 & 3 & 6\\
-today & NOUN & obs & 27597 & INTJ & 56 & 233 & a & 0 & 110 & 2 & 103 & 0.465 & 841 & 1417 & 841 & 1983\\
-kidneys & NOUN & ref & 272499 & ADP & 1974 & 9245 & a & 0 & 5923 & 5 & 9 & 0.420 & 4 & 3 & 2 & 4\\
-character & NOUN & ref & 548367 & ADP & 2080 & 1404 & a & 0 & 8081 & 11 & 85 & 0.368 & 272 & 194 & 115 & 272\\
+space & NOUN & ref & 588399 & DET & 2103 & 4162 & b & 1 & 8410 & 10 & 551 & 0.319 & 594 & 424 & 252 & 594\\
+eyes & NOUN & obs & 773493 & PRON & 1205 & 1283 & e & 0 & 124 & 7 & 13 & 0.388 & 19 & 32 & 19 & 45\\
+trans & NOUN & obs & 636838 & ADJ & 931 & 3941 & a & 0 & 2033 & 41 & 114 & 0.403 & 55 & 93 & 55 & 130\\
+kids & NOUN & ref & 752839 & CCONJ & 2213 & 4435 & a & 0 & 9496 & 56 & 251 & 0.426 & 254 & 181 & 108 & 254\\
+behavior & NOUN & obs & 106287 & PRON & 217 & 1644 & f & 0 & 509 & 2 & 461 & 0.411 & 534 & 899 & 534 & 1258\\
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -338,6 +338,10 @@ In words:
 
 \textbf{\emph{sidenote:}} Positing the url range only as fixed effect instead of normalising the distances still estimates smaller distances for the reference corpus, but with no significance, the only significant difference with that regression formula shows in target=REF under condition e (antecedents: \texttt{my}).
 
+\subsection{model fazit}\label{model-fazit}
+
+As you can cf.~in the appendix with the seperate coefficient tables for each evaluation model, we find over all normalised subsets (vs.~obs/ref/all) significantly smaller distances in the reference corpus with varying effects for the conditions. In the subsets, where we didnt normalise or remove outliers, we find the opposite effect; the raw data does not prove our hypothesis. But just looking into the (raw) mean values plot of Fig. \ref{fig:barplot-mean2} we clearly see that normalising and removing outliers is necessary since mean distances there extend up to over 2000 tokens thus we wouldn't like to count all analogue noun occurences here as anaphora.
+
 \section{conclusion}\label{conclusion}
 
 After evaluating over the different approaches we find our hypothesis proved, that anaphora distances in the target corpus (target=OBS) stretch over a significantly (p\textless0.001) wider range of tokens between reference and referent in contrast to the chosen reference corpus. With our assumptions this could prove a less appropriate estimate for the coherence of the own texts produced in schizophrene language still having in mind, that a wider distance is not stating incoherence in general but instead just that these speakers allow for a wider anaphora distance in their text production. If these distances indeed lead to less coherent texts compared to the reference corpus must be subject to close reading and annotating samples manually and questioning them in terms of coherence by skilled readers though annotation may vary strongly depending on the disposition of readers and their general capacities of infering references. But if we agree that shorter reference distances increase text coherence then we might say the texts produced in the target corpus are less coherent than those in the reference corpus which alignes with the prospect classification of patients language in literature.
@@ -346,18 +350,9 @@ After evaluating over the different approaches we find our hypothesis proved, th
 
 \section{literature}\label{literature}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\#dataset\textless{}{-}7}
-\CommentTok{\#poster{-}ext}
-\end{Highlighting}
-\end{Shaded}
-
 \chapter{appendix}\label{appendix}
 
-eval output M13, normalised to all, distance ceiling = outliers removed, wordcount: 2527.
-
-\section{method (M13)}\label{method-m13}
+overall wordcount of paper: 2639.
 
 \section{legende}\label{legende}
 
@@ -403,9 +398,359 @@ q:e & query condition & my \\
 q:f & query condition & his,her,their,your \\
 \end{longtable}
 
-\section{anova analysis}\label{anova-analysis}
+\section{evaluation model: 1}\label{evaluation-model-1}
 
-\subsection{anova plain}\label{anova-plain}
+\subsection{meta}\label{meta}
+
+eval output data: 13, normalised to obs, distance ceiling = outliers removed
+
+\subsection{parameter setting}\label{parameter-setting}
+
+\begin{verbatim}
+##                value
+## norm_target _rel_obs
+## det.t           TRUE
+## limit           TRUE
+## author          TRUE
+## url             TRUE
+## embed1          TRUE
+## embed2             f
+## range1          TRUE
+## range2             f
+## rel             TRUE
+## lme            FALSE
+## lemma          FALSE
+\end{verbatim}
+
+\subsection{anova analysis}\label{anova-analysis}
+
+\subsubsection{anova plain}\label{anova-plain}
+
+formula: {[}\texttt{dist\_rel\_obs\ \textasciitilde{}\ target*q*det}{]}
+
+\begin{verbatim}
+##                  Df     Sum Sq   Mean Sq   F value    Pr(>F)    
+## target            1  452303747 452303747 7336.4625 < 2.2e-16 ***
+## q                 5   12320667   2464133   39.9688 < 2.2e-16 ***
+## det               1    1636109   1636109   26.5380 2.588e-07 ***
+## target:q          5    2747371    549474    8.9126 1.786e-08 ***
+## target:det        1     251297    251297    4.0761  0.043496 *  
+## q:det             2     905292    452646    7.3420  0.000648 ***
+## target:q:det      1     717222    717222   11.6335  0.000648 ***
+## Residuals    126209 7780971239     61651                        
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\subsubsection{anova of linear regression model}\label{anova-of-linear-regression-model}
+
+{[}\texttt{anova(summary(lmer))}{]}
+
+\begin{verbatim}
+## Type III Analysis of Variance Table with Satterthwaite's method
+##                Sum Sq  Mean Sq NumDF  DenDF   F value    Pr(>F)    
+## target        1144219  1144219     1   3519   23.4567 1.333e-06 ***
+## q              737483   147497     5 122421    3.0237 0.0098706 ** 
+## det             12165    12165     1 118425    0.2494 0.6175055    
+## range        50399647 50399647     1   1025 1033.2042 < 2.2e-16 ***
+## embed.score  25101881 25101881     1 122690  514.5942 < 2.2e-16 ***
+## target:q       776335   155267     5 123486    3.1830 0.0070933 ** 
+## target:det     541078   541078     1 123325   11.0922 0.0008672 ***
+## q:det          359520   179760     2 120804    3.6851 0.0250971 *  
+## target:q:det   219844   219844     1 123315    4.5068 0.0337615 *  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\subsubsection{linear regression coefficients}\label{linear-regression-coefficients}
+
+formula: {[}\texttt{dist\_rel\_obs\ \textasciitilde{}\ target*q*det+(1\textbar{}aut\_id)+range+(embed.score)+(1\textbar{}url\_id)}{]}
+
+\begin{verbatim}
+## Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+## lmerModLmerTest]
+## Formula: eval(expr(lmeform))
+##    Data: dfa
+## 
+## REML criterion at convergence: 1727639
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -2.8643 -0.5282 -0.1721  0.2469  6.9244 
+## 
+## Random effects:
+##  Groups   Name        Variance Std.Dev.
+##  aut_id   (Intercept)  2856     53.44  
+##  url_id   (Intercept)  8187     90.48  
+##  Residual             48780    220.86  
+## Number of obs: 126226, groups:  aut_id, 8238; url_id, 2145
+## 
+## Fixed effects:
+##                    Estimate Std. Error         df t value Pr(>|t|)    
+## (Intercept)       4.625e+02  5.159e+00  8.969e+03  89.651  < 2e-16 ***
+## targetref        -4.342e+01  6.299e+00  1.300e+03  -6.893 8.50e-12 ***
+## qb               -2.013e+01  1.527e+01  1.218e+05  -1.318 0.187483    
+## qc               -2.207e+01  5.499e+00  1.226e+05  -4.014 5.98e-05 ***
+## qd               -3.178e+01  2.225e+02  1.184e+05  -0.143 0.886426    
+## qe                2.492e+01  3.835e+00  1.247e+05   6.498 8.14e-11 ***
+## qf               -1.891e+01  4.892e+00  1.244e+05  -3.866 0.000111 ***
+## det               1.273e+01  4.774e+00  1.229e+05   2.667 0.007662 ** 
+## range            -5.810e-02  1.808e-03  1.025e+03 -32.143  < 2e-16 ***
+## embed.score      -1.829e+02  8.061e+00  1.227e+05 -22.685  < 2e-16 ***
+## targetref:qb      1.862e+01  1.719e+01  1.225e+05   1.083 0.278599    
+## targetref:qc      2.281e+01  1.279e+01  1.237e+05   1.784 0.074435 .  
+## targetref:qd      4.413e-01  1.254e+01  1.238e+05   0.035 0.971935    
+## targetref:qe     -2.321e+01  9.511e+00  1.239e+05  -2.441 0.014662 *  
+## targetref:qf      1.801e+01  1.210e+01  1.238e+05   1.488 0.136766    
+## targetref:det    -1.478e+01  1.084e+01  1.239e+05  -1.363 0.172784    
+## qb:det            5.915e+01  1.678e+01  1.219e+05   3.526 0.000423 ***
+## qd:det            3.648e+01  2.225e+02  1.184e+05   0.164 0.869736    
+## targetref:qb:det -5.198e+01  2.448e+01  1.233e+05  -2.123 0.033761 *  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## fit warnings:
+## fixed-effect model matrix is rank deficient so dropping 7 columns / coefficients
+## Some predictor variables are on very different scales: consider rescaling
+\end{verbatim}
+
+\subsection{plots}\label{plots}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/boxplot11-1} \caption{compare distances by corpus, normalised to obs, distance ceiling =  outliers removed}\label{fig:boxplot11}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/barplot-mean1-1} \caption{mean distances over query/corpus, normalised to obs, distance ceiling =  outliers removed}\label{fig:barplot-mean1}
+\end{figure}
+
+\begin{longtable}[]{@{}llrrr@{}}
+\caption{\label{tab:dfe-table1}mean/median table for model: 1}\tabularnewline
+\toprule\noalign{}
+target & q & n & mean & median \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+target & q & n & mean & median \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+obs & a & 42836 & 234 & 117 \\
+ref & a & 58615 & 121 & 47 \\
+obs & b & 2116 & 286 & 165 \\
+ref & b & 1130 & 121 & 44 \\
+obs & c & 5770 & 231 & 114 \\
+ref & c & 1274 & 120 & 48 \\
+obs & d & 5654 & 260 & 144 \\
+ref & d & 1525 & 122 & 49 \\
+obs & e & 3911 & 281 & 147 \\
+ref & e & 671 & 125 & 45 \\
+obs & f & 2311 & 222 & 133 \\
+ref & f & 413 & 116 & 47 \\
+\end{longtable}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/barplot-median1-1} \caption{median distances over query/corpus, normalised to obs, distance ceiling =  outliers removed}\label{fig:barplot-median1}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/lmeplot1-1} \caption{distances relation, normalised to obs, distance ceiling =  outliers removed}\label{fig:lmeplot1}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/gplot1-1} \caption{distances normalised vs. raw}\label{fig:gplot1}
+\end{figure}
+
+\section{evaluation model: 2}\label{evaluation-model-2}
+
+\subsection{meta}\label{meta-1}
+
+eval output data: 13, not normalised, distance ceiling =outliers not removed
+
+\subsection{parameter setting}\label{parameter-setting-1}
+
+\begin{verbatim}
+##             value
+## norm_target      
+## det.t        TRUE
+## limit       FALSE
+## author       TRUE
+## url          TRUE
+## embed1       TRUE
+## embed2          f
+## range1       TRUE
+## range2          f
+## rel         FALSE
+## lme         FALSE
+## lemma       FALSE
+\end{verbatim}
+
+\subsection{anova analysis}\label{anova-analysis-1}
+
+\subsubsection{anova plain}\label{anova-plain-1}
+
+formula: {[}\texttt{dist\ \textasciitilde{}\ target*q*det}{]}
+
+\begin{verbatim}
+##                  Df     Sum Sq    Mean Sq  F value  Pr(>F)    
+## target            1 1.1152e+11 1.1152e+11 268.8154 < 2e-16 ***
+## q                 5 9.8792e+08 1.9758e+08   0.4763 0.79425    
+## det               1 4.1537e+08 4.1537e+08   1.0012 0.31702    
+## target:q          5 2.3050e+09 4.6101e+08   1.1112 0.35184    
+## target:det        1 2.7199e+09 2.7199e+09   6.5561 0.01045 *  
+## q:det             2 2.4028e+08 1.2014e+08   0.2896 0.74857    
+## target:q:det      1 7.0024e+06 7.0024e+06   0.0169 0.89663    
+## Residuals    142304 5.9037e+13 4.1487e+08                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\subsubsection{anova of linear regression model}\label{anova-of-linear-regression-model-1}
+
+{[}\texttt{anova(summary(lmer))}{]}
+
+\begin{verbatim}
+## Type III Analysis of Variance Table with Satterthwaite's method
+##                  Sum Sq    Mean Sq NumDF  DenDF  F value  Pr(>F)    
+## target       1.2717e+09 1.2717e+09     1   3751   5.5781 0.01824 *  
+## q            6.3534e+08 1.2707e+08     5 137654   0.5574 0.73281    
+## det          7.3359e+05 7.3359e+05     1 133172   0.0032 0.95476    
+## range        2.8637e+07 2.8637e+07     1   2113   0.1256 0.72306    
+## embed.score  2.7199e+10 2.7199e+10     1 141732 119.3005 < 2e-16 ***
+## target:q     3.0753e+09 6.1507e+08     5 138840   2.6979 0.01920 *  
+## target:det   8.1028e+08 8.1028e+08     1 138434   3.5541 0.05940 .  
+## q:det        4.8717e+08 2.4358e+08     2 135770   1.0684 0.34355    
+## target:q:det 2.4585e+06 2.4585e+06     1 138496   0.0108 0.91729    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\subsubsection{linear regression coefficients}\label{linear-regression-coefficients-1}
+
+formula: {[}\texttt{dist\ \textasciitilde{}\ target*q*det+(1\textbar{}aut\_id)+range+(embed.score)+(1\textbar{}url\_id)}{]}
+
+\begin{verbatim}
+## Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+## lmerModLmerTest]
+## Formula: eval(expr(lmeform))
+##    Data: dfa
+## 
+## REML criterion at convergence: 3153644
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -23.760  -0.034  -0.006   0.025  55.672 
+## 
+## Random effects:
+##  Groups   Name        Variance  Std.Dev.
+##  aut_id   (Intercept)  28985985  5384   
+##  url_id   (Intercept)  98381104  9919   
+##  Residual             227983636 15099   
+## Number of obs: 142321, groups:  aut_id, 8395; url_id, 2145
+## 
+## Fixed effects:
+##                    Estimate Std. Error         df t value Pr(>|t|)    
+## (Intercept)       2.873e+03  4.211e+02  8.594e+03   6.823 9.53e-12 ***
+## targetref         1.341e+03  6.536e+02  2.412e+03   2.051   0.0404 *  
+## qb                6.895e+01  1.008e+03  1.363e+05   0.068   0.9454    
+## qc               -6.307e+02  3.622e+02  1.372e+05  -1.741   0.0816 .  
+## qd               -1.993e+03  1.522e+04  1.332e+05  -0.131   0.8958    
+## qe               -1.006e+02  2.520e+02  1.385e+05  -0.399   0.6899    
+## qf               -1.355e+02  3.218e+02  1.384e+05  -0.421   0.6737    
+## det               7.031e+02  3.145e+02  1.375e+05   2.236   0.0254 *  
+## range             6.798e-02  1.918e-01  2.113e+03   0.354   0.7231    
+## embed.score      -5.793e+03  5.304e+02  1.417e+05 -10.922  < 2e-16 ***
+## targetref:qb      6.675e+02  1.124e+03  1.371e+05   0.594   0.5527    
+## targetref:qc      3.752e+01  8.128e+02  1.395e+05   0.046   0.9632    
+## targetref:qd      2.022e+03  7.989e+02  1.395e+05   2.531   0.0114 *  
+## targetref:qe      2.269e+02  6.042e+02  1.395e+05   0.376   0.7073    
+## targetref:qf      3.210e+02  7.643e+02  1.393e+05   0.420   0.6745    
+## targetref:det    -1.416e+03  6.890e+02  1.397e+05  -2.055   0.0398 *  
+## qb:det           -1.077e+03  1.107e+03  1.364e+05  -0.973   0.3304    
+## qd:det            1.039e+03  1.521e+04  1.332e+05   0.068   0.9456    
+## targetref:qb:det -1.651e+02  1.590e+03  1.385e+05  -0.104   0.9173    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## fit warnings:
+## fixed-effect model matrix is rank deficient so dropping 7 columns / coefficients
+## Some predictor variables are on very different scales: consider rescaling
+\end{verbatim}
+
+\subsection{plots}\label{plots-1}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/boxplot12-1} \caption{compare distances by corpus, not normalised, distance ceiling =outliers not removed}\label{fig:boxplot12}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/barplot-mean2-1} \caption{mean distances over query/corpus, not normalised, distance ceiling =outliers not removed}\label{fig:barplot-mean2}
+\end{figure}
+
+\begin{longtable}[]{@{}llrrr@{}}
+\caption{\label{tab:dfe-table2}mean/median table for model: 2}\tabularnewline
+\toprule\noalign{}
+target & q & n & mean & median \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+target & q & n & mean & median \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+obs & a & 46318 & 525 & 92 \\
+ref & a & 68618 & 2305 & 118 \\
+obs & b & 2287 & 275 & 109 \\
+ref & b & 1315 & 1771 & 111 \\
+obs & c & 6253 & 666 & 89 \\
+ref & c & 1504 & 1147 & 119 \\
+obs & d & 6171 & 441 & 105 \\
+ref & d & 1765 & 2214 & 124 \\
+obs & e & 4278 & 298 & 109 \\
+ref & e & 795 & 2636 & 116 \\
+obs & f & 2520 & 249 & 77 \\
+ref & f & 497 & 1627 & 124 \\
+\end{longtable}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/barplot-median2-1} \caption{median distances over query/corpus, not normalised, distance ceiling =outliers not removed}\label{fig:barplot-median2}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/lmeplot2-1} \caption{distances relation, not normalised, distance ceiling =outliers not removed}\label{fig:lmeplot2}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/gplot2-1} \caption{distances normalised vs. raw}\label{fig:gplot2}
+\end{figure}
+
+\section{evaluation model: 3}\label{evaluation-model-3}
+
+\subsection{meta}\label{meta-2}
+
+eval output data: 13, normalised to all, distance ceiling = outliers removed
+
+\subsection{parameter setting}\label{parameter-setting-2}
+
+\begin{verbatim}
+##                value
+## norm_target _rel_all
+## det.t           TRUE
+## limit           TRUE
+## author          TRUE
+## url             TRUE
+## embed1          TRUE
+## embed2             f
+## range1          TRUE
+## range2             f
+## rel             TRUE
+## lme            FALSE
+## lemma          FALSE
+\end{verbatim}
+
+\subsection{anova analysis}\label{anova-analysis-2}
+
+\subsubsection{anova plain}\label{anova-plain-2}
 
 formula: {[}\texttt{dist\_rel\_all\ \textasciitilde{}\ target*q*det}{]}
 
@@ -423,7 +768,7 @@ formula: {[}\texttt{dist\_rel\_all\ \textasciitilde{}\ target*q*det}{]}
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 \end{verbatim}
 
-\subsection{anova of linear regression model}\label{anova-of-linear-regression-model}
+\subsubsection{anova of linear regression model}\label{anova-of-linear-regression-model-2}
 
 {[}\texttt{anova(summary(lmer))}{]}
 
@@ -443,7 +788,7 @@ formula: {[}\texttt{dist\_rel\_all\ \textasciitilde{}\ target*q*det}{]}
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 \end{verbatim}
 
-\subsection{linear regression coefficients}\label{linear-regression-coefficients}
+\subsubsection{linear regression coefficients}\label{linear-regression-coefficients-2}
 
 formula: {[}\texttt{dist\_rel\_all\ \textasciitilde{}\ target*q*det+(1\textbar{}aut\_id)+range+(embed.score)+(1\textbar{}url\_id)}{]}
 
@@ -494,18 +839,18 @@ formula: {[}\texttt{dist\_rel\_all\ \textasciitilde{}\ target*q*det+(1\textbar{}
 ## Some predictor variables are on very different scales: consider rescaling
 \end{verbatim}
 
-\section{plots}\label{plots}
+\subsection{plots}\label{plots-2}
 
 \begin{figure}[H]
-\includegraphics{spund-pub_files/figure-latex/boxplot1-1} \caption{compare distances by corpus, normalised to all, distance ceiling =  outliers removed}\label{fig:boxplot1}
+\includegraphics{spund-pub_files/figure-latex/boxplot13-1} \caption{compare distances by corpus, normalised to all, distance ceiling =  outliers removed}\label{fig:boxplot13}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics{spund-pub_files/figure-latex/barplot-median-1} \caption{mean distances over query/corpus, normalised to all, distance ceiling =  outliers removed}\label{fig:barplot-median}
+\includegraphics{spund-pub_files/figure-latex/barplot-mean3-1} \caption{mean distances over query/corpus, normalised to all, distance ceiling =  outliers removed}\label{fig:barplot-mean3}
 \end{figure}
 
 \begin{longtable}[]{@{}llrrr@{}}
-\caption{\label{tab:dfe-table}mean/median table for M13}\tabularnewline
+\caption{\label{tab:dfe-table3}mean/median table for model: 3}\tabularnewline
 \toprule\noalign{}
 target & q & n & mean & median \\
 \midrule\noalign{}
@@ -531,15 +876,341 @@ ref & f & 413 & 195 & 79 \\
 \end{longtable}
 
 \begin{figure}[H]
-\includegraphics{spund-pub_files/figure-latex/barplot-mean-1} \caption{median distances over query/corpus, normalised to all, distance ceiling =  outliers removed}\label{fig:barplot-mean}
+\includegraphics{spund-pub_files/figure-latex/barplot-median3-1} \caption{median distances over query/corpus, normalised to all, distance ceiling =  outliers removed}\label{fig:barplot-median3}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics{spund-pub_files/figure-latex/lmeplot-1} \caption{distances relation, normalised to all, distance ceiling =  outliers removed}\label{fig:lmeplot}
+\includegraphics{spund-pub_files/figure-latex/lmeplot3-1} \caption{distances relation, normalised to all, distance ceiling =  outliers removed}\label{fig:lmeplot3}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics{spund-pub_files/figure-latex/gplot-1} \caption{distances normalised vs. raw}\label{fig:gplot}
+\includegraphics{spund-pub_files/figure-latex/gplot3-1} \caption{distances normalised vs. raw}\label{fig:gplot3}
+\end{figure}
+
+\section{evaluation model: 4}\label{evaluation-model-4}
+
+\subsection{meta}\label{meta-3}
+
+eval output data: 13, normalised to ref, distance ceiling = outliers removed
+
+\subsection{parameter setting}\label{parameter-setting-3}
+
+\begin{verbatim}
+##                value
+## norm_target _rel_ref
+## det.t           TRUE
+## limit           TRUE
+## author          TRUE
+## url             TRUE
+## embed1          TRUE
+## embed2             f
+## range1          TRUE
+## range2             f
+## rel             TRUE
+## lme            FALSE
+## lemma          FALSE
+\end{verbatim}
+
+\subsection{anova analysis}\label{anova-analysis-3}
+
+\subsubsection{anova plain}\label{anova-plain-3}
+
+formula: {[}\texttt{dist\_rel\_ref\ \textasciitilde{}\ target*q*det}{]}
+
+\begin{verbatim}
+##                  Df     Sum Sq    Mean Sq   F value    Pr(>F)    
+## target            1 2.5135e+09 2513546743 7336.4625 < 2.2e-16 ***
+## q                 5 6.8469e+07   13693706   39.9688 < 2.2e-16 ***
+## det               1 9.0922e+06    9092198   26.5380 2.588e-07 ***
+## target:q          5 1.5268e+07    3053543    8.9126 1.786e-08 ***
+## target:det        1 1.3965e+06    1396511    4.0761  0.043496 *  
+## q:det             2 5.0309e+06    2515448    7.3420  0.000648 ***
+## target:q:det      1 3.9858e+06    3985754   11.6335  0.000648 ***
+## Residuals    126209 4.3240e+10     342610                        
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\subsubsection{anova of linear regression model}\label{anova-of-linear-regression-model-3}
+
+{[}\texttt{anova(summary(lmer))}{]}
+
+\begin{verbatim}
+## Type III Analysis of Variance Table with Satterthwaite's method
+##                 Sum Sq   Mean Sq NumDF  DenDF   F value    Pr(>F)    
+## target         6358663   6358663     1   3519   23.4567 1.333e-06 ***
+## q              4098347    819669     5 122421    3.0237 0.0098706 ** 
+## det              67605     67605     1 118425    0.2494 0.6175055    
+## range        280081403 280081403     1   1025 1033.2042 < 2.2e-16 ***
+## embed.score  139496414 139496414     1 122690  514.5942 < 2.2e-16 ***
+## target:q       4314256    862851     5 123486    3.1830 0.0070933 ** 
+## target:det     3006886   3006886     1 123325   11.0922 0.0008672 ***
+## q:det          1997926    998963     2 120804    3.6851 0.0250971 *  
+## target:q:det   1221717   1221717     1 123315    4.5068 0.0337615 *  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\subsubsection{linear regression coefficients}\label{linear-regression-coefficients-3}
+
+formula: {[}\texttt{dist\_rel\_ref\ \textasciitilde{}\ target*q*det+(1\textbar{}aut\_id)+range+(embed.score)+(1\textbar{}url\_id)}{]}
+
+\begin{verbatim}
+## Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+## lmerModLmerTest]
+## Formula: eval(expr(lmeform))
+##    Data: dfa
+## 
+## REML criterion at convergence: 1944096
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -2.8643 -0.5282 -0.1721  0.2469  6.9244 
+## 
+## Random effects:
+##  Groups   Name        Variance Std.Dev.
+##  aut_id   (Intercept)  15871   126.0   
+##  url_id   (Intercept)  45496   213.3   
+##  Residual             271080   520.7   
+## Number of obs: 126226, groups:  aut_id, 8238; url_id, 2145
+## 
+## Fixed effects:
+##                    Estimate Std. Error         df t value Pr(>|t|)    
+## (Intercept)       1.090e+03  1.216e+01  8.969e+03  89.651  < 2e-16 ***
+## targetref        -1.024e+02  1.485e+01  1.300e+03  -6.893 8.50e-12 ***
+## qb               -4.744e+01  3.600e+01  1.218e+05  -1.318 0.187483    
+## qc               -5.203e+01  1.296e+01  1.226e+05  -4.014 5.98e-05 ***
+## qd               -7.492e+01  5.246e+02  1.184e+05  -0.143 0.886426    
+## qe                5.876e+01  9.042e+00  1.247e+05   6.498 8.14e-11 ***
+## qf               -4.458e+01  1.153e+01  1.244e+05  -3.866 0.000111 ***
+## det               3.001e+01  1.125e+01  1.229e+05   2.667 0.007662 ** 
+## range            -1.370e-01  4.261e-03  1.025e+03 -32.143  < 2e-16 ***
+## embed.score      -4.311e+02  1.900e+01  1.227e+05 -22.685  < 2e-16 ***
+## targetref:qb      4.389e+01  4.051e+01  1.225e+05   1.083 0.278599    
+## targetref:qc      5.378e+01  3.015e+01  1.237e+05   1.784 0.074435 .  
+## targetref:qd      1.040e+00  2.957e+01  1.238e+05   0.035 0.971935    
+## targetref:qe     -5.472e+01  2.242e+01  1.239e+05  -2.441 0.014662 *  
+## targetref:qf      4.246e+01  2.853e+01  1.238e+05   1.488 0.136766    
+## targetref:det    -3.485e+01  2.556e+01  1.239e+05  -1.363 0.172784    
+## qb:det            1.394e+02  3.955e+01  1.219e+05   3.526 0.000423 ***
+## qd:det            8.600e+01  5.244e+02  1.184e+05   0.164 0.869736    
+## targetref:qb:det -1.225e+02  5.772e+01  1.233e+05  -2.123 0.033761 *  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## fit warnings:
+## fixed-effect model matrix is rank deficient so dropping 7 columns / coefficients
+## Some predictor variables are on very different scales: consider rescaling
+\end{verbatim}
+
+\subsection{plots}\label{plots-3}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/boxplot14-1} \caption{compare distances by corpus, normalised to ref, distance ceiling =  outliers removed}\label{fig:boxplot14}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/barplot-mean4-1} \caption{mean distances over query/corpus, normalised to ref, distance ceiling =  outliers removed}\label{fig:barplot-mean4}
+\end{figure}
+
+\begin{longtable}[]{@{}llrrr@{}}
+\caption{\label{tab:dfe-table4}mean/median table for model: 4}\tabularnewline
+\toprule\noalign{}
+target & q & n & mean & median \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+target & q & n & mean & median \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+obs & a & 42836 & 553 & 275 \\
+ref & a & 58615 & 285 & 111 \\
+obs & b & 2116 & 674 & 390 \\
+ref & b & 1130 & 286 & 104 \\
+obs & c & 5770 & 543 & 268 \\
+ref & c & 1274 & 284 & 112 \\
+obs & d & 5654 & 612 & 340 \\
+ref & d & 1525 & 287 & 116 \\
+obs & e & 3911 & 662 & 347 \\
+ref & e & 671 & 295 & 105 \\
+obs & f & 2311 & 523 & 313 \\
+ref & f & 413 & 273 & 111 \\
+\end{longtable}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/barplot-median4-1} \caption{median distances over query/corpus, normalised to ref, distance ceiling =  outliers removed}\label{fig:barplot-median4}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/lmeplot4-1} \caption{distances relation, normalised to ref, distance ceiling =  outliers removed}\label{fig:lmeplot4}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/gplot4-1} \caption{distances normalised vs. raw}\label{fig:gplot4}
+\end{figure}
+
+\section{evaluation model: 6}\label{evaluation-model-6}
+
+\subsection{meta}\label{meta-4}
+
+eval output data: 13, not normalised, distance ceiling =outliers removed
+
+\subsection{parameter setting}\label{parameter-setting-4}
+
+\begin{verbatim}
+##             value
+## norm_target      
+## det.t        TRUE
+## limit        TRUE
+## author       TRUE
+## url          TRUE
+## embed1       TRUE
+## embed2          f
+## range1       TRUE
+## range2          f
+## rel         FALSE
+## lme         FALSE
+## lemma       FALSE
+\end{verbatim}
+
+\subsection{anova analysis}\label{anova-analysis-4}
+
+\subsubsection{anova plain}\label{anova-plain-4}
+
+formula: {[}\texttt{dist\ \textasciitilde{}\ target*q*det}{]}
+
+\begin{verbatim}
+##                  Df     Sum Sq Mean Sq F value    Pr(>F)    
+## target            1    3284330 3284330 84.1223 < 2.2e-16 ***
+## q                 5    1633205  326641  8.3663  6.39e-08 ***
+## det               1     431404  431404 11.0496 0.0008873 ***
+## target:q          5     441118   88224  2.2597 0.0457798 *  
+## target:det        1      16732   16732  0.4286 0.5126999    
+## q:det             2      25549   12774  0.3272 0.7209470    
+## target:q:det      1       6009    6009  0.1539 0.6948226    
+## Residuals    126209 4927490433   39042                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\subsubsection{anova of linear regression model}\label{anova-of-linear-regression-model-4}
+
+{[}\texttt{anova(summary(lmer))}{]}
+
+\begin{verbatim}
+## Type III Analysis of Variance Table with Satterthwaite's method
+##                Sum Sq  Mean Sq NumDF  DenDF   F value Pr(>F)    
+## target            218      218     1  17034    0.0061 0.9377    
+## q              109358    21872     5 124317    0.6129 0.6901    
+## det             20678    20678     1 121247    0.5794 0.4465    
+## range        15332432 15332432     1    912  429.6377 <2e-16 ***
+## embed.score  77286239 77286239     1 105351 2165.6761 <2e-16 ***
+## target:q       304923    60985     5 125126    1.7089 0.1287    
+## target:det      17833    17833     1 124982    0.4997 0.4796    
+## q:det           37151    18576     2 123066    0.5205 0.5942    
+## target:q:det    23985    23985     1 124972    0.6721 0.4123    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\subsubsection{linear regression coefficients}\label{linear-regression-coefficients-4}
+
+formula: {[}\texttt{dist\ \textasciitilde{}\ target*q*det+(1\textbar{}aut\_id)+range+(embed.score)+(1\textbar{}url\_id)}{]}
+
+\begin{verbatim}
+## Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+## lmerModLmerTest]
+## Formula: eval(expr(lmeform))
+##    Data: dfa
+## 
+## REML criterion at convergence: 1685333
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -2.0402 -0.6622 -0.3317  0.3419  4.1697 
+## 
+## Random effects:
+##  Groups   Name        Variance Std.Dev.
+##  aut_id   (Intercept)  1394     37.34  
+##  url_id   (Intercept)  1072     32.74  
+##  Residual             35687    188.91  
+## Number of obs: 126226, groups:  aut_id, 8238; url_id, 2145
+## 
+## Fixed effects:
+##                    Estimate Std. Error         df t value Pr(>|t|)    
+## (Intercept)       2.533e+02  3.618e+00  1.966e+04  70.000  < 2e-16 ***
+## targetref         1.326e+00  2.954e+00  1.890e+03   0.449  0.65362    
+## qb               -8.195e+00  1.300e+01  1.239e+05  -0.630  0.52845    
+## qc               -8.144e+00  4.675e+00  1.243e+05  -1.742  0.08150 .  
+## qd               -1.117e+02  1.902e+02  1.212e+05  -0.587  0.55726    
+## qe                1.392e+01  3.248e+00  1.256e+05   4.285 1.83e-05 ***
+## qf               -6.628e+00  4.145e+00  1.253e+05  -1.599  0.10981    
+## det               3.793e+00  4.058e+00  1.245e+05   0.935  0.35005    
+## range             1.535e-02  7.406e-04  9.124e+02  20.728  < 2e-16 ***
+## embed.score      -3.110e+02  6.682e+00  1.054e+05 -46.537  < 2e-16 ***
+## targetref:qb      4.017e+00  1.464e+01  1.244e+05   0.274  0.78373    
+## targetref:qc      4.577e+00  1.089e+01  1.253e+05   0.420  0.67442    
+## targetref:qd     -2.061e+00  1.069e+01  1.253e+05  -0.193  0.84707    
+## targetref:qe     -2.134e+01  8.099e+00  1.255e+05  -2.635  0.00841 ** 
+## targetref:qf      8.889e+00  1.031e+01  1.254e+05   0.862  0.38849    
+## targetref:det     1.178e+00  9.236e+00  1.253e+05   0.127  0.89855    
+## qb:det            1.714e+01  1.428e+01  1.239e+05   1.200  0.23002    
+## qd:det            1.126e+02  1.902e+02  1.212e+05   0.592  0.55380    
+## targetref:qb:det -1.710e+01  2.086e+01  1.250e+05  -0.820  0.41233    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## fit warnings:
+## fixed-effect model matrix is rank deficient so dropping 7 columns / coefficients
+## Some predictor variables are on very different scales: consider rescaling
+\end{verbatim}
+
+\subsection{plots}\label{plots-4}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/boxplot16-1} \caption{compare distances by corpus, not normalised, distance ceiling =outliers removed}\label{fig:boxplot16}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/barplot-mean6-1} \caption{mean distances over query/corpus, not normalised, distance ceiling =outliers removed}\label{fig:barplot-mean6}
+\end{figure}
+
+\begin{longtable}[]{@{}llrrr@{}}
+\caption{\label{tab:dfe-table6}mean/median table for model: 6}\tabularnewline
+\toprule\noalign{}
+target & q & n & mean & median \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+target & q & n & mean & median \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+obs & a & 42836 & 161 & 77 \\
+ref & a & 58615 & 172 & 81 \\
+obs & b & 2116 & 169 & 109 \\
+ref & b & 1130 & 168 & 78 \\
+obs & c & 5770 & 159 & 75 \\
+ref & c & 1274 & 175 & 84 \\
+obs & d & 5654 & 170 & 86 \\
+ref & d & 1525 & 176 & 83 \\
+obs & e & 3911 & 175 & 92 \\
+ref & e & 671 & 165 & 71 \\
+obs & f & 2311 & 144 & 62 \\
+ref & f & 413 & 171 & 82 \\
+\end{longtable}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/barplot-median6-1} \caption{median distances over query/corpus, not normalised, distance ceiling =outliers removed}\label{fig:barplot-median6}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/lmeplot6-1} \caption{distances relation, not normalised, distance ceiling =outliers removed}\label{fig:lmeplot6}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics{spund-pub_files/figure-latex/gplot6-1} \caption{distances normalised vs. raw}\label{fig:gplot6}
 \end{figure}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
