@@ -17,5 +17,45 @@ bibliography: '/Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/paper/psych.bib'
 link-citations: yes
 github-repo: esteeschwarz/SPUND-LX/tree/main/psych
 ---
+
+```{r,echo=F}
+myname<-ifelse(exists("myname"),myname,"placeholder")
+mtrk<-ifelse(exists("mtrk"),mtrk,"placeholder")
+  
+```
+
 # index
-linguistics, AVL, alii pub essais extension.
+
+Hausarbeit im Seminar: *Sprache und Psychose (PHILGEIST_S_16827_25S)*   
+Dozent: Anatol Stefanowitsch   
+abgegeben von: `r myname`   
+MtrNr: `r mtrk`   
+abgegeben am: `r Sys.Date()`   
+an: Freie Universität Berlin   
+
+
+## Selbständigkeitserklärung
+
+Hiermit versichere ich,
+
+- dass ich die von mir vorgelegte Arbeit mit dem Titel
+
+**coherence & proposition observations in :schizophrenia: threads**
+
+selbständig abgefasst habe und
+
+- dass ich keine weiteren Hilfsmittel verwendet habe als diejenigen, die im Vorfeld explizit zugelassen und von mir angegeben wurden und
+- dass ich die Stellen der Arbeit, die dem Wortlaut oder dem Sinn nach anderen Werken (dazu zählen auch Internetquellen und KI-basierte Tools) entnommen sind, unter Angabe der Quelle kenntlich gemacht habe und
+- dass ich, sollte ich explizit im Vorfeld zugelassene Hilfsmittel (z.B. KI-Tools) verwendet haben, diese in einer tabellarischen Übersicht (\@ref(tab:kitable)) in meiner schriftlichen Arbeit integriert habe und
+- dass ich die vorliegende Arbeit noch nicht für andere Prüfungen eingereicht habe.
+
+Mir ist außerdem bewusst,
+
+- dass ich diese Prüfung nicht bestanden habe, wenn ich die mir bekannte Frist für die Einreichung meiner schriftlichen Arbeit versäume und
+- dass ich im Falle eines Täuschungsversuchs diese Prüfung nicht bestanden habe und
+- dass ich im Falle eines schwerwiegenden Täuschungsversuchs ggf. die Gesamtprüfung endgültig nicht bestanden habe und in diesem Studiengang bzw. Studienangebot nicht mehr weiter studieren darf und
+- dass ich, sofern ich zur Erstellung dieser Arbeit KI-basierte Tools verwendet habe, die Verantwortung für durch die KI generierte eventuell fehlerhafte oder verzerrte (bias) Inhalte, fehlerhafte Referenzen, Verstöße gegen das Datenschutz- und Urheberrecht oder Plagiate trage.
+
+Ich bestätige mit meiner Unterschrift die Richtigkeit dieser Angaben.   
+
+`r Sys.Date()`,
