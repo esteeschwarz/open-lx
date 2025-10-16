@@ -2,20 +2,14 @@
 title: "SPUND-LX / AVL :: Appendix"
 author: "st. schwarz"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+output: pdf_document
 documentclass: book
-# documentclass: article
-# classoption: 
-#   - 12pt
-#   - a4paper
-  # - twocolumn  # if needed
-url: https://esteeschwarz.github.io/open-lx
-# cover-image: path to the social sharing image like images/cover.jpg
-description: |
-    SPUND-LX - AVL - alii :: appendix & pub essais
-bibliography: '/Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/paper/psych.bib'
-link-citations: yes
-github-repo: esteeschwarz/SPUND-LX/tree/main/psych
+url: "https://esteeschwarz.github.io/open-lx"
+description: "SPUND-LX - AVL - alii :: appendix & pub essais\n"
+bibliography: "/Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/paper/psych.bib"
+link-citations: true
+github-repo: "esteeschwarz/SPUND-LX/tree/main/psych"
+site: bookdown::bookdown_site
 ---
 
 ```{r,echo=F}
@@ -59,3 +53,7 @@ Mir ist außerdem bewusst,
 Ich bestätige mit meiner Unterschrift die Richtigkeit dieser Angaben.   
 
 `r Sys.Date()`,
+
+
+
+\clearpage
