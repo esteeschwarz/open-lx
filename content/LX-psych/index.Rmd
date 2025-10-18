@@ -1,12 +1,25 @@
---- 
-title: "SPUND-LX / AVL :: Appendix"
+---
+title: "coherence & propositions"
+subtitle: "measuring reference distance in :schizophrenia: threads"
 author: "st. schwarz"
 date: "`r Sys.Date()`"
-output: pdf_document
+# output: 
+#     bookdown::html_document2:
+#       base_format: tufte::tufte_html
+#       keep_md: true
+#       self_contained: true
+    #fig_path: "plots/"
+  # md_document:
+  #   variant: markdown_github
+  #   pandoc_args: ["--wrap=none"]
+  #keep_md: yes
+bibliography: /Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/paper/psych.bib
+nocite: '@*'
+#keep_md: true
 documentclass: book
 url: "https://esteeschwarz.github.io/open-lx"
 description: "SPUND-LX - AVL - alii :: appendix & pub essais\n"
-bibliography: "/Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/paper/psych.bib"
+#bibliography: "/Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/paper/psych.bib"
 link-citations: true
 github-repo: "esteeschwarz/SPUND-LX/tree/main/psych"
 site: bookdown::bookdown_site
