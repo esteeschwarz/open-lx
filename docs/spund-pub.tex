@@ -38,46 +38,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -157,14 +117,21 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={coherence \& proposition observations in :schizophrenia: threads},
+  pdftitle={coherence \& propositions},
   pdfauthor={st. schwarz},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{coherence \& proposition observations in :schizophrenia: threads}
+\title{coherence \& propositions}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{measuring reference distance in :schizophrenia: threads}
 \author{st. schwarz}
-\date{2025-10-18}
+\date{2025-10-19}
 
 \begin{document}
 \maketitle
@@ -179,7 +146,7 @@ Hausarbeit im Seminar: \emph{Sprache und Psychose (PHILGEIST\_S\_16827\_25S)}\\
 Dozent: Anatol Stefanowitsch\\
 abgegeben von: placeholder\\
 MtrNr: placeholder\\
-abgegeben am: 2025-10-18\\
+abgegeben am: 2025-10-19\\
 an: Freie Universität Berlin
 
 \section{Selbständigkeitserklärung}\label{selbstuxe4ndigkeitserkluxe4rung}
@@ -192,7 +159,7 @@ Hiermit versichere ich,
   dass ich die von mir vorgelegte Arbeit mit dem Titel
 \end{itemize}
 
-\textbf{coherence \& proposition observations in :schizophrenia: threads}
+\textbf{coherence \& propositions: measuring reference distance in :schizophrenia: threads}
 
 selbständig abgefasst habe und
 
@@ -224,22 +191,15 @@ Mir ist außerdem bewusst,
 
 Ich bestätige mit meiner Unterschrift die Richtigkeit dieser Angaben.
 
-2025-10-18,
+2025-10-19,
 
 \clearpage
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\#dataset\textless{}{-}7}
-\CommentTok{\#prelim}
-\end{Highlighting}
-\end{Shaded}
 
 \chapter{15303.ha.draft}\label{ha.draft}
 
 \section{subject}\label{subject}
 
-In this paper we want to explore \textbf{reference marking and coherence in schizophrenia language} by measuring corpus distance of similar nouns preceded by specified determinants.\footnote{snc.1:h2.pb.1000char/pg.queries.cites}
+In this paper we want to explore \textbf{reference marking and coherence in schizophrenia language} by measuring corpus distance of similar nouns preceded by specified determinants.
 
 Inspired by Zimmerer et al. (\citeproc{ref-zimmerer_deictic_2017}{2017}) we are interested in observations concerning coherence and propositional statement conditions in schizophrenia language. Further Nenchev et al. (\citeproc{ref-nenchev_linguistic_2024}{2024}) consider investigating in coherence as important ``linguistic aspect in psychotic language addressing the relatedness between word chunks or sentences'' an approach to ``capture formal thought disorders (disorganisation, tangentiality, derailment and poverty of speech) in schizophrenia'' (cf. Nenchev et al. (\citeproc{ref-nenchev_linguistic_2024}{2024}), 2.1: linguistic markers of schizophrenia). As this is not a clinical but a corpus linguistics study we do not intend to concur with recent psychiatric literature but rather take the subject as welcome task to test corpus linguistics methods.
 
@@ -280,17 +240,17 @@ The dataframe used for our model (actual: dataset 13) consists of \texttt{142321
 \toprule
 token & upos & target & pos & prepos & url\_id & range & q & det & aut\_id & total\_mentions & dist & embed.score & dist\_rel\_within & dist\_rel\_all & dist\_rel\_obs & dist\_rel\_ref & embed\_c & dist\_rel\_scaled\\
 \midrule
-celebs & NOUN & ref & 426950 & VERB & 2022 & 5904 & a & 0 & 5692 & 2 & 66 & 31.37 & 50 & 36 & 21 & 50 & -10.93 & 0.01\\
-night & NOUN & obs & 952500 & DET & 1480 & 671 & a & 1 & 2607 & 3 & 3 & 30.60 & 9 & 14 & 9 & 20 & -11.71 & 0.00\\
-student & NOUN & obs & 490311 & ADJ & 739 & 1983 & a & 0 & 550 & 3 & 210 & 38.02 & 202 & 339 & 202 & 475 & -4.28 & 0.11\\
-psychosis & NOUN & obs & 800580 & ADP & 1249 & 552 & a & 0 & 448 & 4 & 19 & 39.11 & 65 & 110 & 65 & 154 & -3.20 & 0.03\\
-people & NOUN & ref & 802272 & NOUN & 2237 & 13823 & a & 0 & 8313 & 44 & 778 & 36.49 & 252 & 180 & 107 & 252 & -5.81 & 0.06\\
+films & NOUN & ref & 112012 & AUX & 1902 & 1501 & a & 0 & 3928 & 7 & 121 & 44.94 & 362 & 258 & 153 & 362 & 2.64 & 0.08\\
+Sleep & NOUN & obs & 823700 & CCONJ & 1280 & 1718 & a & 0 & 2391 & 8 & 358 & 31.30 & 397 & 668 & 397 & 935 & -11.00 & 0.21\\
+Treatment & NOUN & obs & 988835 & NOUN & 1519 & 2991 & a & 0 & 37 & 4 & 69 & 52.42 & 44 & 74 & 44 & 103 & 10.11 & 0.02\\
+sucks & NOUN & ref & 100536 & PRON & 1898 & 2140 & a & 0 & 4438 & 2 & 722 & 37.11 & 1513 & 1081 & 642 & 1513 & -5.19 & 0.34\\
+subreddit & NOUN & ref & 722521 & DET & 2187 & 402 & b & 1 & 82 & 5 & 22 & 58.22 & 245 & 175 & 104 & 245 & 15.91 & 0.05\\
 \addlinespace
-sense & NOUN & ref & 687980 & ADV & 2154 & 3284 & a & 0 & 3336 & 6 & 17 & 42.36 & 23 & 17 & 10 & 23 & 0.06 & 0.01\\
-schizophrenics & NOUN & obs & 199347 & NOUN & 374 & 2963 & a & 0 & 23 & 4 & 37 & 55.73 & 24 & 40 & 24 & 56 & 13.42 & 0.01\\
-pizza & NOUN & ref & 628578 & VERB & 2123 & 3685 & a & 0 & 6092 & 4 & 12 & 27.46 & 15 & 10 & 6 & 15 & -14.85 & 0.00\\
-hallucinations & NOUN & obs & 1019891 & ADJ & 1559 & 509 & a & 0 & 1257 & 4 & 17 & 60.58 & 64 & 107 & 64 & 150 & 18.28 & 0.03\\
-languages & NOUN & ref & 816739 & ADJ & 2243 & 6849 & a & 0 & 10051 & 133 & 82 & 52.64 & 54 & 38 & 23 & 54 & 10.34 & 0.01\\
+things & NOUN & obs & 1033241 & VERB & 1577 & 1544 & a & 0 & 61 & 7 & 205 & 36.99 & 253 & 425 & 253 & 596 & -5.31 & 0.13\\
+medication & NOUN & obs & 898555 & AUX & 1401 & 1883 & a & 0 & 2525 & 5 & 27 & 54.29 & 27 & 46 & 27 & 64 & 11.99 & 0.01\\
+fixing & NOUN & ref & 405059 & NOUN & 2015 & 5062 & a & 0 & 6980 & 2 & 153 & 42.38 & 136 & 97 & 58 & 136 & 0.08 & 0.03\\
+time & NOUN & obs & 52214 & ADJ & 111 & 1344 & a & 0 & 302 & 2 & 719 & 31.49 & 1018 & 1714 & 1018 & 2400 & -10.81 & 0.53\\
+fund & NOUN & ref & 667261 & DET & 2147 & 2358 & d & 1 & 8950 & 20 & 654 & 49.23 & 1244 & 889 & 528 & 1244 & 6.92 & 0.28\\
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -396,7 +356,8 @@ The issue is solved since we found a ressource saving method of computing the em
 
 \subsection{covariances}\label{covariances}
 
-Effects of the same direction for target OBS and REF are observed in \texttt{qc,\ range} (with positive effects in \texttt{qc}) while contrary effects are observed in \texttt{qb,\ qd,\ qe,\ qf,\ det,\ embed.score,\ qb:det,\ qd:det} (with negative effects in target=obs and vcvs.)\\
+Effects of the same direction for target OBS and REF are observed in \texttt{qc,\ range} (with positive effects in \texttt{qc}) while contrary effects are observed in \texttt{qb,\ qd,\ qe,\ qf,\ det,\ embed.score,\ qb:det,\ qd:det} (with negative effects in target=obs and vcvs) (cf.~sec.~\ref{covar}).
+
 In words:
 
 \begin{itemize}
@@ -464,8 +425,8 @@ det & antecedent POS==DET & TRUE,FALSE \\
 aut\_id & author & author hash \\
 lemma & lemma & noun lemma \\
 range & url range of distance devised & 1..maxlength(urlthread) \\
-embed.score & semantic similarity score lemma vs.~thread & 0..1 \\
-q:a & query condition & .* \\
+embed.score & semantic similarity score lemma vs.~thread & 0:1 (scaled 0:100) \\
+q:a & query condition & any !\{b,c,d,e,f\} \\
 q:b & query condition & this,that,those,these \\
 q:c & query condition & the \\
 q:d & query condition & a,an,any,some \\
@@ -473,65 +434,110 @@ q:e & query condition & my \\
 q:f & query condition & his,her,their,your \\
 \end{longtable}
 
-\section{fixed effects in M1}\label{fixed-effects-in-m1}
+\section{covariance effects in M1}\label{covar}
 
 \begin{verbatim}
-## 10 x 19 Matrix of class "dgeMatrix"
-##              (Intercept)    targetref            qb            qc            qd
-## qb          -0.656706044  1.207097617  2.331532e+02  4.972520e-02 -1.123020e-01
-## qc           0.218792760  0.035239530  4.972520e-02  3.023656e+01  2.139728e+01
-## qd           0.213024201 -0.057995645 -1.123020e-01  2.139728e+01  4.951568e+04
-## qe          -1.181562271  1.364128579  1.204280e+00  1.804251e-02 -3.122280e-02
-## qf          -0.999266163  1.466700457  1.321795e+00  7.762191e-02 -1.314356e-03
-## det         -1.792510882  1.297436814  1.285782e+00 -2.140515e+01 -2.147507e+01
-## range       -0.003430091 -0.004456289 -5.684751e-05 -1.771291e-06 -3.063886e-05
-## embed.score -0.304346598  0.003347917 -9.761775e-03 -5.578520e-03 -5.250995e-03
-## qb:det       0.848433419 -0.992845655 -2.331005e+02  2.141809e+01  2.160561e+01
-## qd:det      -0.311056815  0.114084229 -1.000347e-02 -4.340561e-03 -4.948523e+04
-##                        qe            qf           det         range
-## qb           1.204280e+00  1.321795e+00  1.285782e+00 -5.684751e-05
-## qc           1.804251e-02  7.762191e-02 -2.140515e+01 -1.771291e-06
-## qd          -3.122280e-02 -1.314356e-03 -2.147507e+01 -3.063886e-05
-## qe           1.471083e+01  1.256452e+00  1.298793e+00  1.601799e-05
-## qf           1.256452e+00  2.393642e+01  1.298587e+00  2.964445e-05
-## det          1.298793e+00  1.298587e+00  2.279447e+01  1.314184e-05
-## range        1.601799e-05  2.964445e-05  1.314184e-05  3.267330e-06
-## embed.score -5.662857e-03 -1.123025e-02  1.088365e-02  9.235581e-06
-## qb:det      -1.229842e+00 -1.099137e+00 -2.275232e+01  7.012525e-05
-## qd:det      -6.757926e-03 -7.304582e-03  1.082133e-02  3.758041e-05
-##               embed.score  targetref:qb  targetref:qc  targetref:qd
-## qb          -9.761775e-03 -2.331546e+02 -5.243550e-02  1.179001e-01
-## qc          -5.578520e-03 -4.868618e-02 -3.024022e+01 -2.139480e+01
-## qd          -5.250995e-03  2.337161e+00 -1.144880e+02 -1.572741e+02
-## qe          -5.662857e-03 -1.204734e+00 -2.043544e-02  3.386100e-02
-## qf          -1.123025e-02 -1.320686e+00 -8.345716e-02  6.049089e-03
-## det          1.088365e-02 -1.286510e+00  2.141138e+01  2.146985e+01
-## range        9.235581e-06  5.866084e-05  7.093443e-06 -1.261267e-05
-## embed.score  6.497771e-03  9.771409e-03  8.618392e-03  2.039760e-03
-## qb:det       1.842562e-03  2.331055e+02 -2.142179e+01 -2.160838e+01
-## qd:det       6.309983e-03 -2.213302e+00  9.309397e+01  1.268228e+02
-##              targetref:qe  targetref:qf targetref:det        qb:det
-## qb          -1.203769e+00 -1.319105e+00 -1.286549e+00 -2.331005e+02
-## qc          -1.838955e-02 -7.419652e-02  2.140615e+01  2.141809e+01
-## qd           4.821807e-01  5.162239e-01  1.153981e+02  2.160561e+01
-## qe          -1.470978e+01 -1.257490e+00 -1.298512e+00 -1.229842e+00
-## qf          -1.257873e+00 -2.392701e+01 -1.297449e+00 -1.099137e+00
-## det         -1.298964e+00 -1.301955e+00 -2.279625e+01 -2.275232e+01
-## range       -9.407763e-06 -4.502403e-05 -1.113598e-05  7.012525e-05
-## embed.score  5.516501e-03  9.146142e-03 -1.136072e-02  1.842562e-03
-## qb:det       1.225973e+00  1.110890e+00  2.275511e+01  2.814856e+02
-## qd:det      -4.451085e-01 -5.050676e-01 -9.393291e+01  9.338525e-03
-##                    qd:det targetref:qb:det
-## qb          -1.000347e-02     2.331077e+02
-## qc          -4.340561e-03    -2.141755e+01
-## qd          -4.948523e+04    -1.180455e+02
-## qe          -6.757926e-03     1.233269e+00
-## qf          -7.304582e-03     1.101642e+00
-## det          1.082133e-02     2.274935e+01
-## range        3.758041e-05    -7.935980e-05
-## embed.score  6.309983e-03    -4.612123e-03
-## qb:det       9.338525e-03    -2.814960e+02
-## qd:det       4.948523e+04     9.642721e+01
+## 19 x 19 Matrix of class "dpoMatrix"
+##                   (Intercept)    targetref            qb            qc
+## (Intercept)      26.611291407 -5.408939772 -6.567060e-01  2.187928e-01
+## targetref        -5.408939772 39.674221182  1.207098e+00  3.523953e-02
+## qb               -0.656706044  1.207097617  2.331532e+02  4.972520e-02
+## qc                0.218792760  0.035239530  4.972520e-02  3.023656e+01
+## qd                0.213024201 -0.057995645 -1.123020e-01  2.139728e+01
+## qe               -1.181562271  1.364128579  1.204280e+00  1.804251e-02
+## qf               -0.999266163  1.466700457  1.321795e+00  7.762191e-02
+## det              -1.792510882  1.297436814  1.285782e+00 -2.140515e+01
+## range            -0.003430091 -0.004456289 -5.684751e-05 -1.771291e-06
+## embed.score      -0.304346598  0.003347917 -9.761775e-03 -5.578520e-03
+## targetref:qb      0.654394998 -2.080569798 -2.331546e+02 -4.868618e-02
+## targetref:qc     -0.359874020  0.021438617 -5.243550e-02 -3.024022e+01
+## targetref:qd     -0.027304750  0.042580295  1.179001e-01 -2.139480e+01
+## targetref:qe      1.174698803 -2.255321684 -1.203769e+00 -1.838955e-02
+## targetref:qf      1.131431154 -2.338162076 -1.319105e+00 -7.419652e-02
+## targetref:det     1.811527451 -2.212790533 -1.286549e+00  2.140615e+01
+## qb:det            0.848433419 -0.992845655 -2.331005e+02  2.141809e+01
+## qd:det           -0.311056815  0.114084229 -1.000347e-02 -4.340561e-03
+## targetref:qb:det -0.716556379  1.847108799  2.331077e+02 -2.141755e+01
+##                             qd            qe            qf           det
+## (Intercept)       2.130242e-01 -1.181562e+00 -9.992662e-01 -1.792511e+00
+## targetref        -5.799564e-02  1.364129e+00  1.466700e+00  1.297437e+00
+## qb               -1.123020e-01  1.204280e+00  1.321795e+00  1.285782e+00
+## qc                2.139728e+01  1.804251e-02  7.762191e-02 -2.140515e+01
+## qd                4.951568e+04 -3.122280e-02 -1.314356e-03 -2.147507e+01
+## qe               -3.122280e-02  1.471083e+01  1.256452e+00  1.298793e+00
+## qf               -1.314356e-03  1.256452e+00  2.393642e+01  1.298587e+00
+## det              -2.147507e+01  1.298793e+00  1.298587e+00  2.279447e+01
+## range            -3.063886e-05  1.601799e-05  2.964445e-05  1.314184e-05
+## embed.score      -5.250995e-03 -5.662857e-03 -1.123025e-02  1.088365e-02
+## targetref:qb      2.337161e+00 -1.204734e+00 -1.320686e+00 -1.286510e+00
+## targetref:qc     -1.144880e+02 -2.043544e-02 -8.345716e-02  2.141138e+01
+## targetref:qd     -1.572741e+02  3.386100e-02  6.049089e-03  2.146985e+01
+## targetref:qe      4.821807e-01 -1.470978e+01 -1.257873e+00 -1.298964e+00
+## targetref:qf      5.162239e-01 -1.257490e+00 -2.392701e+01 -1.301955e+00
+## targetref:det     1.153981e+02 -1.298512e+00 -1.297449e+00 -2.279625e+01
+## qb:det            2.160561e+01 -1.229842e+00 -1.099137e+00 -2.275232e+01
+## qd:det           -4.948523e+04 -6.757926e-03 -7.304582e-03  1.082133e-02
+## targetref:qb:det -1.180455e+02  1.233269e+00  1.101642e+00  2.274935e+01
+##                          range   embed.score  targetref:qb  targetref:qc
+## (Intercept)      -3.430091e-03 -3.043466e-01  6.543950e-01 -3.598740e-01
+## targetref        -4.456289e-03  3.347917e-03 -2.080570e+00  2.143862e-02
+## qb               -5.684751e-05 -9.761775e-03 -2.331546e+02 -5.243550e-02
+## qc               -1.771291e-06 -5.578520e-03 -4.868618e-02 -3.024022e+01
+## qd               -3.063886e-05 -5.250995e-03  2.337161e+00 -1.144880e+02
+## qe                1.601799e-05 -5.662857e-03 -1.204734e+00 -2.043544e-02
+## qf                2.964445e-05 -1.123025e-02 -1.320686e+00 -8.345716e-02
+## det               1.314184e-05  1.088365e-02 -1.286510e+00  2.141138e+01
+## range             3.267330e-06  9.235581e-06  5.866084e-05  7.093443e-06
+## embed.score       9.235581e-06  6.497771e-03  9.771409e-03  8.618392e-03
+## targetref:qb      5.866084e-05  9.771409e-03  2.953345e+02  1.560137e-02
+## targetref:qc      7.093443e-06  8.618392e-03  1.560137e-02  1.635460e+02
+## targetref:qd     -1.261267e-05  2.039760e-03 -1.220460e-01  1.153485e+02
+## targetref:qe     -9.407763e-06  5.516501e-03  2.087695e+00  8.220806e-03
+## targetref:qf     -4.502403e-05  9.146142e-03  2.189894e+00  3.583894e-02
+## targetref:det    -1.113598e-05 -1.136072e-02  2.176777e+00 -1.153443e+02
+## qb:det            7.012525e-05  1.842562e-03  2.331055e+02 -2.142179e+01
+## qd:det            3.758041e-05  6.309983e-03 -2.213302e+00  9.309397e+01
+## targetref:qb:det -7.935980e-05 -4.612123e-03 -2.952775e+02  1.154446e+02
+##                   targetref:qd  targetref:qe  targetref:qf targetref:det
+## (Intercept)      -2.730475e-02  1.174699e+00  1.131431e+00  1.811527e+00
+## targetref         4.258029e-02 -2.255322e+00 -2.338162e+00 -2.212791e+00
+## qb                1.179001e-01 -1.203769e+00 -1.319105e+00 -1.286549e+00
+## qc               -2.139480e+01 -1.838955e-02 -7.419652e-02  2.140615e+01
+## qd               -1.572741e+02  4.821807e-01  5.162239e-01  1.153981e+02
+## qe                3.386100e-02 -1.470978e+01 -1.257490e+00 -1.298512e+00
+## qf                6.049089e-03 -1.257873e+00 -2.392701e+01 -1.297449e+00
+## det               2.146985e+01 -1.298964e+00 -1.301955e+00 -2.279625e+01
+## range            -1.261267e-05 -9.407763e-06 -4.502403e-05 -1.113598e-05
+## embed.score       2.039760e-03  5.516501e-03  9.146142e-03 -1.136072e-02
+## targetref:qb     -1.220460e-01  2.087695e+00  2.189894e+00  2.176777e+00
+## targetref:qc      1.153485e+02  8.220806e-03  3.583894e-02 -1.153443e+02
+## targetref:qd      1.573349e+02 -7.247316e-02 -4.640418e-02 -1.153777e+02
+## targetref:qe     -7.247316e-02  9.045770e+01  2.025662e+00  2.155388e+00
+## targetref:qf     -4.640418e-02  2.025662e+00  1.465018e+02  2.156294e+00
+## targetref:det    -1.153777e+02  2.155388e+00  2.156294e+00  1.175653e+02
+## qb:det           -2.160838e+01  1.225973e+00  1.110890e+00  2.275511e+01
+## qd:det            1.268228e+02 -4.451085e-01 -5.050676e-01 -9.393291e+01
+## targetref:qb:det  1.155367e+02 -2.226150e+00 -1.965015e+00 -1.175746e+02
+##                         qb:det        qd:det targetref:qb:det
+## (Intercept)       8.484334e-01 -3.110568e-01    -7.165564e-01
+## targetref        -9.928457e-01  1.140842e-01     1.847109e+00
+## qb               -2.331005e+02 -1.000347e-02     2.331077e+02
+## qc                2.141809e+01 -4.340561e-03    -2.141755e+01
+## qd                2.160561e+01 -4.948523e+04    -1.180455e+02
+## qe               -1.229842e+00 -6.757926e-03     1.233269e+00
+## qf               -1.099137e+00 -7.304582e-03     1.101642e+00
+## det              -2.275232e+01  1.082133e-02     2.274935e+01
+## range             7.012525e-05  3.758041e-05    -7.935980e-05
+## embed.score       1.842562e-03  6.309983e-03    -4.612123e-03
+## targetref:qb      2.331055e+02 -2.213302e+00    -2.952775e+02
+## targetref:qc     -2.142179e+01  9.309397e+01     1.154446e+02
+## targetref:qd     -2.160838e+01  1.268228e+02     1.155367e+02
+## targetref:qe      1.225973e+00 -4.451085e-01    -2.226150e+00
+## targetref:qf      1.110890e+00 -5.050676e-01    -1.965015e+00
+## targetref:det     2.275511e+01 -9.393291e+01    -1.175746e+02
+## qb:det            2.814856e+02  9.338525e-03    -2.814960e+02
+## qd:det            9.338525e-03  4.948523e+04     9.642721e+01
+## targetref:qb:det -2.814960e+02  9.642721e+01     5.994966e+02
 \end{verbatim}
 
 \section{evaluation model: 1}\label{evaluation-model-1}
@@ -1392,6 +1398,9 @@ Kuperberg, Gina R. 2010. {``Language in Schizophrenia {Part} 2: {What} Can Psych
 
 \bibitem[\citeproctext]{ref-lee_higher-order_2018}
 Lee, Kenton, Luheng He, and Luke Zettlemoyer. 2018. {``Higher-Order {Coreference} {Resolution} with {Coarse}-to-Fine {Inference}.''} arXiv. \url{https://doi.org/10.48550/arXiv.1804.05392}.
+
+\bibitem[\citeproctext]{ref-maindonald_practical_2024}
+Maindonald, John H., W. John Braun, and Jeffrey L. Andrews. 2024. \emph{A {Practical} {Guide} to {Data} {Analysis} {Using} {R}: {An} {Example}-{Based} {Approach}}. Cambridge University Press.
 
 \bibitem[\citeproctext]{ref-mishara_klaus_2010}
 Mishara, Aaron L. 2010. {``Klaus {Conrad} (1905--1961): {Delusional} {Mood}, {Psychosis}, and {Beginning} {Schizophrenia}.''} \emph{Schizophrenia Bulletin} 36 (1): 9--13. \url{https://doi.org/10.1093/schbul/sbp144}.

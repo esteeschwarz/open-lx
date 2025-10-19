@@ -26,6 +26,7 @@ site: bookdown::bookdown_site
 ---
 
 ```{r,echo=F}
+source("~/rwd/psych-meta.R")
 myname<-ifelse(exists("myname"),myname,"placeholder")
 mtrk<-ifelse(exists("mtrk"),mtrk,"placeholder")
   
@@ -47,7 +48,7 @@ Hiermit versichere ich,
 
 - dass ich die von mir vorgelegte Arbeit mit dem Titel
 
-**coherence & proposition observations in :schizophrenia: threads**
+**coherence & propositions: measuring reference distance in :schizophrenia: threads**
 
 selbständig abgefasst habe und
 
