@@ -2,8 +2,10 @@ name: pull to zdt
 
 on:
   push:
-    branches:
-      - main
+   # branches:
+    #  - main
+    paths:
+      - 'docs'
 
 jobs:
   render:
@@ -17,5 +19,4 @@ jobs:
           username: ${{ secrets.ZDT_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ~/public_html/open-lx
-            git pull
+            sh p-open.sh
