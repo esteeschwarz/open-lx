@@ -10,6 +10,7 @@ date: "2025-08-17"
 # R Markdown template page, first h1
 ## snc
 - wf pull script
+- yml edit
 - test for yaml title
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
