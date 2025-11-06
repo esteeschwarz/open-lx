@@ -1,0 +1,21 @@
+name: pull to zdt
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger render job on server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.ZDT_HOST }}
+          username: ${{ secrets.ZDT_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/public_html/open-lx
+            git pull
