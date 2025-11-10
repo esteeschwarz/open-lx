@@ -4,5 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+> besides used as publications essai of recent relevant learnings this pages serve also as demonstration for how we propose (draft essai) to rebuild the homepages of the [Dahlem Center for Linguistics](https://www.geisteswissenschaften.fu-berlin.de/dcl/index.html).
