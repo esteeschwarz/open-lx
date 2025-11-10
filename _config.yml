@@ -155,7 +155,7 @@ baseurl: "https://esteeschwarz/github.io/open-lx
 
 kramdown:
 #  footnote_backlink: "&#8617;&#xfe0e;"
-  footnote_backlink: "<<"
+#  footnote_backlink: "<<"
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
