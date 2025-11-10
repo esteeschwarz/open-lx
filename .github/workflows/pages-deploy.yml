@@ -1,9 +1,13 @@
 name: "Build and Deploy chirpy"
 on:
   push:
-    branches:
-      - main
-      - master
+    # branches:
+    #   - main
+    #   - master
+    paths:
+     # - 'docs'
+      - '_posts'
+
     paths-ignore:
       - .gitignore
       - README.md
