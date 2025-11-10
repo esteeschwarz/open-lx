@@ -8,10 +8,10 @@ on:
      # - 'docs'
       - '_posts'
 
-    paths-ignore:
-      - .gitignore
-      - README.md
-      - LICENSE
+    # paths-ignore:
+    #   - .gitignore
+    #   - README.md
+    #   - LICENSE
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
