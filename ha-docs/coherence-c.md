@@ -94,18 +94,7 @@ nocite: '@*'
 
 
 
-<style type="text/css">
-/*table {
-  width: 100% !important;
-  
-}*/
-pre {
-border: 1px solid black;
-border-radius: 0.25rem;
-background-color: rgba(0, 0, 0, 0.04);
 
-}
-</style>
 
 
 
@@ -182,244 +171,28 @@ We built a corpus of above mentioned subreddit channel (``` n =1500371 tokens ``
 The dataframe used for our model (actual: dataset 13) consists of ``` 142321 ``` distance datapoints (sample cf. Tab. \@ref(tab:data1) below) derived from the postagged corpus. Because the ranges of the url threads vary heavily between target and reference corpus, the distances are (in evaluation M1) normalised to the target corpus (cf. Fig. \@ref(fig:gplot1) for the raw vs. normalised distances comparison.) Outliers are excluded from the analysis since they very probably do not fulfill to can be counted as anaphoric references. We silently assume that all of the noun distances which are not by value excluded as outliers occur as anaphoric references. A manual annotation and close reading of the text would be necessary to exactly determine wether the references are associated at all. This may be the task for another qualitative evaluation of our quantitative study.
 
 
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:auto; overflow-x: scroll; width:100%; "><table class="table" style="width: auto !important; ">
-<caption>(\#tab:data1)(\#tab:data1)data sample of distances df</caption>
- <thead>
-  <tr>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> token </th>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> upos </th>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> target </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> pos </th>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> prepos </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> url_id </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> range </th>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> q </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> det </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> aut_id </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> total_mentions </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> dist </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> embed.score </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> dist_rel_within </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> dist_rel_all </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> dist_rel_obs </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> dist_rel_ref </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> embed_c </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> dist_rel_scaled </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> spoon </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:left;"> ref </td>
-   <td style="text-align:right;"> 502852 </td>
-   <td style="text-align:left;"> ADJ </td>
-   <td style="text-align:right;"> 2051 </td>
-   <td style="text-align:right;"> 4942 </td>
-   <td style="text-align:left;"> a </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 4091 </td>
-   <td style="text-align:right;"> 62 </td>
-   <td style="text-align:right;"> 134 </td>
-   <td style="text-align:right;"> 50.10 </td>
-   <td style="text-align:right;"> 122 </td>
-   <td style="text-align:right;"> 87 </td>
-   <td style="text-align:right;"> 52 </td>
-   <td style="text-align:right;"> 122 </td>
-   <td style="text-align:right;"> 7.80 </td>
-   <td style="text-align:right;"> 0.03 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> movies </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:left;"> ref </td>
-   <td style="text-align:right;"> 20994 </td>
-   <td style="text-align:left;"> ADP </td>
-   <td style="text-align:right;"> 1866 </td>
-   <td style="text-align:right;"> 4885 </td>
-   <td style="text-align:left;"> a </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 3544 </td>
-   <td style="text-align:right;"> 71 </td>
-   <td style="text-align:right;"> 31 </td>
-   <td style="text-align:right;"> 53.84 </td>
-   <td style="text-align:right;"> 28 </td>
-   <td style="text-align:right;"> 20 </td>
-   <td style="text-align:right;"> 12 </td>
-   <td style="text-align:right;"> 28 </td>
-   <td style="text-align:right;"> 11.53 </td>
-   <td style="text-align:right;"> 0.01 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> credit </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:left;"> ref </td>
-   <td style="text-align:right;"> 192739 </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:right;"> 1939 </td>
-   <td style="text-align:right;"> 5634 </td>
-   <td style="text-align:left;"> a </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 5207 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 98 </td>
-   <td style="text-align:right;"> 47.43 </td>
-   <td style="text-align:right;"> 78 </td>
-   <td style="text-align:right;"> 56 </td>
-   <td style="text-align:right;"> 33 </td>
-   <td style="text-align:right;"> 78 </td>
-   <td style="text-align:right;"> 5.13 </td>
-   <td style="text-align:right;"> 0.02 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> takis </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:left;"> ref </td>
-   <td style="text-align:right;"> 342001 </td>
-   <td style="text-align:left;"> PUNCT </td>
-   <td style="text-align:right;"> 1993 </td>
-   <td style="text-align:right;"> 2432 </td>
-   <td style="text-align:left;"> a </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 6472 </td>
-   <td style="text-align:right;"> 15 </td>
-   <td style="text-align:right;"> 144 </td>
-   <td style="text-align:right;"> 47.97 </td>
-   <td style="text-align:right;"> 266 </td>
-   <td style="text-align:right;"> 190 </td>
-   <td style="text-align:right;"> 113 </td>
-   <td style="text-align:right;"> 266 </td>
-   <td style="text-align:right;"> 5.67 </td>
-   <td style="text-align:right;"> 0.06 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> place </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:left;"> ref </td>
-   <td style="text-align:right;"> 412382 </td>
-   <td style="text-align:left;"> PUNCT </td>
-   <td style="text-align:right;"> 2019 </td>
-   <td style="text-align:right;"> 3894 </td>
-   <td style="text-align:left;"> a </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 7023 </td>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 504 </td>
-   <td style="text-align:right;"> 45.62 </td>
-   <td style="text-align:right;"> 581 </td>
-   <td style="text-align:right;"> 415 </td>
-   <td style="text-align:right;"> 246 </td>
-   <td style="text-align:right;"> 581 </td>
-   <td style="text-align:right;"> 3.32 </td>
-   <td style="text-align:right;"> 0.13 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> shnitzel </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:left;"> obs </td>
-   <td style="text-align:right;"> 583476 </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:right;"> 851 </td>
-   <td style="text-align:right;"> 320 </td>
-   <td style="text-align:left;"> a </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 662 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 40.82 </td>
-   <td style="text-align:right;"> 36 </td>
-   <td style="text-align:right;"> 60 </td>
-   <td style="text-align:right;"> 36 </td>
-   <td style="text-align:right;"> 84 </td>
-   <td style="text-align:right;"> -1.48 </td>
-   <td style="text-align:right;"> 0.02 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> one </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:left;"> obs </td>
-   <td style="text-align:right;"> 1201139 </td>
-   <td style="text-align:left;"> DET </td>
-   <td style="text-align:right;"> 1760 </td>
-   <td style="text-align:right;"> 4800 </td>
-   <td style="text-align:left;"> a </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 3019 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 27 </td>
-   <td style="text-align:right;"> 31.54 </td>
-   <td style="text-align:right;"> 11 </td>
-   <td style="text-align:right;"> 18 </td>
-   <td style="text-align:right;"> 11 </td>
-   <td style="text-align:right;"> 25 </td>
-   <td style="text-align:right;"> -10.76 </td>
-   <td style="text-align:right;"> 0.01 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> hypocrite </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:left;"> ref </td>
-   <td style="text-align:right;"> 710453 </td>
-   <td style="text-align:left;"> ADJ </td>
-   <td style="text-align:right;"> 2174 </td>
-   <td style="text-align:right;"> 1998 </td>
-   <td style="text-align:left;"> a </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 3316 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 105 </td>
-   <td style="text-align:right;"> 38.22 </td>
-   <td style="text-align:right;"> 236 </td>
-   <td style="text-align:right;"> 168 </td>
-   <td style="text-align:right;"> 100 </td>
-   <td style="text-align:right;"> 236 </td>
-   <td style="text-align:right;"> -4.09 </td>
-   <td style="text-align:right;"> 0.05 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> loss </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:left;"> obs </td>
-   <td style="text-align:right;"> 871244 </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:right;"> 1355 </td>
-   <td style="text-align:right;"> 868 </td>
-   <td style="text-align:left;"> a </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 1033 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 11 </td>
-   <td style="text-align:right;"> 35.59 </td>
-   <td style="text-align:right;"> 24 </td>
-   <td style="text-align:right;"> 41 </td>
-   <td style="text-align:right;"> 24 </td>
-   <td style="text-align:right;"> 57 </td>
-   <td style="text-align:right;"> -6.72 </td>
-   <td style="text-align:right;"> 0.01 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> breakfast </td>
-   <td style="text-align:left;"> NOUN </td>
-   <td style="text-align:left;"> ref </td>
-   <td style="text-align:right;"> 693866 </td>
-   <td style="text-align:left;"> ADP </td>
-   <td style="text-align:right;"> 2162 </td>
-   <td style="text-align:right;"> 601 </td>
-   <td style="text-align:left;"> a </td>
-   <td style="text-align:right;"> 0 </td>
-   <td style="text-align:right;"> 7318 </td>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 52.77 </td>
-   <td style="text-align:right;"> 30 </td>
-   <td style="text-align:right;"> 21 </td>
-   <td style="text-align:right;"> 13 </td>
-   <td style="text-align:right;"> 30 </td>
-   <td style="text-align:right;"> 10.47 </td>
-   <td style="text-align:right;"> 0.01 </td>
-  </tr>
-</tbody>
-</table></div>
+\begin{table}
+
+\caption{(\#tab:data1)data sample of distances df}
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lllrlrrlrrrrrrrrrrr}
+\toprule
+token & upos & target & pos & prepos & url\_id & range & q & det & aut\_id & total\_mentions & dist & embed.score & dist\_rel\_within & dist\_rel\_all & dist\_rel\_obs & dist\_rel\_ref & embed\_c & dist\_rel\_scaled\\
+\midrule
+cup & NOUN & obs & 435059 & NOUN & 671 & 5636 & a & 0 & 469 & 4 & 10 & 23.39 & 3 & 6 & 3 & 8 & -18.92 & 0.00\\
+burgers & NOUN & ref & 218584 & ADP & 1952 & 1852 & a & 0 & 5487 & 13 & 13 & 37.10 & 31 & 22 & 13 & 31 & -5.20 & 0.01\\
+pew & NOUN & obs & 162343 & DET & 319 & 1066 & d & 1 & 704 & 2 & 1 & 27.96 & 2 & 3 & 2 & 4 & -14.34 & 0.00\\
+practitioner & NOUN & obs & 797319 & NOUN & 1242 & 2322 & a & 0 & 118 & 2 & 846 & 40.80 & 693 & 1168 & 693 & 1634 & -1.51 & 0.36\\
+time & NOUN & ref & 173467 & VERB & 1929 & 6064 & a & 0 & 5053 & 19 & 84 & 28.94 & 62 & 44 & 26 & 62 & -13.37 & 0.01\\
+\addlinespace
+People & NOUN & ref & 341149 & ADJ & 1993 & 2432 & a & 0 & 6472 & 22 & 6 & 37.70 & 11 & 8 & 5 & 11 & -4.61 & 0.00\\
+meds & NOUN & obs & 143331 & PRON & 289 & 603 & f & 0 & 33 & 3 & 106 & 49.94 & 334 & 563 & 334 & 789 & 7.63 & 0.18\\
+trans & NOUN & obs & 635022 & ADV & 931 & 3941 & a & 0 & 118 & 41 & 174 & 40.28 & 84 & 141 & 84 & 198 & -2.02 & 0.04\\
+part & NOUN & ref & 591749 & NOUN & 2103 & 4162 & a & 0 & 5961 & 2 & 476 & 44.63 & 513 & 367 & 218 & 513 & 2.33 & 0.11\\
+cure & NOUN & obs & 1015639 & DET & 1554 & 1583 & d & 1 & 127 & 16 & 25 & 38.55 & 30 & 51 & 30 & 71 & -3.75 & 0.02\\
+\bottomrule
+\end{tabular}}
+\end{table}
 
 
 
@@ -535,18 +308,7 @@ We had to do some silent assumptions, but the main limitation is that we will ha
 
 
 
-<style type="text/css">
-/*table {
-  width: 100% !important;
-  
-}*/
-pre {
-border: 1px solid black;
-border-radius: 0.25rem;
-background-color: rgba(0, 0, 0, 0.04);
 
-}
-</style>
 
 
 
@@ -808,15 +570,13 @@ formula: [``` dist_rel_obs ~ target*q*det+(1|aut_id)+range+(embed.score)+(1|url_
 ```
 
 ### plots
-<div class="figure">
-<img src="coherence-c_files/figure-html/boxplot11-1.png" alt="compare distances by corpus, normalised to obs, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:boxplot11)compare distances by corpus, normalised to obs, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/boxplot11-1} \caption{compare distances by corpus, normalised to obs, distance ceiling =  outliers removed}(\#fig:boxplot11)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/barplot-mean1-1.png" alt="mean distances over query/corpus, normalised to obs, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:barplot-mean1)mean distances over query/corpus, normalised to obs, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/barplot-mean1-1} \caption{mean distances over query/corpus, normalised to obs, distance ceiling =  outliers removed}(\#fig:barplot-mean1)
+\end{figure}
 
 
 
@@ -838,20 +598,17 @@ Table: (\#tab:dfe-table1)mean/median table for model: 1
 |ref    |f  |   413|  116|     47|
 
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/barplot-median1-1.png" alt="median distances over query/corpus, normalised to obs, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:barplot-median1)median distances over query/corpus, normalised to obs, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/barplot-median1-1} \caption{median distances over query/corpus, normalised to obs, distance ceiling =  outliers removed}(\#fig:barplot-median1)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/lmeplot1-1.png" alt="distances relation, normalised to obs, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:lmeplot1)distances relation, normalised to obs, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/lmeplot1-1} \caption{distances relation, normalised to obs, distance ceiling =  outliers removed}(\#fig:lmeplot1)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/gplot1-1.png" alt="distances normalised vs. raw"  />
-<p class="caption">(\#fig:gplot1)distances normalised vs. raw</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/gplot1-1} \caption{distances normalised vs. raw}(\#fig:gplot1)
+\end{figure}
 
 
 
@@ -978,15 +735,13 @@ formula: [``` dist ~ target*q*det+(1|aut_id)+range+(embed.score)+(1|url_id) ```]
 ```
 
 ### plots
-<div class="figure">
-<img src="coherence-c_files/figure-html/boxplot12-1.png" alt="compare distances by corpus, not normalised, distance ceiling =outliers not removed"  />
-<p class="caption">(\#fig:boxplot12)compare distances by corpus, not normalised, distance ceiling =outliers not removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/boxplot12-1} \caption{compare distances by corpus, not normalised, distance ceiling =outliers not removed}(\#fig:boxplot12)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/barplot-mean2-1.png" alt="mean distances over query/corpus, not normalised, distance ceiling =outliers not removed"  />
-<p class="caption">(\#fig:barplot-mean2)mean distances over query/corpus, not normalised, distance ceiling =outliers not removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/barplot-mean2-1} \caption{mean distances over query/corpus, not normalised, distance ceiling =outliers not removed}(\#fig:barplot-mean2)
+\end{figure}
 
 
 
@@ -1008,15 +763,13 @@ Table: (\#tab:dfe-table2)mean/median table for model: 2
 |ref    |f  |   497| 1627|    124|
 
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/barplot-median2-1.png" alt="median distances over query/corpus, not normalised, distance ceiling =outliers not removed"  />
-<p class="caption">(\#fig:barplot-median2)median distances over query/corpus, not normalised, distance ceiling =outliers not removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/barplot-median2-1} \caption{median distances over query/corpus, not normalised, distance ceiling =outliers not removed}(\#fig:barplot-median2)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/lmeplot2-1.png" alt="distances relation, not normalised, distance ceiling =outliers not removed"  />
-<p class="caption">(\#fig:lmeplot2)distances relation, not normalised, distance ceiling =outliers not removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/lmeplot2-1} \caption{distances relation, not normalised, distance ceiling =outliers not removed}(\#fig:lmeplot2)
+\end{figure}
 
 
 
@@ -1145,15 +898,13 @@ formula: [``` dist_rel_all ~ target*q*det+(1|aut_id)+range+(embed.score)+(1|url_
 ```
 
 ### plots
-<div class="figure">
-<img src="coherence-c_files/figure-html/boxplot13-1.png" alt="compare distances by corpus, normalised to all, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:boxplot13)compare distances by corpus, normalised to all, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/boxplot13-1} \caption{compare distances by corpus, normalised to all, distance ceiling =  outliers removed}(\#fig:boxplot13)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/barplot-mean3-1.png" alt="mean distances over query/corpus, normalised to all, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:barplot-mean3)mean distances over query/corpus, normalised to all, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/barplot-mean3-1} \caption{mean distances over query/corpus, normalised to all, distance ceiling =  outliers removed}(\#fig:barplot-mean3)
+\end{figure}
 
 
 
@@ -1175,20 +926,17 @@ Table: (\#tab:dfe-table3)mean/median table for model: 3
 |ref    |f  |   413|  195|     79|
 
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/barplot-median3-1.png" alt="median distances over query/corpus, normalised to all, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:barplot-median3)median distances over query/corpus, normalised to all, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/barplot-median3-1} \caption{median distances over query/corpus, normalised to all, distance ceiling =  outliers removed}(\#fig:barplot-median3)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/lmeplot3-1.png" alt="distances relation, normalised to all, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:lmeplot3)distances relation, normalised to all, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/lmeplot3-1} \caption{distances relation, normalised to all, distance ceiling =  outliers removed}(\#fig:lmeplot3)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/gplot3-1.png" alt="distances normalised vs. raw"  />
-<p class="caption">(\#fig:gplot3)distances normalised vs. raw</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/gplot3-1} \caption{distances normalised vs. raw}(\#fig:gplot3)
+\end{figure}
 
 
 
@@ -1315,15 +1063,13 @@ formula: [``` dist_rel_ref ~ target*q*det+(1|aut_id)+range+(embed.score)+(1|url_
 ```
 
 ### plots
-<div class="figure">
-<img src="coherence-c_files/figure-html/boxplot14-1.png" alt="compare distances by corpus, normalised to ref, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:boxplot14)compare distances by corpus, normalised to ref, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/boxplot14-1} \caption{compare distances by corpus, normalised to ref, distance ceiling =  outliers removed}(\#fig:boxplot14)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/barplot-mean4-1.png" alt="mean distances over query/corpus, normalised to ref, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:barplot-mean4)mean distances over query/corpus, normalised to ref, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/barplot-mean4-1} \caption{mean distances over query/corpus, normalised to ref, distance ceiling =  outliers removed}(\#fig:barplot-mean4)
+\end{figure}
 
 
 
@@ -1345,20 +1091,17 @@ Table: (\#tab:dfe-table4)mean/median table for model: 4
 |ref    |f  |   413|  273|    111|
 
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/barplot-median4-1.png" alt="median distances over query/corpus, normalised to ref, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:barplot-median4)median distances over query/corpus, normalised to ref, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/barplot-median4-1} \caption{median distances over query/corpus, normalised to ref, distance ceiling =  outliers removed}(\#fig:barplot-median4)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/lmeplot4-1.png" alt="distances relation, normalised to ref, distance ceiling =  outliers removed"  />
-<p class="caption">(\#fig:lmeplot4)distances relation, normalised to ref, distance ceiling =  outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/lmeplot4-1} \caption{distances relation, normalised to ref, distance ceiling =  outliers removed}(\#fig:lmeplot4)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/gplot4-1.png" alt="distances normalised vs. raw"  />
-<p class="caption">(\#fig:gplot4)distances normalised vs. raw</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/gplot4-1} \caption{distances normalised vs. raw}(\#fig:gplot4)
+\end{figure}
 
 
 
@@ -1486,15 +1229,13 @@ formula: [``` dist ~ target*q*det+(1|aut_id)+range+(embed.score)+(1|url_id) ```]
 ```
 
 ### plots
-<div class="figure">
-<img src="coherence-c_files/figure-html/boxplot16-1.png" alt="compare distances by corpus, not normalised, distance ceiling =outliers removed"  />
-<p class="caption">(\#fig:boxplot16)compare distances by corpus, not normalised, distance ceiling =outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/boxplot16-1} \caption{compare distances by corpus, not normalised, distance ceiling =outliers removed}(\#fig:boxplot16)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/barplot-mean6-1.png" alt="mean distances over query/corpus, not normalised, distance ceiling =outliers removed"  />
-<p class="caption">(\#fig:barplot-mean6)mean distances over query/corpus, not normalised, distance ceiling =outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/barplot-mean6-1} \caption{mean distances over query/corpus, not normalised, distance ceiling =outliers removed}(\#fig:barplot-mean6)
+\end{figure}
 
 
 
@@ -1516,15 +1257,13 @@ Table: (\#tab:dfe-table6)mean/median table for model: 6
 |ref    |f  |   413|  171|     82|
 
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/barplot-median6-1.png" alt="median distances over query/corpus, not normalised, distance ceiling =outliers removed"  />
-<p class="caption">(\#fig:barplot-median6)median distances over query/corpus, not normalised, distance ceiling =outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/barplot-median6-1} \caption{median distances over query/corpus, not normalised, distance ceiling =outliers removed}(\#fig:barplot-median6)
+\end{figure}
 
-<div class="figure">
-<img src="coherence-c_files/figure-html/lmeplot6-1.png" alt="distances relation, not normalised, distance ceiling =outliers removed"  />
-<p class="caption">(\#fig:lmeplot6)distances relation, not normalised, distance ceiling =outliers removed</p>
-</div>
+\begin{figure}[H]
+\includegraphics{coherence-c_files/figure-latex/lmeplot6-1} \caption{distances relation, not normalised, distance ceiling =outliers removed}(\#fig:lmeplot6)
+\end{figure}
 
 
 
@@ -1546,38 +1285,23 @@ In der vorliegenden Arbeit wurden keinerlei nicht erlaubte Hilfsmittel zur Erste
 ## See help("Deprecated")
 ```
 
-<table style="word-wrap:break-word; white-space:normal; width:100%;">
-<caption>(\#tab:kitable)verwendete Hilfsmittel</caption>
- <thead>
-  <tr>
-   <th style="text-align:left;"> Hilfsmittel </th>
-   <th style="text-align:left;"> Verwendung </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> github copilot </td>
-   <td style="text-align:left;"> Hilfe bei der Skripterstellung (R, Python) zur 
-Programmierung der Distanzenberechnung, semantic embeddings und statistischen Auswertung </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> chatgpt.com </td>
-   <td style="text-align:left;"> dito </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> claude.ai </td>
-   <td style="text-align:left;"> dito </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> deepseek.com </td>
-   <td style="text-align:left;"> dito </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> nomic-embed-text (model) </td>
-   <td style="text-align:left;"> calculate semantic embeddings </td>
-  </tr>
-</tbody>
-</table>
+\begin{table}[!h]
+\centering
+\caption{(\#tab:kitable)verwendete Hilfsmittel}
+\centering
+\begin{tabular}[t]{l>{\raggedright\arraybackslash}p{10cm}}
+\toprule
+Hilfsmittel & Verwendung\\
+\midrule
+github copilot & Hilfe bei der Skripterstellung (R, Python) zur 
+Programmierung der Distanzenberechnung, semantic embeddings und statistischen Auswertung\\
+chatgpt.com & dito\\
+claude.ai & dito\\
+deepseek.com & dito\\
+nomic-embed-text (model) & calculate semantic embeddings\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 -----
 \clearpage

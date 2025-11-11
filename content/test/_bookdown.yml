@@ -13,7 +13,7 @@ rmd_files: ["index.Rmd","~/Documents/GitHub/SPUND-LX/psych/HA/paper/poster-ext.R
 #     chapter_name: "Chapter "
 #delete_merged_file: true
 new_session: no
-delete_merged_file: true
+delete_merged_file: false
 language:
   ui:
     chapter_name: ""

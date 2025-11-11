@@ -1,8 +1,11 @@
 ---
-title: "coherence & propositions"
+title: "coherence & proposition"
 subtitle: "measuring reference distance in :schizophrenia: threads"
 author: "st. schwarz"
 date: "`r Sys.Date()`"
+#date: "2025-10-18"
+categories: [papers,linguistics]
+tags: [LX,corpus,psych,HA]
 # output: 
 #     bookdown::html_document2:
 #       base_format: tufte::tufte_html
@@ -15,7 +18,8 @@ date: "`r Sys.Date()`"
   #keep_md: yes
 bibliography: /Users/guhl/Documents/GitHub/SPUND-LX/psych/HA/paper/psych.bib
 nocite: '@*'
-#keep_md: true
+keep_md: yes
+keep_tex: yes
 documentclass: book
 url: "https://esteeschwarz.github.io/open-lx"
 description: "SPUND-LX - AVL - alii :: appendix & pub essais\n"
@@ -38,7 +42,7 @@ Hausarbeit im Seminar: *Sprache und Psychose (PHILGEIST_S_16827_25S)*
 Dozent: Anatol Stefanowitsch   
 abgegeben von: `r myname`   
 MtrNr: `r mtrk`   
-abgegeben am: `r Sys.Date()`   
+abgegeben am: 2025-10-18   
 an: Freie Universität Berlin   
 
 

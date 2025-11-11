@@ -3,10 +3,11 @@ bookdown::gitbook:
   css: style.css
   pandoc_args: ["--wrap=none"]
   #extra_dependencies: ["float"]
+  keep_md: yes
   config:
     toc:
       before: |
-        <li><a href="./">snc.1</a></li>
+        <li><a href="https://esteeschwarz.github.io/open-lx">open-lx-home</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     # edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
@@ -35,7 +36,9 @@ bookdown::pdf_document2:
   # latex_engine: xelatex
 #   #citation_package: natbib
   keep_tex: yes
+  keep_md: yes # this!
 #bookdown::epub_book: default
 # md_document:
 #    variant: markdown_github
 #    pandoc_args: ["--wrap=none"]
+# always_allow_html: true

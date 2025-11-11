@@ -1,7 +1,7 @@
-book_filename: spund-pub
+book_filename: coherence-c
 repo: https://github.com/esteeschwarz/SPUND-LX/
 # output_dir: _book
-output_dir: ../../docs
+output_dir: ../../ha-docs
 #clean: [packages.bib]
 # rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]
 # rmd_files: ["index.Rmd","~/Documents/GitHub/SPUND-LX/psych/HA/paper/poster-ext.Rmd","~/Documents/GitHub/SPUND-LX/psych/HA/paper/draftpaper-ul.md","testpages.Rmd"]
@@ -14,7 +14,8 @@ rmd_files: ["~/Documents/GitHub/open-lx/content/LX-psych/index.Rmd","~/Documents
 #     chapter_name: "Chapter "
 #delete_merged_file: true
 new_session: no
-delete_merged_file: true
+delete_merged_file: false
+keep_md: true
 language:
   ui:
     chapter_name: ""

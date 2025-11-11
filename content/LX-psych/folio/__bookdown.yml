@@ -1,7 +1,7 @@
 #book_filename: spund-pub
 repo: https://github.com/esteeschwarz/SPUND-LX/
 # output_dir: _book
-output_dir: ../../docs/folien/2025-10-22
+output_dir: ../../ha-docs/folien/2025-10-22
 #clean: [packages.bib]
 # rmd_files: ["index.Rmd","poster-ext.Rmd","testpages.Rmd"]
 # rmd_files: ["index.Rmd","~/Documents/GitHub/SPUND-LX/psych/HA/paper/poster-ext.Rmd","~/Documents/GitHub/SPUND-LX/psych/HA/paper/draftpaper-ul.md","testpages.Rmd"]

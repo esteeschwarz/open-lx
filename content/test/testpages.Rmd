@@ -2,10 +2,10 @@
 title: "SPUND-LX / AVL :: Appendix"
 author: "st. schwarz"
 date: "`r Sys.Date()`"
-#output: bookdown::html_document2
+output: bookdown::html_document2
 #bibliography: psych.bib
 #nocite: '@*'
-#keep_md: true
+keep_md: true
 ---
 
 # testpage
@@ -17,13 +17,29 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```{r cars}
 summary(cars)
+library(kableExtra)
+
 ```
 
-```{r kable}
-knitr::kable(head(cars))
+```{r, label=ori}
+knitr::kable(head(cars),caption = "simple")
+```
+
+## testkable
+- this should reference testk Tab.\@ref(tab:testkable)
+- and this above table Tab.\@ref(tab:ori)
+
+```{r test1}
+sample.df<-cbind(head(cars),head(cars),head(cars),head(cars))
+# kable(mtcars[1:10, ], caption = "Scrollable table") %>%
+#   kable_styling(full_width = FALSE, position = "left") %>%
+#   scroll_box(width = "100%", height = "auto")
+knitr::kable(sample.df,row.names = F,booktabs = TRUE,label = "testkable",caption = "extra")%>%
+    kable_styling(full_width = FALSE, position = "left",latex_options = "scale_down") %>%
+  scroll_box(width = "100%", height = "auto")
+
 ```
 ## Including Plots
-
 You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
