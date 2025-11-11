@@ -7,7 +7,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="https://esteeschwarz.github.io/open-lx">open-lx-home</a></li>
+        <li><a href="https://esteeschwarz.github.io/open-lx/posts/coherence">open-lx-home</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     # edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
