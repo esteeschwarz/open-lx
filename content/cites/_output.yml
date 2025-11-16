@@ -1,8 +1,0 @@
-# bookdown::gitbook
-#   toc: true
-#   toc_depth: 2
-#   number_sections: true
-#   fig_caption: true
-bookdown::bs4_book:
-  split_bib: true
-bibliography: references.bib

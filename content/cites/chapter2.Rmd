@@ -1,9 +1,4 @@
----
-title: "Chapter Two"
-bibliography: references.bib
-reference-section-title: References
----
 
-# Chapter Two
+# ch2
 
 This chapter uses ggplot2 [@ggplot2].

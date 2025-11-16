@@ -1,0 +1,6 @@
+---
+output: bookdown::markdown_document2
+---
+# about
+
+this section should go into _posts

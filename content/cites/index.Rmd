@@ -1,10 +1,14 @@
 ---
-title: "My Book"
-author: "Your Name"
+title: "citest"
+author: "esteeschwarz"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
 documentclass: book
-#bibliography: references.bib
+bibliography: references.bib
+book_filename: citest
+language:
+  ui:
+    chapter_name: ''
+delete_merged_file: false
 ---
 
 # Introduction

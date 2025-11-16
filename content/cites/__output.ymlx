@@ -1,0 +1,10 @@
+bookdown::gitbook:
+ config:
+  toc: true
+  toc_depth: 2
+  number_sections: true
+  fig_caption: true
+# bookdown::gitbook:
+#   split_bib: true
+# bibliography: references.bib
+# nocite: '@*'
