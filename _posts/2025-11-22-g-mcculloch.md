@@ -13,4 +13,4 @@ class: linguistik & öffentlichkeit, stefanowitsch
 task: analyse einer linguistischen öffentlichkeit anhand vorhandener kategorien
 
 # view
-[view analysis here](../../essais/publx/002)
+[view analysis here](../../essais/publx/001)
