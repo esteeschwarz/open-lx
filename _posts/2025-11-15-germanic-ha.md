@@ -19,4 +19,4 @@ I decided for draft A out of pure interest in sociolinguistic and register/style
 - C: xtitle: The choice of english L1/L2 structures in german >L1 speakers. A corpus based investigation of english language patterns in german term papers of exchange students.
 
 ## view 
-[drafts page](../../essais/germanic)
+[drafts page](../../essais/germanic/001)
