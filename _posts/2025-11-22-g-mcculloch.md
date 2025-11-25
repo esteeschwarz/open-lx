@@ -1,5 +1,5 @@
 ---
-title: "linguistik & öffentlichkeit"
+title: "LX & public / class project"
 subtitle: "site analysis Gretchen McCulloch"
 author: "st. schwarz"
 date: "2025-11-22"
