@@ -10,10 +10,10 @@ tags:
 - AVL
 - buechner
 - reception
-render_with_liquid: no
+render_with_liquid: false
 site_link_text: class presentation
 class: georg büchner. mara ruwe. WS25 FUB.
 task: 'session preparation to: buechner & reception'
-id: buechner-a
+ids: buechner-a
 description: a georg buechner reception task
 ---
