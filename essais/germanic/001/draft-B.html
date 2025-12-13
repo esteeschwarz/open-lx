@@ -23,7 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -119,6 +139,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./draft-C.html">
  <span class="dropdown-text">draft C</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./play.html">
+ <span class="dropdown-text">samling</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -148,11 +172,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#index" id="toc-index" class="nav-link active" data-scroll-target="#index">index</a>
-  <ul class="collapse">
+  <li><a href="#index" id="toc-index" class="nav-link active" data-scroll-target="#index">index</a></li>
   <li><a href="#abstract-b-idee-2" id="toc-abstract-b-idee-2" class="nav-link" data-scroll-target="#abstract-b-idee-2">abstract B: idee 2</a>
   <ul class="collapse">
   <li><a href="#inspiration" id="toc-inspiration" class="nav-link" data-scroll-target="#inspiration">inspiration</a></li>
+  <li><a href="#ai-speech-wtf" id="toc-ai-speech-wtf" class="nav-link" data-scroll-target="#ai-speech-wtf">AI speech: wtf</a></li>
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">methods</a></li>
   <li><a href="#focusing-questions" id="toc-focusing-questions" class="nav-link" data-scroll-target="#focusing-questions">focusing questions</a></li>
   </ul></li>
@@ -161,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-i-would-like-to" id="toc-what-i-would-like-to" class="nav-link" data-scroll-target="#what-i-would-like-to">what i would like to…</a></li>
   <li><a href="#and-what-i-actually-can-do" id="toc-and-what-i-actually-can-do" class="nav-link" data-scroll-target="#and-what-i-actually-can-do">and what i actually <strong>can</strong> do</a></li>
   </ul></li>
-  </ul></li>
+  <li><a href="#annotations" id="toc-annotations" class="nav-link" data-scroll-target="#annotations">annotations</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="draft-B.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -215,28 +239,29 @@ load pdf [here](.pdf)
 -->
 <section id="index" class="level1">
 <h1>index</h1>
-<section id="abstract-b-idee-2" class="level2">
-<h2 class="anchored" data-anchor-id="abstract-b-idee-2">abstract B: idee 2</h2>
+</section>
+<section id="abstract-b-idee-2" class="level1">
+<h1>abstract B: idee 2</h1>
 <p>language is developing and changing. there are many factors that influence language change, but i want to focus on one that may become relevant in todays language development: the change of language by constant and increasing use of AI tools that :communicate: with us as partners one may consider :real: or human-equivalent.</p>
-<section id="inspiration" class="level3">
-<h3 class="anchored" data-anchor-id="inspiration">inspiration</h3>
+<section id="inspiration" class="level2">
+<h2 class="anchored" data-anchor-id="inspiration">inspiration</h2>
 <p>now what are we experiencing if communicating with an artificial intelligence? first comes to mind the seemingly :natural language: adressed to us. one may feel as if talking to a human when asking questions and getting a response. studies prove that a significant amount of us show behaviour towards the AI that one would expect humans show only towards each other. that leads to the first question:</p>
 <blockquote class="blockquote">
 <p>if we hold the AI as a human communication partner, could its behaviour towards us (here: their language) influence the way we talk/act viceversa? can people learn from an AI <em>how</em> to talk and what would they learn in this case? what is the language <em>taught</em> here specifically? do we adapt to patterns or linguistic markers common for <em>AI speech</em>?</p>
 </blockquote>
-<section id="ai-speech-wtf" class="level4">
-<h4 class="anchored" data-anchor-id="ai-speech-wtf">AI speech: wtf</h4>
+</section>
+<section id="ai-speech-wtf" class="level2">
+<h2 class="anchored" data-anchor-id="ai-speech-wtf">AI speech: wtf</h2>
 <p>we can assume as common ground that the language used (here: output) by LLMs seems rather neutral, deprived of features deviating from the norm. its rather easy to understand, doesnt contain irony or sarcasm very often nor hyperbolic sentence structures (if not explicitly prompted) and could be very well used in a textbook for learners. it may be considered <em>universal</em> in aspects of transferability into other languages. it uses to not contain any specific vocabular or non-standard phrases. the syntax and grammar seems to follow the corresponding rules as the models are trained on large corpora of natural language. if we would (and we will do that) analyse a corpus of LLM outputs we very probably will find that in any feature it complies with the average feature matrix of any language compared. so if one language goes like SPO with having an average wordcount of 5wds/phrase and an average wordlength of 5 chars then the LLM certainly will show the same features for output in that language. no magic so far.</p>
 <p>But: what if learners or people with deficient language skills begin to sync their output with the artificial language in their chatverlauf? simple like: beginning a response firstly with an appreciation of the :very interesting question: whatever the other may have asked? we’re already heading that way…</p>
 <p>There may also be tiny (oberlehrerhafte) standardisations of our own speech peculiarities (idiosyncrasies) we are confronted with which we are kind of nudged to relativate if always sending them into a black hole.</p>
 </section>
-</section>
-<section id="methods" class="level3">
-<h3 class="anchored" data-anchor-id="methods">methods</h3>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">methods</h2>
 <p>first to do would be to create (or search for) a corpus of AI generated output. to use an existing corpus would prevent biasing which on the other hand could be interesting to explore i.e.&nbsp;we could by building (generating) a corpus ourselves on the basis of certain dedicated prompts<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> force the AI to generate phenomena of interest to our research question. where we get into medias res…</p>
 </section>
-<section id="focusing-questions" class="level3">
-<h3 class="anchored" data-anchor-id="focusing-questions">focusing questions</h3>
+<section id="focusing-questions" class="level2">
+<h2 class="anchored" data-anchor-id="focusing-questions">focusing questions</h2>
 <ol type="1">
 <li>does a generative AI generally produces output that is in any aspects of interest for linguistic research?</li>
 <li>how will users prime the output?</li>
@@ -249,19 +274,19 @@ load pdf [here](.pdf)
 </ol>
 </section>
 </section>
-<section id="capacities" class="level2">
-<h2 class="anchored" data-anchor-id="capacities">capacities</h2>
+<section id="capacities" class="level1">
+<h1>capacities</h1>
 <p>to arrive at a research question, maybe discarding above</p>
-<section id="what-i-would-like-to" class="level3">
-<h3 class="anchored" data-anchor-id="what-i-would-like-to">what i would like to…</h3>
+<section id="what-i-would-like-to" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-would-like-to">what i would like to…</h2>
 <ul>
 <li>AI chat queries analysis</li>
 <li>analyse linguistic knowledge capacities of AIs</li>
 <li>proofread responses, factchecking</li>
 </ul>
 </section>
-<section id="and-what-i-actually-can-do" class="level3">
-<h3 class="anchored" data-anchor-id="and-what-i-actually-can-do">and what i actually <strong>can</strong> do</h3>
+<section id="and-what-i-actually-can-do" class="level2">
+<h2 class="anchored" data-anchor-id="and-what-i-actually-can-do">and what i actually <strong>can</strong> do</h2>
 <ul>
 <li>statistics</li>
 <li>automated prompting using APIs</li>
@@ -270,15 +295,175 @@ load pdf [here](.pdf)
 </ul>
 </section>
 </section>
+<section id="annotations" class="level1">
+<h1>annotations</h1>
+<p>Q: <span class="citation" data-cites="bsi_wie_2025">BSI (<a href="#ref-bsi_wie_2025" role="doc-biblioref">2025</a>)</span></p>
+<div class="cell">
+<div id="tbl-rev" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: annotations: revolution
+</figcaption>
+<div aria-describedby="tbl-rev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 0%">
+<col style="width: 99%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">id</th>
+<th style="text-align: left;">annotations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Die Grenze zwischen Werkzeug und Gegenüber, zwischen Medium und Partner, wird dabei zunehmend durchlässig. Der Sprachgebrauch selbst wird zum Ort der Aushandlung: zwischen individueller Intention und algorithmischer Interpretation. Dieses neue Spannungsfeld erzeugt – so die zentrale These dieser Studie – neue Sprachgewohnheiten, veränderte semantische Ökonomien und möglicherweise sogar emergente Sprachformen, die sich jenseits etablierter kultureller und linguistischer Ordnungssysteme bewegen</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Es entsteht eine hybride Sprachpraxis, die Merkmale von Alltagssprache, Programmiersprache, ökonomischer Instruktion, metaphorischer Verdichtung und affektiver Andeutung kombiniert – ein Phänomen, das wir im weiteren Verlauf dieser Studie als Promptlinguistik bezeichnen werden.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Promptlinguistik</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Nutzer beginnen zunehmend, in einer Art Promptlogik zu denken und zu sprechen. Diese Logik folgt nicht der klassischen Satzstruktur oder narrativen Kohärenz, sondern ist geprägt von zielgerichteter Instruktion, semantischer Kompression, elliptischen Formulierungen und reduzierter Kontextualisierung</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">Der Kommunikationsstil verschiebt sich von einem syntaktisch vollständigen, sozialen Text hin zu einem effizienzorientierten, oft kryptisch anmutenden Sprachgebrauch</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Diese Entwicklung lässt sich als Kognitionskompression begreifen – ein psycholinguistischer Prozess, bei dem sprachliche Komplexität reduziert wird, um mentale Entlastung, Output-Beschleunigung und Interaktionsökonomie zu erreichen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">Prompten wird zur „sprechenden Skizze“ – nicht mehr zur Mitteilung, sondern zur Initialzündung algorithmischer Leistung.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">Prompting ist in vielen Fällen nicht mehr klar als Englisch, Deutsch oder Spanisch identifizierbar, sondern als transkultureller, maschinenadaptierter Idiolekt</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">eröffnet zugleich neue Perspektiven auf eine mögliche Globalgrammatik der Mensch-MaschineInteraktion.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">zielt die vorliegende Studie darauf ab, den Wandel sprachlicher und kommunikativer Muster im Kontext der Nutzung generativer KI systematisch zu erfassen und differenziert zu analysieren</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">Nutzergruppe von 112 Heavy AI Usern, die über einen Zeitraum von mindestens drei Monaten eine besonders intensive Interaktion mit generativen Sprachmodellen –vorrangig ChatGPT – aufwiesen</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">Entsteht durch die Mensch-Maschine-Interaktion ein emergentes, transkulturelles „Meta-Idiolekt“– eine neue Ebene symbolischer Ordnung zwischen Natur-, Kunst- und Programmiersprachen?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">Ziel ist es, ein erstes kognitiv-semiotisches Mapping der neuen Sprachlandschaft im Zeitalter generativer KI zu entwerfen</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">Menschen streben danach, bei gleichbleibender Ergebnisqualität möglichst wenig kognitive Energie aufzuwenden (Kahneman, 2011).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">Erwartungshaltung, dass die Maschine semantische Lücken „mitdenkt“ , also kontextuelle Implikaturen und Nuancen selbstständig ergänzt</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td style="text-align: left;">kompensatorisches semantisches Vertrauen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td style="text-align: left;">Diese Sprachveränderung steht nicht im Gegensatz zur Intelligenz des Users, sondern ist Anpassung an das System: Sie basiert auf gelerntem Promptingverhalten, das durch Erfahrung mit dem Modell bestärkt wird. Die Sprache wird maschinen-kompatibel – nicht mehr menschlich-vollständig, sondern systemadäquat</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">zeigen, dass bei intensiver Nutzung generativer KI die durchschnittliche Promptlänge signifikant abnimmt, während die semantische Dichte steigt</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">kognitive Prozesse nicht auf das Gehirn beschränkt sind, sondern sich über Werkzeuge und Umweltstrukturen erweitern können</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">Generative KI kann unter dieser Perspektive als externes semantisches Kognitionsorgan verstanden werden – ein „sprachlicher Cortex außerhalb des Körpers“ , der jedoch aktiv am Denkprozess teilnimmt.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">21</td>
+<td style="text-align: left;">Verarbeitungsflüssigkeit (Processing Fluency).</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">kognitive Bevorzugung von flüssiger Information wirkt sich nachweislich auf Urteile, Entscheidungen und Gedächtnisprozesse aus</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: left;">kein Zeichen sprachlicher Degradation, sondern Ausdruck einer anpassungsfähigen Sprachintelligenz, die erkennt, dass komplexe Ästhetik nicht belohnt wird –während funktionale Direktheit zu besseren Ergebnissen führt.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">sprachliche Verlagerung vom Ausdruck zum Effekt – das Ziel ist nicht die Formulierung als solche, sondern die Antizipation eines möglichst optimalen Outputs. Sprache wird zur strategischen Handlung, nicht mehr zur sozialen Äußerung.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">Komplexe Idiome, Metaphern oder poetische Strukturen aus spezifischen Sprachkulturen funktionieren weniger zuverlässig – während reduzierte, direktive, entkontextualisierte Sprache überdurchschnittlich effektiv ist</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">Symbolische Interaktionismus als soziologische Theorieperspektive geht davon aus, dass soziale Wirklichkeit nicht objektiv vorliegt, sondern in sozialen Interaktionen hergestellt, verhandelt und symbolisch codiert wird</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">27</td>
+<td style="text-align: left;">Bedeutung nicht in Dingen selbst liegt, sondern im Prozess der Bedeutungszuweisung durch Akteure.</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">28</td>
+<td style="text-align: left;">Sprache</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">29</td>
+<td style="text-align: left;">Sprache</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
 </section>
 <section id="references" class="level1">
-<h1>References</h1>
+
+
 
 
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bsi_wie_2025" class="csl-entry" role="listitem">
+BSI, Brand Science Institute. 2025. <span>“Wie <span>KI</span> Unsere <span>Sprache</span> Verändert – <span>Eine</span> Empirische <span>Studie</span>.”</span> <a href="https://www.bsi.ag/cases/104-case-studie-wie-ki-unsere-sprache-veraendert---eine-empirische-studie.html">https://www.bsi.ag/cases/104-case-studie-wie-ki-unsere-sprache-veraendert---eine-empirische-studie.html</a>.
+</div>
+<div id="ref-noauthor_critical_nodate" class="csl-entry" role="listitem">
+<span>“Critical <span>AI</span>.”</span> n.d. Accessed December 8, 2025. <a href="https://www.dukeupress.edu/critical-ai">https://www.dukeupress.edu/critical-ai</a>.
+</div>
+<div id="ref-milicka_ai_2025" class="csl-entry" role="listitem">
+Milička, Jiří, Anna Marklová, and Václav Cvrček. 2025. <span>“<span>AI</span> <span>Brown</span> and <span>AI</span> <span>Koditex</span>: <span>LLM</span>-<span>Generated</span> <span>Corpora</span> <span>Comparable</span> to <span>Traditional</span> <span>Corpora</span> of <span>English</span> and <span>Czech</span> <span>Texts</span>.”</span> <a href="https://doi.org/10.48550/arxiv.2509.22996">https://doi.org/10.48550/arxiv.2509.22996</a>.
+</div>
+<div id="ref-noauthor_studie_2025" class="csl-entry" role="listitem">
+<span>“Studie Zeigt: <span>KI</span> Lernt <span>Sprachregeln</span> Beim <span>Lesen</span>.”</span> 2025. <em>FAU</em>. <a href="https://www.fau.de/2025/11/news/forschung/studie-ki-lernt-sprachregeln-beim-lesen/">https://www.fau.de/2025/11/news/forschung/studie-ki-lernt-sprachregeln-beim-lesen/</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>which could very well be adapted to our research question<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
