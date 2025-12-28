@@ -133,8 +133,14 @@ script_includes:
    {{ page.task }}
     {% endif %}
    {% if page.site_link_text and page.id %}
+{% assign prefix = "" %}
+{% unless page.idurl %}
+  {% assign prefix = "../../essais/" %}
+{% endunless %}
+
+<!-- <a href="{{ prefix }}/{{ page.ids }}">{{ page.site_link_text }}</a> -->
    <h1>view</h1>
-       <a href="../../essais/{{ page.ids }}"> {{ page.site_link_text }}</a>
+       <a href="{{ prefix }}{{ page.ids }}"> {{ page.site_link_text }}</a>
 
    {% endif %}
    
